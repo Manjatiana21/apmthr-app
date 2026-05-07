@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-=vv5#lpb%%n0t8cnsm9@6-s-b8$b2y2$#r9yj_r=ey33=xpq=m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".railway.app", "apmthr-backend.up.railway.app", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ['apmthr-app.onrender.com', 'localhost', "127.0.0.1", "localhost"]
 
 
 
