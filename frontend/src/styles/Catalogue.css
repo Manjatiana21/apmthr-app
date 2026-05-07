@@ -1,0 +1,209 @@
+.catalogue {
+  max-width: 1200px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+h2 {
+  color: #2e7d32; 
+  margin-bottom: 2rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-produits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 7rem;
+  row-gap: 1cap;
+  width: 1200px;
+ 
+}
+
+.carte-produit {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  border: white solid 5px;
+  width: 320px;
+  height: 700px;
+  border: 5px solid white;
+}
+
+.carte-produit img{
+  border: 3px solid white;
+  background-color:slateblue;
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 19px;
+}
+.carte-produit:hover {
+  transform: translateY(-5px);
+}
+
+ .carte-produit1 h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+/* .carte-produit {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: none;
+  border: 1px red solid;
+  background: #eb9008bd;
+} */
+
+
+.prix {
+  font-weight: bold;
+  color: black; 
+  margin: 0.5rem 0;
+}
+
+.btn-commande {
+  display: inline-block;
+  background-color: #2e7d32;
+  color: white;
+  /* margin-left: 2rem; */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  height: 2.5rem;
+  animation: zoomButton 2s infinite; 
+}
+
+.btn-panier {
+  display: inline-block;
+  background-color: #9c0101;
+  color: white;
+  /* margin-left: 5rem; */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  /* animation: zoomButton 2s infinite;  */
+  height: 2rem;
+  /* width: 6rem; */
+  margin-top: O.8rem;
+}
+
+.btn-commande:hover {
+  background-color: #ff9800;
+}
+
+/* .btn-panier:hover {
+  background-color: #ff9800;
+} */
+
+
+.Boutton_commande{
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  /* border: 1px solid red; */
+  margin-top: 0;
+}
+
+.index {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Animation zoom pour le bouton */
+@keyframes zoomButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+.FAITMAIN{
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif,italic; 
+}
+
+
+.CHOISISSEZ{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
+}
+
+
+@media (max-width:992px) {
+  /* .catalogue{
+    border: 1px solid red;
+  } */
+
+  .grid-produits{
+    width: 900px;
+    margin-left: 1.2rem;
+    gap: 4.9rem;
+  }
+
+  .carte-produit{
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width:768px){
+  .grid-produits{
+    width: 398px;
+    margin-left: 0;
+  }
+
+  .carte-produit{
+    width: 600px;
+    height: 500px;
+  }
+
+  .Boutton_commande{
+    /* border: green solid 1px; */
+    margin-top: 0;
+    position: absolute;
+    
+    margin-left: 26rem;
+  }
+
+  .carte-produit1{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+  }
+
+ 
+  .description{
+    position: absolute;
+    margin-left: 9rem;
+    width: 260px;
+  }
+
+  .type{
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 5rem;
+  }
+
+  .fournisseur{
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 7rem;
+  }
+
+  .P-Prix{
+    border: 1px orange solid;
+    background: orange;
+    width: 120px;
+    border-radius: 9px 0 9px 9px;
+    margin-left: 0;
+  }
+
+  .btn-panier{
+    margin-top: 0;
+  }
+
+}

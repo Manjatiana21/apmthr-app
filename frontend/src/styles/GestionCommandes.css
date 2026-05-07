@@ -1,0 +1,136 @@
+.gestion-commandes {
+  max-width: 1100px;
+  margin: 2rem auto;
+  background: #f5f5dc; /* beige artisanal */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2e7d32; /* vert naturel */
+  margin-bottom: 1rem;
+}
+
+.table-commandes {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-commandes th, .table-commandes td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-commandes th {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.statut-valide {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.statut-annulee {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.statut-en_cours {
+  background-color: #ff9800;
+  color: white;
+}
+
+.btn-link {
+  color: #2e7d32;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-link:hover {
+  color: #ff9800;
+}
+
+.btn-valider {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-valider:hover {
+  background-color: #ff9800;
+}
+
+.btn-annuler {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-annuler:hover {
+  background-color: #ff9800;
+}
+
+.navigation-commandes{
+  width: 600px;
+  margin-left: 32rem;
+  height: 50px;
+  row-gap: 5rem;
+}
+
+#CommandeAnnulees{
+  margin-left: 6rem;
+}
+
+.actionsCV{
+  border: white solid 5px;
+  width: 120px;
+  height: 20px;
+  margin-left: 55rem;
+  position: absolute;
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 5rem;
+  background: white;
+  border-radius: 6px;
+}
+
+.actionsCV a{
+  text-decoration: none;
+}
+
+.navigatio-commandes Link{
+  text-decoration: none;
+}
+
+.gestion-titre{
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 30rem;
+}
+
+.gestion-titre h2{
+  height: 2rem;
+  width: 25rem;
+}
+
+.gestion-titre .btn{
+  margin-top: 1rem;
+}
+

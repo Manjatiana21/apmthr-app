@@ -1,0 +1,105 @@
+.mes-paiements {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #f5f5dc; 
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.table-paiements {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-paiements th, .table-paiements td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.table-paiements th {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.statut-valide {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.statut-en_attente {
+  background-color: #ff9800;
+  color: white;
+}
+
+.statut-annule {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* ✅ Conteneur principal */
+.container, .paiement-container, .stock-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ✅ Tables responsives */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Responsive tables */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* cacher l’en-tête sur mobile */
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  .table-responsive td::before {
+    content: attr(data-label); /* ✅ affiche le nom de la colonne */
+    font-weight: bold;
+    color: #555;
+  }
+
+  td {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+}

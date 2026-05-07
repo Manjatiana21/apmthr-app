@@ -1,0 +1,73 @@
+.commande-admin-detail {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #f5f5dc; /* beige artisanal */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2e7d32; /* vert naturel */
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  color: #2e7d32;
+}
+
+.table-produits {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-produits th, .table-produits td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-produits th {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.statut-valide {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.statut-annulee {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.statut-en_cours {
+  background-color: #ff9800;
+  color: white;
+}
+
+.actions {
+  margin-top: 1.5rem;
+}
+
+.btn-retour {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-retour:hover {
+  background-color: #ff9800;
+}

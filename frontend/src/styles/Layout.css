@@ -1,0 +1,438 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between; /* nav à gauche, logo à droite */
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(120deg, #e49e09, #4ee429);
+  color: white;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ffe082;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.auth .btn-login,
+.auth .btn-logout {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth .btn-login {
+  border: 2px solid white;
+  color: white;
+}
+
+.auth .btn-login:hover {
+  background: white;
+  color: #ff3c3c;
+}
+
+.auth .btn-logout {
+  background: white;
+  color: #ff3c3c;
+}
+
+.auth .btn-logout:hover {
+  background: #ffe082;
+  color: #222;
+}
+
+/* Conteneur du dropdown */
+.profil-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Bouton icône */
+.profil-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+/* Menu déroulant */
+.profil-menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+/* Liens dans le menu */
+.profil-menu-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+/* Hover sur les liens */
+.profil-menu-dropdown a:hover {
+  background: #f5f5f5;
+}
+
+/* Style spécifique pour Déconnexion */
+.profil-menu-dropdown .btn-logout {
+  color: #c00;
+}
+
+.profil-menu-dropdown .btn-logout:hover {
+  background: #ffe5e5;
+  color: #900;
+}
+
+
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.footer {
+  background: #0e3b04;
+  color: #ddd;
+  padding: 2rem;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s, color 0.3s;
+  color: white;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+  color: #ffe082;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+.redirection:hover {
+  color: #5f531d;
+}
+
+.redirection{
+  color: white;
+}
+
+.burger-btn, .nav-mobile, .notification-icon{
+  display: none;
+}
+
+.footer-item a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bas{
+  /* border: 1px red solid; */
+  margin-left: 5rem;
+  column-gap: 3rem;
+
+}
+
+#li{
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.nav-redirection1{
+  /* border: 1px solid red; */
+  width: 500px;
+  position: absolute;
+  margin-left: 35rem;
+  margin-top: 0;
+  margin-bottom: 15rem;
+}
+
+.nav-redirection2{
+  /* border: 1px solid red; */
+  width: 500px;
+}
+
+.badge {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.badge-2 {
+  background: red;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.notification-icon {
+  /* margin-left: 31rem; */
+  margin-right: 10px;
+  font-size: 20px;
+  /* position: absolute; */
+}
+/* .burger-btn{
+    border: 1px red solid;
+    width: 50px;
+    margin-left: 42rem;
+    position: absolute;
+  } */
+
+.burger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 40rem;
+  width: 50px;
+  position: absolute;
+  color: #1000f5;
+}
+/* Menu mobile */
+.nav-mobile {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.nav-mobile.open {
+  display: block;
+}
+
+.nav-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-mobile li {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-mobile a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panier-icon-mobile{
+
+  font-size: 20px;
+}
+.panier-icon-mobile li{
+  list-style: none;
+}
+
+.Icone-mobile{
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  margin-left: 14rem;
+  gap: 5rem;
+  width: 250px;
+}
+
+.Icone-mobile .Icone-flex-mobile{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.Acceuil-mobile li{
+  list-style: none;
+}
+
+.Acceuil-mobile{
+  font-size: 20px;
+}
+
+.icone-catalogue{
+  font-size: 20px;
+}
+
+.icone-catalogue li{
+  list-style: none;
+}
+.i-home, .i-catalogue, .i-facture{
+  color:blue;
+}
+
+.facture-icone-mobile li {
+  list-style: none;
+}
+
+.facture-icone-mobile{
+  display: none;
+}
+.Notif-facture{
+  position: relative;
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  gap: 2rem;
+}
+
+.facture-icone-mobile .badge{
+  display: inline-block;
+  font-size: 10px;
+  width: 1px;
+  padding-left: 8px;
+  margin-left: 0;
+  margin-top: 0.5rem;
+  height: 0.8rem;
+  padding-top: 5px;
+
+}
+
+.notification-icon .badge{
+  display: inline-block;
+  font-size: 10px;
+  width: 5px;
+  padding-left: 8px;
+  margin-left: 0;
+  margin-top: 0.5rem;
+  height: 0.8rem;
+  padding-top: 5px;
+}
+/* Responsive : activer burger en mobile */
+@media (max-width: 768px) {
+  .nav {
+    display: none; 
+  }
+  .burger-btn, .notification-icon, .badge {
+    display: block;
+  }
+footer{
+    max-width: 768px;
+    .footer-info{
+      gap: 1.5rem;
+    }
+    
+    #F-Adresse{
+      margin-left: 5rem;
+    }
+
+    
+    #F-Telephone{
+      margin-left: 5rem;
+      width: 200px;
+      margin-right: 5rem;
+    }
+
+      #F-Facebook{
+      margin-left: 1.5rem;
+    }
+
+      #F-Email{
+      margin-left: 5rem;
+      width: 100px;
+      margin-right: 7rem;
+    }
+  }
+
+  .Icone-mobile{
+    display: block;
+    flex-direction: inline-block;
+  }
+  
+  .facture-icone-mobile{
+    display: block
+  }
+}
+
+/* @media (max-width: 768px) {
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-item {
+    margin-bottom: 12px;
+  }
+
+  .footer-icon {
+    margin-right: 6px;
+    font-size: 18px;
+  }
+
+  .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+} */
+

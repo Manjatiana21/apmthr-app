@@ -1,0 +1,33 @@
+.modifier-adresse-container{
+    border:  2px white solid;
+    height: 400px;
+    width: 500px;
+    margin-left:30%;
+    margin-top: 5rem;
+    border-radius: 10px;
+    box-shadow: 5px black inset;
+}
+
+.modifier-adresse-container h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
+
+.Form-input{
+    margin-top: 2rem;
+}
+
+.Form-input label{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0.5rem;
+}
+
+.Valide-btn{
+    width: 300px;
+    margin-left: 5rem;
+}
+
+
+
+

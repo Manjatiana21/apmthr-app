@@ -1,0 +1,37 @@
+.profil-options button{
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profil-options{
+    width: 500px;
+    margin-left: 15rem;
+}
+
+.profil-container{
+    border: 2px beige solid;
+    background: beige;
+    height: 100vh;
+}
+
+.profil-titre h2{
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 30px;
+    font-family:cursive;
+}
+
+#retour-btn{
+    height: 2rem;
+    margin-top: 5rem;
+}
+
+.profil-titre{
+    display: flex;
+    flex-direction: inline-block;
+    gap: 15rem;
+    text-align: center;
+    margin-left: 8rem;
+}

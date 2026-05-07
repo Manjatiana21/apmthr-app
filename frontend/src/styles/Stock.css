@@ -1,0 +1,169 @@
+.stock-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #f5f5dc;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2, h1 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.table-stock {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-stock th, .table-stock td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.table-stock th {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.btn {
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.filters {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filters select, .filters input {
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* ✅ Conteneur principal */
+.container, .paiement-container, .stock-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ✅ Tables responsives */
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+} */
+
+.rapport-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.rapport-chart {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.rapport-synthese {
+  flex: 1;
+  max-width: 50%;
+}
+
+/* ✅ Responsive : sur petit écran, empile */
+@media (max-width: 768px) {
+  .rapport-grid {
+    flex-direction: column;
+  }
+  .rapport-chart, .rapport-synthese {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* ✅ Responsive tables */
+/* @media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; cacher l’en-tête sur mobile */
+  /* }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  td {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+} */
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+input, select, button {
+  flex: 1 1 200px;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

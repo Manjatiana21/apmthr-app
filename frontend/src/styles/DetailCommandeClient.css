@@ -1,0 +1,52 @@
+.commande-client-detail {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.commande-client-detail h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.commande-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.commande-info label {
+  font-weight: bold;
+  color: #444;
+}
+
+.commande-info input {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-annuler {
+  background: #ff3c3c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-annuler:hover {
+  background: #c62828;
+}

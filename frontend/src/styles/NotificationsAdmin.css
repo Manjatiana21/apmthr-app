@@ -1,0 +1,110 @@
+.notifications-admin {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #f5f5dc; /* beige artisanal */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.notif-counter {
+  margin-bottom: 1rem;
+}
+
+.badge-danger {
+  background-color: #d32f2f;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.notif-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notif-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eeeeee;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  border-radius: 6px;
+}
+
+.notif-warning {
+  background-color: #fff3cd; 
+}
+
+.btn-mark-read {
+  margin-top: 3rem;
+  width: 200px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 42rem;
+  position: absolute;
+}
+
+.btn-mark-read:hover {
+  background-color: #ff9800;
+}
+
+
+/* ✅ Conteneur principal */
+.container, .paiement-container, .stock-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ✅ Tables responsives */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Responsive tables */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* cacher l’en-tête sur mobile */
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  td {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+}

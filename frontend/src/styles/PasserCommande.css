@@ -1,0 +1,109 @@
+.commande-card {
+  max-width: 300px;
+  margin: 2rem auto;
+  background: #f5f5dc; /* beige artisanal */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2e7d32; /* vert naturel */
+  margin-bottom: 1rem;
+}
+
+form input, form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.numero-admin {
+  margin-top: 1rem;
+  background: #eeee;
+  padding: 1rem;
+  border-radius: 6px;
+  
+}
+
+.numero{
+  border: #ff9800 solid 2px;
+  width: 10rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  animation: zoomButton 1s infinite;
+  background: white;
+}
+.btn-commande {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  animation: zoomButton 2s infinite; /* animation zoom */
+}
+
+.btn-commande:hover {
+  background-color: #ff9800;
+}
+
+/* Animation zoom */
+@keyframes zoomButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+/* ✅ Conteneur principal */
+.container, .paiement-container, .stock-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ✅ Tables responsives */
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+} */
+
+/* ✅ Responsive tables */
+/* @media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* cacher l’en-tête sur mobile */
+  /* }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  td {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  } */
+/* } */ 

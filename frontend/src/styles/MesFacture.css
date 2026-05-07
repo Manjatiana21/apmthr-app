@@ -1,0 +1,11 @@
+.btnaction-lfacture{
+    background: white;
+    height: 30px;
+}
+
+.btnaction-lfacture a{
+    text-decoration: none;
+    color: green;
+    font: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}

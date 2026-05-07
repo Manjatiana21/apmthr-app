@@ -1,0 +1,204 @@
+.header-admin {
+  background: linear-gradient(120deg, #e49e09, #4ee429);
+  color: white;
+  padding: 1rem;
+  
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TableauAdmin {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+
+.header-links a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.badge {
+  background: #d32f2f;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  margin-left: 0.3rem;
+}
+
+.header-middle {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.header-bottom {
+  background: #f5f5dc;
+  padding: 0.5rem;
+}
+
+.nav-admin {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-admin a {
+  color: #2e7d32;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.statistique {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 800px;
+}
+
+.card h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin: 0.3rem 0;
+  font-weight: bold;
+}
+
+.card canvas {
+  margin-top: 1rem;
+}
+
+
+/* ✅ Conteneur principal */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ✅ Tables responsives */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Responsive tables */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* cacher l’en-tête sur mobile */
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  td {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+}
+
+.quick-cards-row {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  width: 70rem;
+  margin-left: 7rem;
+}
+
+.quick-card {
+  flex: 1;
+  /* min-width: 250px; */
+  background: linear-gradient(125deg, rgb(240, 23, 229), rgb(11, 225, 233));
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  height: 8rem;
+  position: relative;
+  
+}
+
+.quick-card .pourcentage {
+  font-weight: bold;
+  margin-top: 5px;
+  color: #ffeb3b; /* jaune pour contraste */
+}
+
+.link-white {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-white:hover {
+  text-decoration: underline;
+}
+
+.card-para{
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.Link{
+  font-style: none;
+  color: white;
+}
+
+/* #livraison{
+  background: #e49e09;
+}
+
+#facture{
+  background:#cf43c4 ;
+}
+
+#clients{
+  background:  #16cae2;
+} */
+
+#card-titre{
+  color: white;
+  font-family: bold;
+}

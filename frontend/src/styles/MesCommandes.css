@@ -1,0 +1,66 @@
+.mes-commandes {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #f5f5dc; /* beige artisanal */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2e7d32; /* vert naturel */
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.table-commandes {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-commandes th, .table-commandes td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-commandes th {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.statut-en_cours {
+  background-color: #ff9800;
+  color: white;
+}
+
+.statut-validee {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.statut-annulee {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.btn-link {
+  color: #2e7d32;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  color: #ff9800;
+}

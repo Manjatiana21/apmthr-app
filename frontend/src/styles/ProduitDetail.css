@@ -1,0 +1,105 @@
+.produit-card {
+  display: flex;
+  gap: 2rem;
+  background: #f5f5dc; /* beige artisanal */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  align-items: center;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.produit-image {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #2e7d32; /* vert naturel */
+}
+
+.produit-info h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.produit-info p {
+  margin: 0.5rem 0;
+}
+
+.prix {
+  font-weight: bold;
+  color: #ff9800; /* accent orange */
+}
+
+.btn-commande {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  animation: zoomButton 2s infinite; /* animation zoom */
+}
+
+.btn-commande:hover {
+  background-color: #ff9800;
+}
+
+/* Animation zoom */
+@keyframes zoomButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+/* ✅ Conteneur principal */
+.container, .paiement-container, .stock-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ✅ Tables responsives */
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+} */
+
+/* ✅ Responsive tables */
+/* @media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* cacher l’en-tête sur mobile */
+  /* }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  td {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+} */

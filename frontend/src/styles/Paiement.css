@@ -1,0 +1,165 @@
+.paiement-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #f5f5dc;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.table-paiement {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-paiement th, .table-paiement td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.table-paiement th {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.badge-warning { background-color: #ff9800; color: black; }
+.badge-success { background-color: #2e7d32; color: white; }
+.badge-danger { background-color: #d32f2f; color: white; }
+
+.btn {
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ variantes */
+.btn-primary {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #ff9800;
+}
+
+.btn-success {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #388e3c;
+}
+
+.btn-danger {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c;
+}
+
+.facture-info {
+  margin-bottom: 1.5rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.facture-actions {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.toggle-links{
+  width: 20rem;
+  margin-left: 50rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/* ✅ Conteneur principal */
+.container, .paiement-container, .stock-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ✅ Tables responsives */
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+} */
+
+/* ✅ Responsive tables */
+/* @media (max-width: 768px) { */
+  /* table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* cacher l’en-tête sur mobile */
+  /* }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  td {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  } */ */
+/* } */
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+input, select, button {
+  flex: 1 1 200px;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
