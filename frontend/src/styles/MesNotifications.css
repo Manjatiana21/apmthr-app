@@ -1,7 +1,7 @@
 .mes-notifications {
   max-width: 900px;
   margin: 2rem auto;
-  background: #f5f5dc; /* beige artisanal */
+  background: #f5f5dc;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px #0000001a;
@@ -43,18 +43,6 @@ h2 {
   background-color: #fff3cd;
 }
 
-/* .btn-mark-read {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-left: 0rem;
-  position: absolute;
-  width: 200px;
-  margin-top: 3rem;
-} */
 
 .btn-mark-read:hover {
   background-color: #ff9800;

@@ -36,7 +36,7 @@
 
 .Form-box{
   display: flex;
-  flex-direction: inline;
+  flex-direction: row;
   width: 100%;
   gap: 3rem;
 }
@@ -60,18 +60,6 @@ h2 {
   border-radius: 6px; 
   margin-left: 0;
 }
-/* .email{
-  margin-left: 0.2rem;
- }
-
-.MDP{
-  margin-left: 2rem;
-}
-
-.confirmation_MDP{
-  margin-left: 0;
-  width: 300px;
-} */
 
 .btn-register {
   background-color: #2e7d32;
@@ -113,14 +101,13 @@ h2 {
   color: #ff9800;
 }
 
-/* Animation fond */
+
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Animation bordure */
 @keyframes borderLoop {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }

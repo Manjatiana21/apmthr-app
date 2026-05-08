@@ -1,7 +1,7 @@
 .notifications-admin {
   max-width: 900px;
   margin: 2rem auto;
-  background: #f5f5dc; /* beige artisanal */
+  background: #f5f5dc; 
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -44,6 +44,7 @@ h2 {
 }
 
 .btn-mark-read {
+  position: absolute;
   margin-top: 3rem;
   width: 200px;
   background-color: #2e7d32;
@@ -53,7 +54,6 @@ h2 {
   border-radius: 6px;
   cursor: pointer;
   margin-left: 42rem;
-  position: absolute;
 }
 
 .btn-mark-read:hover {
@@ -61,14 +61,14 @@ h2 {
 }
 
 
-/* ✅ Conteneur principal */
+
 .container, .paiement-container, .stock-container {
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
 }
 
-/* ✅ Tables responsives */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -80,14 +80,14 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
-/* ✅ Responsive tables */
+
 @media (max-width: 768px) {
   table, thead, tbody, th, td, tr {
     display: block;
   }
 
   thead tr {
-    display: none; /* cacher l’en-tête sur mobile */
+    display: none; 
   }
 
   tr {

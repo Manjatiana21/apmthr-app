@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { addMouvement } from "../api"; 
-import "../styles/Stock.css";
+import   "../styles/Stock.css";
 import Layout from "./Layout";
 
 

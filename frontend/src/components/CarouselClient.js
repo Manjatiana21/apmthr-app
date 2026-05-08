@@ -11,14 +11,14 @@ import img6 from "../assets/photo 8.png";
 
 function CarouselClient() {
   const settings = {
-    dots: true,              // ✅ dots de navigation
+    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,         // ✅ 3 images visibles
+    slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,          // ✅ défilement automatique
-    autoplaySpeed: 3000,     // ✅ toutes les 3 secondes
-    centerMode: true,        // ✅ image centrale mise en avant
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
     centerPadding: "0px"
   };
 

@@ -47,7 +47,6 @@ function EspaceClient() {
     fetchData();
   }, []);
 
-  // 🔑 Charger le nombre de produits dans le panier depuis localStorage
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCartCount(storedCart.length);
@@ -90,7 +89,6 @@ function EspaceClient() {
             <img src={logoImg} alt="Header de l’espace client" className="logo-image" />
           </div>
           <nav className="header-links">
-            {/* 🛒 Icône panier avec badge */}
             <Link to="/panier" className="panier-icon">
               <FaShoppingCart className="iconShop"/>Panier
               {cartCount > 0 && <span className="badge-2">{cartCount}</span>}
@@ -121,7 +119,7 @@ function EspaceClient() {
               </div>
           </div>
 
-        {/* Barre de recherche */}
+      
         <div className="Recherche">
           <input
             className="InputRech"
@@ -155,7 +153,6 @@ function EspaceClient() {
         </div>
       </section>
 
-      {/* Section A propos */}
       <section className="section_PROPOS">
         <h2>A PROPOS DE NOUS</h2>
         <h4>APMTHR</h4>
@@ -171,7 +168,7 @@ function EspaceClient() {
         <p className="petiteintro">Maîtriser son geste ne suffit pas...</p>
       </section>
 
-      {/* Section Produits */}
+    
       <section className="section-produits" ref={produitsSectionRef}>
         <h2 className="section-title">NOS PRODUITS</h2>
         <p className="petiteintro">
@@ -212,7 +209,7 @@ function EspaceClient() {
         )}
       </section>
 
-      {/* Section Commandes */}
+      
       <section className="section-commandes">
         <h2 className="section-title" id="VOTRECOMMANDE">CONSULTEZ VOTRE COMMANDE</h2>
         <p className="petiteintro" id="paragraphe-commande">
@@ -221,7 +218,7 @@ function EspaceClient() {
         <Link to="/client-commandes" className="btn-Commande">Voir mes commandes</Link>
       </section>
 
-      {/* Section Services */}
+      
       <section className="section-service">
         <h2 className="section-title">NOS SERVICES</h2>
         <p className="petiteintro" id="paragraphe-service">
@@ -278,7 +275,7 @@ function EspaceClient() {
         </div>
       </footer>
 
-      {/* ✅ Message modal */}
+      
       <MessageModal
         message={message}
         type={messageType}

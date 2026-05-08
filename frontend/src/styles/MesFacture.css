@@ -6,6 +6,6 @@
 .btnaction-lfacture a{
     text-decoration: none;
     color: green;
-    font: bold;
+    font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }

@@ -1,14 +1,14 @@
 .commande-detail {
   max-width: 900px;
   margin: 2rem auto;
-  background: #f5f5dc; /* beige artisanal */
+  background: #f5f5dc; 
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-  color: #2e7d32; /* vert naturel */
+  color: #2e7d32; 
   margin-bottom: 1rem;
 }
 

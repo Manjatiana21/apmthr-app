@@ -53,7 +53,6 @@ h2 {
   transform: scale(1.05);
 }
 
-/* ✅ variantes */
 .btn-primary {
   background-color: #2e7d32;
   color: white;
@@ -109,46 +108,8 @@ h2 {
   padding: 1rem;
 }
 
-/* ✅ Tables responsives */
-/* table {
-  width: 100%;
-  border-collapse: collapse;
-}
 
-th, td {
-  padding: 0.6rem;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-} */
 
-/* ✅ Responsive tables */
-/* @media (max-width: 768px) { */
-  /* table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  thead tr {
-    display: none; /* cacher l’en-tête sur mobile */
-  /* }
-
-  tr {
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-  }
-
-  td {
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    margin-right: 0.5rem;
-  } */ */
-/* } */
 
 form {
   display: flex;

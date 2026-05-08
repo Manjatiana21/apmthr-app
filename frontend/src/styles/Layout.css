@@ -7,7 +7,7 @@
 
 .header {
   display: flex;
-  justify-content: space-between; /* nav à gauche, logo à droite */
+  justify-content: space-between; 
   align-items: center;
   padding: 1rem 2rem;
   background: linear-gradient(120deg, #e49e09, #4ee429);
@@ -65,13 +65,13 @@
   color: #222;
 }
 
-/* Conteneur du dropdown */
+
 .profil-dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Bouton icône */
+
 .profil-icon-btn {
   background: none;
   border: none;
@@ -82,7 +82,7 @@
   align-items: center;
 }
 
-/* Menu déroulant */
+
 .profil-menu-dropdown {
   position: absolute;
   right: 0;
@@ -96,7 +96,7 @@
   min-width: 160px;
 }
 
-/* Liens dans le menu */
+
 .profil-menu-dropdown a {
   display: flex;
   align-items: center;
@@ -108,12 +108,11 @@
   transition: background 0.2s ease;
 }
 
-/* Hover sur les liens */
+
 .profil-menu-dropdown a:hover {
   background: #f5f5f5;
 }
 
-/* Style spécifique pour Déconnexion */
 .profil-menu-dropdown .btn-logout {
   color: #c00;
 }
@@ -187,7 +186,6 @@
 }
 
 .nav-bas{
-  /* border: 1px red solid; */
   margin-left: 5rem;
   column-gap: 3rem;
 
@@ -199,7 +197,6 @@
 }
 
 .nav-redirection1{
-  /* border: 1px solid red; */
   width: 500px;
   position: absolute;
   margin-left: 35rem;
@@ -208,7 +205,6 @@
 }
 
 .nav-redirection2{
-  /* border: 1px solid red; */
   width: 500px;
 }
 
@@ -228,17 +224,9 @@
 }
 
 .notification-icon {
-  /* margin-left: 31rem; */
   margin-right: 10px;
   font-size: 20px;
-  /* position: absolute; */
 }
-/* .burger-btn{
-    border: 1px red solid;
-    width: 50px;
-    margin-left: 42rem;
-    position: absolute;
-  } */
 
 .burger-btn {
   display: none;
@@ -251,7 +239,7 @@
   position: absolute;
   color: #1000f5;
 }
-/* Menu mobile */
+
 .nav-mobile {
   position: absolute;
   top: 60px;
@@ -367,7 +355,8 @@
   height: 0.8rem;
   padding-top: 5px;
 }
-/* Responsive : activer burger en mobile */
+
+
 @media (max-width: 768px) {
   .nav {
     display: none; 
@@ -375,37 +364,38 @@
   .burger-btn, .notification-icon, .badge {
     display: block;
   }
-footer{
-    max-width: 768px;
-    .footer-info{
-      gap: 1.5rem;
-    }
-    
-    #F-Adresse{
-      margin-left: 5rem;
-    }
+footer {
+  max-width: 768px;
+}
 
-    
-    #F-Telephone{
-      margin-left: 5rem;
-      width: 200px;
-      margin-right: 5rem;
-    }
+footer .footer-info {
+  gap: 1.5rem;
+}
 
-      #F-Facebook{
-      margin-left: 1.5rem;
-    }
+footer #F-Adresse {
+  margin-left: 5rem;
+}
 
-      #F-Email{
-      margin-left: 5rem;
-      width: 100px;
-      margin-right: 7rem;
-    }
-  }
+footer #F-Telephone {
+  margin-left: 5rem;
+  width: 200px;
+  margin-right: 5rem;
+}
+
+footer #F-Facebook {
+  margin-left: 1.5rem;
+}
+
+footer #F-Email {
+  margin-left: 5rem;
+  width: 100px;
+  margin-right: 7rem;
+}
+
 
   .Icone-mobile{
     display: block;
-    flex-direction: inline-block;
+    flex-direction: row;
   }
   
   .facture-icone-mobile{
@@ -413,26 +403,4 @@ footer{
   }
 }
 
-/* @media (max-width: 768px) {
-  .footer-info {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-item {
-    margin-bottom: 12px;
-  }
-
-  .footer-icon {
-    margin-right: 6px;
-    font-size: 18px;
-  }
-
-  .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-} */
 

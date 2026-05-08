@@ -1,7 +1,7 @@
 .supprimer-produit {
   max-width: 600px;
   margin: 2rem auto;
-  background: #f5f5dc; /* beige artisanal */
+  background: #f5f5dc;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -60,51 +60,8 @@ form input, form textarea {
   background-color: #999;
 }
 
-
-/* ✅ Conteneur principal */
 .container, .paiement-container, .stock-container {
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
 }
-
-/* ✅ Tables responsives */
-/* table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 0.6rem;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-} */
-
-/* ✅ Responsive tables */
-/* @media (max-width: 768px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  thead tr {
-    display: none; cacher l’en-tête sur mobile */
-  /* }
-
-  tr {
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-  }
-
-  td {
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    margin-right: 0.5rem;
-  }
-} */

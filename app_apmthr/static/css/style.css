@@ -8,7 +8,7 @@ body {
 }
 
 main {
-  flex: 1; /* prend tout l’espace disponible */
+  flex: 1;
 }
 
 footer {
@@ -17,8 +17,6 @@ footer {
   text-align: center;
 }
 
-
-/* Barre de navigation */
 nav {
     background: #2c3e50;
     padding: 10px 20px;
@@ -46,12 +44,11 @@ nav ul li a:hover {
     color: #1abc9c;
 }
 
-/* Contenu principal */
+
 main {
     padding: 20px;
 }
 
-/* Tableaux */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -70,7 +67,7 @@ table th {
     color: #fff;
 }
 
-/* Boutons */
+
 button, a.button {
     background: #1abc9c;
     color: #fff;

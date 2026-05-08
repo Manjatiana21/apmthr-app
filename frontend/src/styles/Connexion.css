@@ -87,14 +87,14 @@ h2 {
   color: #ff9800;
 }
 
-/* Animation fond */
+
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Animation bordure */
+
 @keyframes borderLoop {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }

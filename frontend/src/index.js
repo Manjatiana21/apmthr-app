@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { NotificationsProvider } from "./components/NotificationsContext";
 import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import "./styles/slick-theme.css";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
