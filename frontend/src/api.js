@@ -13,7 +13,7 @@ const api = axios.create({
 // 📌 Refresh Token
 // =======================
 export const refreshToken = (refresh) =>
-  api.post("/comptes/api/token/refresh/", { refresh });
+  api.post("/comptes/token/refresh/", { refresh });
 
 // =======================
 // 📌 Intercepteur Request
@@ -69,8 +69,8 @@ api.interceptors.response.use(
 // =======================
 // 📌 Authentification
 // =======================
-export const login = (data) => api.post("/api/comptes/login/", data);
-export const register = (data) => api.post("/api/comptes/register/", data);
+export const login = (data) => api.post("/comptes/login/", data);
+export const register = (data) => api.post("/comptes/register/", data);
 export const logout = () => {
   localStorage.removeItem("access_token");
   localStorage.removeItem("refresh_token");
@@ -80,24 +80,24 @@ export const logout = () => {
 
 // Liste des utilisateurs
 export const getUsers = async () => {
-  const res = await api.get("/api/comptes/utilisateurs/");
+  const res = await api.get("/comptes/utilisateurs/");
   return res.data;
 };
 
 export const reactivateUser = async (id) => {
-  const res = await api.post(`/api/comptes/utilisateurs/${id}/reactiver/`);
+  const res = await api.post(`/comptes/utilisateurs/${id}/reactiver/`);
   return res.data;
 };
 
 export const suspendUser = async (id, reason) => {
-  const res = await api.post(`/api/comptes/utilisateurs/${id}/suspendre/`, { raison: reason });
+  const res = await api.post(`/comptes/utilisateurs/${id}/suspendre/`, { raison: reason });
   return res.data;
 };
 
 // =======================
 // 📌 Utilisateur connecté
 // =======================
-export const getMe = () => api.get("/api/me/");
+export const getMe = () => api.get("/me/");
 
 
 // =======================
@@ -128,77 +128,77 @@ export const modifierMotdepasse = (old_password, new_password) =>
 // 📌 Produits (Catalogue)
 // =======================
 // Produits
-export const getProduits = () => api.get("/api/produits/?is_active=true");
-export const getProduitById = (id) => api.get(`/api/produits/${id}/`);
-export const getProduitsParType = (typeId) => api.get(`/api/produits/type/${typeId}/`);
+export const getProduits = () => api.get("/produits/?is_active=true");
+export const getProduitById = (id) => api.get(`/produits/${id}/`);
+export const getProduitsParType = (typeId) => api.get(`/produits/type/${typeId}/`);
 
-export const getProduitsArchives = () => api.get("/api/produits/?is_active=false");
-export const reactiverProduit = (id) => api.post(`/api/produits/${id}/reactiver/`);
+export const getProduitsArchives = () => api.get("/produits/?is_active=false");
+export const reactiverProduit = (id) => api.post(`/produits/${id}/reactiver/`);
 
 export const addProduit = (data) =>
-  api.post("/api/produits/", data, {
+  api.post("/produits/", data, {
     headers: { "Content-Type": "multipart/form-data" },
   });
 
 // ⚠️ Tu peux soit garder les manuelles :
 export const modifierProduit = (id, data) =>
-  api.patch(`/api/produits/${id}/modifier/`, data, {
+  api.patch(`/produits/${id}/modifier/`, data, {
     headers: { "Content-Type": "multipart/form-data" },
   });
 
-export const supprimerProduit = (id) => api.delete(`/api/produits/${id}/supprimer/`);
+export const supprimerProduit = (id) => api.delete(`/produits/${id}/supprimer/`);
 
 export const updateProduit = (id, data) =>
-  api.patch(`/api/produits/${id}/`, data, {
+  api.patch(`/produits/${id}/`, data, {
     headers: { "Content-Type": "multipart/form-data" },
   });
 
 
-export const deleteProduit = (id) => api.delete(`/api/produits/${id}/`);
+export const deleteProduit = (id) => api.delete(`/produits/${id}/`);
 
 // Types Produits
-export const getTypesProduits = () => api.get("/api/types-produits/");
+export const getTypesProduits = () => api.get("/types-produits/");
 
 // Fournisseurs
-export const getFournisseurs = () => api.get("/api/fournisseurs/");
+export const getFournisseurs = () => api.get("/fournisseurs/");
 
 // =======================
 // 📌 Commandes
 // =======================
 
 // --- Commandes côté admin ---
-export const getCommandesAdmin = () => api.get("/api/commandes/");
-export const validerCommande = (id) => api.post(`/api/commandes/${id}/valider/`);
-export const annulerCommande = (id) => api.post(`/api/commandes/${id}/annuler/`);
+export const getCommandesAdmin = () => api.get("/commandes/");
+export const validerCommande = (id) => api.post(`/commandes/${id}/valider/`);
+export const annulerCommande = (id) => api.post(`/commandes/${id}/annuler/`);
 
-export const getCommandesValideesAdmin = () => api.get("/api/commandes-validees-admin/");
-export const getCommandesAnnuleesAdmin = () => api.get("/api/commandes-annulees-admin/");
-export const getCommandeDetailAdmin = (id) => api.get(`/api/commandes/${id}/detail-admin/`);
+export const getCommandesValideesAdmin = () => api.get("/commandes-validees-admin/");
+export const getCommandesAnnuleesAdmin = () => api.get("/commandes-annulees-admin/");
+export const getCommandeDetailAdmin = (id) => api.get(`/commandes/${id}/detail-admin/`);
 export const deleteCommande = async (id) => {
-  const res = await api.delete(`/api/commandes/${id}/`);
+  const res = await api.delete(`/commandes/${id}/`);
   return res.data;
 };
 
 
 // --- Commandes côté client ---
-export const getCommandesClient = () => api.get("/api/commandes/client/");
-export const getCommandesAnnulees = () => api.get("/api/commandes/annulees/");
+export const getCommandesClient = () => api.get("/commandes/client/");
+export const getCommandesAnnulees = () => api.get("/commandes/annulees/");
 
 export const passerCommande = (data) =>
-  api.post(`/api/commandes/${data.produit}/passer/`, data, {
+  api.post(`/commandes/${data.produit}/passer/`, data, {
     headers: { "Content-Type": "application/json" },
   });
 
 // Passer une commande avec plusieurs produits
 export const passerCommandeMultiple = (produits) =>
-  api.post("api/commandes/passer-multiple/", { produits });
+  api.post("/commandes/passer-multiple/", { produits });
 
 export const annulerCommandeClient = (id) =>
-  api.post(`/api/commandes/${id}/annuler-client/`);
+  api.post(`/commandes/${id}/annuler-client/`);
 
 // --- Suppression en masse (admin) ---
 export const deleteCommandesSelection = (ids) =>
-  api.delete("/api/commandes/effacer-selection/", { data: { ids } });
+  api.delete("/commandes/effacer-selection/", { data: { ids } });
 
 // =======================
 // 📌 Panier
@@ -206,7 +206,7 @@ export const deleteCommandesSelection = (ids) =>
 
 // Consulter le panier du client (commande en attente)
 export const consulterPanier = async () => {
-  const res = await api.get("/api/commande/panier/consulter/");
+  const res = await api.get("/commande/panier/consulter/");
   return res.data;
 };
 
@@ -223,13 +223,13 @@ export const validerPanier = async (produits, adresseLivraison, modePaiementId) 
 
   console.log("Payload envoyé au backend:", payload); // ✅ debug pour vérifier
 
-  const res = await api.post("/api/commande/panier/ajouter/", payload);
+  const res = await api.post("/commande/panier/ajouter/", payload);
   return res.data;
 };
 
 // Vider le panier (optionnel)
 export const viderPanier = async () => {
-  const res = await api.post("/api/commande/panier/vider/");
+  const res = await api.post("/commande/panier/vider/");
   return res.data;
 };
 
@@ -237,65 +237,65 @@ export const viderPanier = async () => {
 // =======================
 // 📌 Paiements
 // =======================
-export const getPaiementsClient = () => api.get("/api/paiements/");
+export const getPaiementsClient = () => api.get("/paiements/");
 
 export const getPaiementsAdmin = async () => {
-  const res = await api.get("/api/gestion-paiements/");
+  const res = await api.get("/gestion-paiements/");
   return res.data;
 };
 
 export const validerPaiement = async (id) => {
-  const res = await api.post(`/api/paiements/${id}/valider/`);
+  const res = await api.post(`/paiements/${id}/valider/`);
   return res.data;
 };
 
 export const annulerPaiement = async (id) => {
-  const res = await api.post(`/api/paiements/${id}/annuler/`);
+  const res = await api.post(`/paiements/${id}/annuler/`);
   return res.data;
 };
 
 export const genererFacture = async (id) => {
-  const res = await api.post(`/api/comptes/paiements/${id}/generer-facture/`);
+  const res = await api.post(`/comptes/paiements/${id}/generer-facture/`);
   return res.data;
 };
 
 export const getPaiementDetail = async (id) => {
-  const res = await api.get(`/api/comptes/paiements/${id}/`);
+  const res = await api.get(`/comptes/paiements/${id}/`);
   return res.data;
 };
 
 export const envoyerFacture = async (factureId) => {
-  const res = await api.post(`/api/comptes/factures/${factureId}/envoyer/`);
+  const res = await api.post(`/comptes/factures/${factureId}/envoyer/`);
   return res.data;
 };
 
 // Récupérer les factures du client
 export const getFacturesRecues = async () => {
-  const res = await api.get("/api/comptes/factures/recues/");
+  const res = await api.get("/comptes/factures/recues/");
   return res.data;
 };
 
 // Télécharger une facture en PDF
 export const downloadFacturePDF = async (factureId) => {
-  const res = await api.get(`/api/comptes/factures/${factureId}/pdf/`, {
+  const res = await api.get(`/comptes/factures/${factureId}/pdf/`, {
     responseType: "blob",
   });
   return res.data;
 };
 
 export async function getFactureDetail(facture_id) {
-  const res = await api.get(`/api/comptes/factures/${facture_id}/`);
+  const res = await api.get(`/comptes/factures/${facture_id}/`);
   return res.data;
 }
 
 
-export const facturePaiement = (id) => api.get(`/api/paiements/${id}/facture/`);
-export const getModesPaiement = () => api.get("/api/modes-paiement/");
+export const facturePaiement = (id) => api.get(`/paiements/${id}/facture/`);
+export const getModesPaiement = () => api.get("/modes-paiement/");
 
 // ✅ Utiliser axios avec l'instance configurée
 export async function getAllFactures() {
   try {
-    const res = await api.get("/api/comptes/factures/");
+    const res = await api.get("/comptes/factures/");
     return res.data; // axios renvoie déjà les données dans res.data
   } catch (err) {
     throw new Error("Erreur API factures");
@@ -306,24 +306,24 @@ export async function getAllFactures() {
 // 📌 Livraisons
 // =======================
 
-export const getLivraisonsAdmin = () => api.get("/api/livraisons/");
-export const getLivraisonsClient = () => api.get("/api/livraisons/client/");
+export const getLivraisonsAdmin = () => api.get("/livraisons/");
+export const getLivraisonsClient = () => api.get("/livraisons/client/");
 export const updateLivraisonStatut = (livraisonId, statut) =>
-  api.patch(`/api/livraisons/${livraisonId}/update-statut/`, { statut });
+  api.patch(`/livraisons/${livraisonId}/update-statut/`, { statut });
 
-export const demarrerLivraison = (id) => api.post(`/api/livraisons/${id}/demarrer/`);
-export const terminerLivraison = (id) => api.post(`/api/livraisons/${id}/terminer/`);
+export const demarrerLivraison = (id) => api.post(`/livraisons/${id}/demarrer/`);
+export const terminerLivraison = (id) => api.post(`/livraisons/${id}/terminer/`);
 export const planifierLivraison = (commandeId) =>
-  api.post(`/api/livraisons/${commandeId}/planifier/`);
+  api.post(`/livraisons/${commandeId}/planifier/`);
 
 // =======================
 // 📌 Stocks
 // =======================
-export const getMouvementsStock = () => api.get("/api/stocks/");
+export const getMouvementsStock = () => api.get("/stocks/");
 
 
 
-export const getRapportMouvements = () => api.get("/api/stocks/rapport/");
+export const getRapportMouvements = () => api.get("/stocks/rapport/");
 
 
 // =======================
@@ -334,17 +334,17 @@ export const getRapportMouvements = () => api.get("/api/stocks/rapport/");
 // 🔔 Notifications Client
 // =======================
 export const getMesNotifications = async () => {
-  const res = await api.get("/api/comptes/mes-notifications/");
+  const res = await api.get("/comptes/mes-notifications/");
   return res.data;
 };
 
 export const marquerNotificationClientLue = async (id) => {
-  const res = await api.post(`/api/comptes/notifications/${id}/marquer-lue/`);
+  const res = await api.post(`/comptes/notifications/${id}/marquer-lue/`);
   return res.data;
 };
 
 export const marquerToutesNotificationsClientLues = async () => {
-  const res = await api.post("/api/comptes/notifications/marquer-tout-lu/");
+  const res = await api.post("/comptes/notifications/marquer-tout-lu/");
   return res.data;
 };
 
@@ -352,17 +352,17 @@ export const marquerToutesNotificationsClientLues = async () => {
 // 🔔 Notifications Admin
 // =======================
 export const getNotificationsAdmin = async () => {
-  const res = await api.get("/api/comptes/notifications/admin/");
+  const res = await api.get("/comptes/notifications/admin/");
   return res.data;
 };
 
 export const marquerNotificationAdminLue = async (id) => {
-  const res = await api.post(`/api/comptes/notifications/${id}/marquer-lue/`);
+  const res = await api.post(`/comptes/notifications/${id}/marquer-lue/`);
   return res.data;
 };
 
 export const marquerToutesNotificationsAdminLues = async () => {
-  const res = await api.post("/api/comptes/notifications/marquer-tout-lu/");
+  const res = await api.post("/comptes/notifications/marquer-tout-lu/");
   return res.data;
 };
 
@@ -372,12 +372,12 @@ export const marquerToutesNotificationsAdminLues = async () => {
 // =======================
 // 📌 Utilisateurs
 // =======================
-export const getUtilisateurs = () => api.get("/api/utilisateurs/");
+export const getUtilisateurs = () => api.get("/utilisateurs/");
 
 // =======================
 // 📌 Admin - Stats
 // =======================
-export const getAdminStats = () => api.get("/api/admin/stats/");
+export const getAdminStats = () => api.get("/admin/stats/");
 
 
 export default api;
