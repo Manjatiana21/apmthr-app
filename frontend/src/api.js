@@ -4,11 +4,10 @@ import axios from "axios";
 
 // ✅ Instance axios avec configuration de base
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000", // backend Django
-  headers: {
-    "Content-Type": "application/json",
-  },
+  baseURL: process.env.REACT_APP_API_URL,
+  headers: { "Content-Type": "application/json" },
 });
+
 
 // =======================
 // 📌 Refresh Token
