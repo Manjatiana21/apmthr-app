@@ -1,4 +1,3 @@
-// frontend/src/components/Inscription.js
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { register } from "../api"; 
@@ -9,7 +8,7 @@ function Inscription() {
     username: "",
     email: "",
     adresse: "",
-    telephone:"",
+    telephone: "",
     password1: "",
     password2: "",
   });
@@ -27,19 +26,36 @@ function Inscription() {
     setLoading(true);
     setMessage("");
 
+    // 🔎 Vérification côté frontend
+    if (formData.password1 !== formData.password2) {
+      setMessage("❌ Les mots de passe ne correspondent pas");
+      setLoading(false);
+      return;
+    }
+
     try {
-      const res = await register(formData); 
+      // ✅ Payload JSON attendu par ton serializer
+      const payload = {
+        username: formData.username,
+        email: formData.email,
+        adresse: formData.adresse,
+        telephone: formData.telephone,
+        password1: formData.password1,
+        password2: formData.password2,
+      };
+
+      const res = await register(payload);
 
       if (res.status === 201) {
         setMessage("✅ Inscription réussie !");
-        //  Redirection vers la page de connexion
         setTimeout(() => navigate("/login"), 1500);
       } else {
         setMessage("❌ Erreur lors de l'inscription");
       }
     } catch (err) {
       console.error("Erreur inscription:", err.response?.data || err);
-      setMessage("❌ Erreur lors de l'inscription");
+      // ✅ Affichage des erreurs backend
+      setMessage("❌ " + JSON.stringify(err.response?.data));
     } finally {
       setLoading(false);
     }
@@ -49,7 +65,7 @@ function Inscription() {
     <div className="inscription-container">
       <div className="inscription-box">
         <h2>Créer un compte</h2>
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit}>
           <div className="Form-box">
             <div className="form-group">
               <input
@@ -74,18 +90,15 @@ function Inscription() {
             </div>
           </div>
 
-
           <div className="Form-box">
             <div className="form-group">
-              <div className="MDP" >
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="form-group">
@@ -99,32 +112,27 @@ function Inscription() {
             </div>
           </div>
 
-
           <div className="Form-box">
             <div className="form-group">
-              <div className="MDP" >
-                <input
-                  type="password"
-                  name="password1"
-                  placeholder="Mot de passe"
-                  value={formData.password1}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+              <input
+                type="password"
+                name="password1"
+                placeholder="Mot de passe"
+                value={formData.password1}
+                onChange={handleChange}
+                required
+              />
             </div>
 
             <div className="form-group">
-              <div className="confirmation_MDP" >
-                <input
-                  type="password"
-                  name="password2"
-                  placeholder="Confirmer le mot de passe"
-                  value={formData.password2}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+              <input
+                type="password"
+                name="password2"
+                placeholder="Confirmer le mot de passe"
+                value={formData.password2}
+                onChange={handleChange}
+                required
+              />
             </div>
           </div>
 
@@ -135,7 +143,6 @@ function Inscription() {
 
         {message && <p className="message">{message}</p>}
 
-        {/* Option Se connecter */}
         <p className="connexion-text">
           Déjà un compte ? <Link to="/login">Se connecter</Link>
         </p>
