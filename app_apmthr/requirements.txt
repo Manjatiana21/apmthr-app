@@ -1,0 +1,11 @@
+Django==4.2.11
+gunicorn
+psycopg2-binary
+dj-database-url
+whitenoise
+djangorestframework
+django-cors-headers
+django-filter
+djangorestframework-simplejwt
+xhtml2pdf
+reportlab

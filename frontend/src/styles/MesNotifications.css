@@ -1,0 +1,80 @@
+.mes-notifications {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #f5f5dc;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #0000001a;
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.notif-counter {
+  margin-bottom: 1rem;
+}
+
+.badge-danger {
+  background-color: #d32f2f;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.notif-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notif-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eeeeee;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  border-radius: 6px;
+}
+
+.notif-warning {
+  background-color: #fff3cd;
+}
+
+
+.btn-mark-read:hover {
+  background-color: #ff9800;
+}
+
+.actions {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.btn-mark-all {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-mark-all:hover {
+  background-color: #ff9800;
+}
+
+
+@media (max-width: 768px){
+  .notif-counter{
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+  }
+
+  #Boutton-Mlus{
+    margin-left: 25rem;
+  }
+}

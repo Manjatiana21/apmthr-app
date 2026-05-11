@@ -1,0 +1,23 @@
+
+.page-commande {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.col-gauche {
+  flex: 1;
+}
+
+.col-droite {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.info {
+  color: #666;
+  font-style: italic;
+}

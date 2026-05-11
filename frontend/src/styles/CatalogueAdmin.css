@@ -1,0 +1,119 @@
+.catalogue-admin {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.form-section, .table-section {
+  flex: 1;
+  background: #F5F5DC; 
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2E7D32; 
+  margin-bottom: 1rem;
+}
+
+form input, form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  background-color: #2E7D32;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #FF9800; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #2E7D32;
+  color: white;
+}
+
+.search-bar-catalogue button {
+  background: #e49e09;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  width: 90px;
+}
+
+.modif-btn{
+  border: 1px solid #ddd;
+  width: 85px;
+  border-radius:5px;
+  height: 35px;
+}
+
+.miniature {
+  width: 60px;   
+  height: 60px;  
+  object-fit: cover; 
+  border-radius: 4px;
+}
+
+.btn-edit{
+  width: 85px;
+  height: 35px;
+  margin-bottom: 0.6rem;
+}
+
+.btn-delete{
+  background: rgb(216, 0, 0);
+  color: white;
+  font-size: 0.9rem ;
+  font-weight: bold;
+}
+
+.search-bar-catalogue{
+  width: 40rem;
+  margin-left: 35rem;
+  margin-bottom: 1rem;
+
+}
+
+.daterecherche{
+  margin-left: 1rem;
+  width: 150px;
+}
+.inputrecherche{
+  width: 250px;
+}
+
+
+.form-section-ajout, .table-section-ajout {
+  flex: 1;
+  background: #F5F5DC;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
