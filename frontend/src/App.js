@@ -1,7 +1,7 @@
 // frontend/src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import { BrowserRouter } from "react-router-dom";
 // Import de tes composants
 import Connexion from "./components/Connexion";
 import Inscription from "./components/Inscription";
@@ -48,6 +48,7 @@ import Panier from "./components/Panier";
 
 function App() {
   return (
+    <BrowserRouter>
     <Router>
       <Routes>
         <Route path="/" element={<Connexion />} />
@@ -333,7 +334,7 @@ function App() {
         />
 
         <Route
-          path="/"
+          path="/GestionCommandes"
           element={
             <PrivateRoute>
               
@@ -453,6 +454,7 @@ function App() {
 
       </Routes>
     </Router>
+    </BrowserRouter>
   );
 }
 
