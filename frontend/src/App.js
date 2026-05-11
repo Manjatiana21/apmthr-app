@@ -1,7 +1,7 @@
 // frontend/src/App.js
 import React from "react";
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Import de tes composants
 import Connexion from "./components/Connexion";
 import Inscription from "./components/Inscription";
@@ -49,7 +49,6 @@ import Panier from "./components/Panier";
 function App() {
   return (
     <BrowserRouter>
-    <Router>
       <Routes>
         <Route path="/" element={<Connexion />} />
         <Route path="/login" element={<Connexion />} />
@@ -453,7 +452,6 @@ function App() {
         />
 
       </Routes>
-    </Router>
     </BrowserRouter>
   );
 }
