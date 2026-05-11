@@ -55,9 +55,15 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+<<<<<<< HEAD
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+=======
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+>>>>>>> 19ae220e8249c7e92bb83b48030e38fd7d382c8a
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -68,12 +74,18 @@ MIDDLEWARE = [
 #CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
+<<<<<<< HEAD
     "http://localhost:3000", 
     "https://apmthr-application.onrender.com", 
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+=======
+    "http://localhost:3000",   # ✅ ton front React
+]
+
+>>>>>>> 19ae220e8249c7e92bb83b48030e38fd7d382c8a
 ROOT_URLCONF = 'app_apmthr.urls'
 
 TEMPLATES = [
