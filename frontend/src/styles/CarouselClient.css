@@ -7,7 +7,7 @@
 }
 
 .carousel-slide {
-  padding: 10px;
+  padding: 5px;
   border: white solid 11px;
 }
 
@@ -36,5 +36,37 @@
     height: 300px;
   }
 
+}
+
+@media (max-width: 480px) {
+  .carousel-client{
+    /* border: 1px red solid; */
+    height: 15rem;
+  }
+
+  .carousel-image{
+    height: 210px;
+  }
+  
+}
+
+@media (max-width: 360px) {
+  .carousel-client{
+    height: 15rem;
+  }
+
+  .carousel-image{
+    height: 150px;
+  }
+}
+
+@media (max-width: 414px) {
+  .carousel-client{
+    height: 15rem;
+  }
+
+  .carousel-image{
+    height: 150px;
+  }
 }
 

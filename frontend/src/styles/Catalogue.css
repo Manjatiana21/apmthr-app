@@ -116,6 +116,15 @@ h2 {
   font-size: 1rem;
 }
 
+@media (max-width: 1024px) {
+  .grid-produits{
+    /* border: 1px red solid; */
+    max-width: 900px;
+    margin-left: 2.5rem;
+  }
+  
+}
+
 
 @media (max-width:992px) {
 
@@ -187,4 +196,383 @@ h2 {
     margin-top: 0;
   }
 
+}
+
+@media (max-width: 640px){
+  .grid-produits{
+    width: 560px;
+    margin-left: 1.5rem;
+  }
+
+  .carte-produit{
+    width: 490px;
+    margin-left: 0;
+    /* border: 1px red solid; */
+  }
+
+  .description{
+    /* border: 1px red solid; */
+    margin-left: 8rem;
+    height: auto;
+  }
+
+  .type, .fournisseur{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .carte-produit .produit-image{
+    /* border: 1px red solid; */
+    width: 350px;
+    margin-bottom: 0;
+  }
+
+  .Boutton_commande{
+    margin-top: 1rem;
+    height: 115px;
+    width: 100px;
+    margin-left: 25rem;
+  }
+
+  #BTN-COMMANDEPASSER{
+    /* border: 1px red solid; */
+    font-size: 0.7rem;
+  }  
+
+  .numero-admin label{
+    font-size: 0.8rem;
+    width: 150px;
+  }
+
+  .numero-admin input{
+    width: 50px;
+    margin-left: 5rem;
+  }
+}
+
+@media (max-width: 600px){
+  .grid-produits{
+    width: 560px;
+    margin-left: 0;
+  }
+
+  .carte-produit{
+    width: 490px;
+    margin-left: 0;
+    /* border: 1px red solid; */
+  }
+
+  .description{
+    /* border: 1px red solid; */
+    margin-left: 8rem;
+    height: auto;
+  }
+
+  .type, .fournisseur{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .carte-produit .produit-image{
+    /* border: 1px red solid; */
+    width: 350px;
+    margin-bottom: 0;
+  }
+
+  .Boutton_commande{
+    margin-top: 1rem;
+    height: 115px;
+    width: 100px;
+    margin-left: 25rem;
+  }
+
+  #BTN-COMMANDEPASSER{
+    /* border: 1px red solid; */
+    font-size: 0.7rem;
+  }  
+
+  .numero-admin label{
+    font-size: 0.8rem;
+    width: 150px;
+  }
+
+  .numero-admin input{
+    width: 50px;
+    margin-left: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carte-produit{
+    width: 380px;
+    margin-left: 0;
+    /* margin-right: 5rem; */
+    /* border: 1px red solid; */
+  }
+
+  .type, .fournisseur{
+    margin-left: 0rem;
+    font-size: 0.9rem;
+  }
+
+  .type{
+    margin-top: 7.5rem;
+  }
+
+  .fournisseur{
+    margin-top: 8.9rem;
+  }
+
+  .description{
+    /* border: 1px red solid; */
+    width: 260px;
+    padding-left: 0;
+    margin-left: 8rem;
+    /* height: 90px; */
+  }
+
+  .Boutton_commande{
+    /* border: 1px red solid; */
+    margin-left: 10rem;
+    margin-top: 1.3rem;
+    height: 10px;
+    width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-panier{
+    /* border: 1px red solid; */
+    font-size: 0.5rem;
+    width: 110px;
+    height: 30px;
+  }
+
+  #BTN-COMMANDEPASSER{
+    /* border: 1px red solid; */
+    font-size: 0.5rem;
+    margin-left: 7.5rem;
+  }
+
+  .btn-commande{
+    /* border: 3px red solid; */
+    position: absolute;
+    margin-top: 0;
+    height: 7px;
+  }
+
+  .carte-produit1 h3{
+    margin-bottom: 0;
+  }
+  .P-Prix{
+    /* border: 1px red solid; */
+    margin-top: 0.5rem;
+  }
+
+  
+}
+
+@media (max-width: 414px){
+   .grid-produits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* border: 1px red solid; */
+    margin-left: 0;
+    margin-right: 5rem;
+    row-gap: 5rem;
+  }
+
+  .carte-produit {
+    width: 55%;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 0;
+    height: 100%;
+
+  }
+
+
+  .P-Prix{
+    /* border: 1px red solid; */
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  .prix{
+    padding: 0;
+    padding-top: 0.5rem;
+  }
+
+  .type, .fournisseur{
+    margin-left: 0;
+    font-size: 0.7rem;
+  }
+
+  .type{
+    margin-top: 8rem
+  }
+
+   .fournisseur{
+    margin-top: 10rem
+  }
+  .description{
+    /* border: 1px red solid; */
+    margin-left: 0rem;
+    margin-top: 3.5rem;
+    width: auto;
+    height: auto;
+    font-size: 0.7rem;
+  }
+
+   .Boutton_commande{
+    /* border: 1px red solid; */
+    margin-left: 6rem;
+    margin-top: 5.5rem;
+    gap: 0;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    
+  }
+
+  .btn-panier{
+    /* border: 1px red solid; */
+    font-size: 0.5rem;
+    width: 110px;
+    height: 30px;
+  }
+
+  #BTN-COMMANDEPASSER{
+    /* border: 1px red solid; */
+    font-size: 0.5rem;
+    margin-left: 7.5rem;
+    padding-top: 0.5rem;
+    /* width: 10px; */
+    height: 10px;
+  }
+
+
+  .carte-produit h3{
+    /* border: 1px red solid; */
+    width: 150px;
+    margin-top: 0.5rem;
+    margin-left: 0rem;
+  }
+
+  
+  .carte-produit img{
+  height: 200px;
+  width: 200px;
+  margin-left: 0;
+  padding-left: 0;
+  /* border: 1px red solid; */
+
+}
+}
+
+@media (max-width: 360px){
+  .catalogue{
+    max-width: 360px;
+  }
+   .grid-produits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* border: 1px red solid; */
+    margin-left: 0;
+    margin-right: 5rem;
+    row-gap: 5rem;
+  }
+
+  .carte-produit {
+    width: 45%;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 0;
+    height: 100%;
+
+  }
+
+
+  .P-Prix{
+    /* border: 1px red solid; */
+    position: absolute;
+    margin-left: 9rem;
+    margin-top: 0;
+    margin-bottom: 5rem;
+    width: 90px;
+  }
+
+  .prix{
+    padding: 0;
+    padding-top: 0.5rem;
+  }
+
+  .type, .fournisseur{
+    margin-left: 0;
+    font-size: 0.7rem;
+  }
+
+  .type{
+    margin-top: 8rem
+  }
+
+   .fournisseur{
+    margin-top: 10rem
+  }
+  .description{
+    /* border: 1px red solid; */
+    margin-left: 0rem;
+    margin-top: 3.5rem;
+    width: auto;
+    height: auto;
+    font-size: 0.7rem;
+  }
+
+
+  .carte-produit h3{
+    /* border: 1px red solid; */
+    width: 150px;
+    margin-top: 0.5rem;
+    margin-left: 0rem;
+  }
+
+    .Boutton_commande{
+    /* border: 1px red solid; */
+    margin-left: 5.5rem;
+    margin-top: 6rem;
+    max-width: 10px;
+    gap: 0;
+    /* height: 30px; */
+    /* width: 100px; */
+    /* position: absolute; */
+  }
+
+  .btn-panier{
+    /* border: 1px red solid; */
+    font-size: 0.5rem;
+    width: 80px;
+    height: 35px;
+    margin-right: 0;
+  }
+
+  #BTN-COMMANDEPASSER{
+    /* border: 1px red solid; */
+    position: absolute;
+    margin-left: 5.3rem;
+    font-size: 0.5rem;
+    padding-top: 0.5rem;
+    height: 15px;
+  }
+
+  .carte-produit img{
+  height: 200px;
+  width: 200px;
+  margin-left: 0;
+  padding-left: 0;
+  /* border: 1px red solid; */
+
+}
 }

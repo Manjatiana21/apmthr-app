@@ -64,3 +64,160 @@ h2 {
 .btn-link:hover {
   color: #ff9800;
 }
+
+@media (max-width: 640px) {
+  #statut-commande{
+    margin-left: 22rem;
+    width: 100px;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+  #btn-secondary-commande{
+    display: none;
+  }
+  
+  #statut-commande{
+    margin-left: 20rem;
+    width: 95px;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 480px){
+  .actions{
+    /* border: 1px red solid; */
+    width: 350px;
+    margin-left: 0;
+  }
+
+   #Voir-mes-commandes-btn{
+    /* border: 1px red solid; */
+    font-size: 0.8rem;
+    height: 20px;
+    /* margin-right: 2rem; */
+  }
+
+  #Livraison-btn{
+    /* border: 1px red solid; */
+    font-size: 0.8rem;
+    height: 20px;
+    margin-left: 13.5rem;
+    position: absolute;
+  }
+
+  #statut-commande{
+    width: 62px;
+    font-size: 0.6rem;
+    text-align: center;
+    margin-left: 14.5rem;
+  }
+
+  td{
+    font-size: 0.9rem;
+  }
+
+
+}
+
+@media (max-width: 414px){
+  .actions{
+    /* border: 1px red solid; */
+    width: 280px;
+    margin-left: 0;
+  }
+
+  #btn-secondary-commande{
+    display: none;
+  }
+
+  #Voir-mes-commandes-btn{
+    /* border: 1px red solid; */
+    font-size: 0.6rem;
+    height: 20px;
+    /* margin-right: 2rem; */
+  }
+
+  #Livraison-btn{
+    /* border: 1px red solid; */
+    font-size: 0.6rem;
+    height: 20px;
+    margin-left: 10.5rem;
+    position: absolute;
+  }
+
+  .mes-commandes h2{
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+   #statut-commande{
+    width: 62px;
+    font-size: 0.6rem;
+    text-align: center;
+    margin-left: 10.5rem;
+  }
+
+
+  .btn-link{
+    font-size: 0.1rem;
+  }
+
+  .table-commandes{
+    font-size: 0.8rem;
+  }
+  
+  #Voir{
+    /* border: 1px red solid; */
+    font-size: 0.99rem;
+  }
+}
+
+@media (max-width: 360px){
+  .actions{
+    /* border: 1px red solid; */
+    width: 280px;
+    margin-left: 0;
+  }
+
+  #btn-secondary-commande{
+    display: none;
+  }
+
+  #Voir-mes-commandes-btn{
+    /* border: 1px red solid; */
+    font-size: 0.6rem;
+    height: 20px;
+    /* margin-right: 2rem; */
+  }
+
+  #statut-commande{
+    width: 60px;
+    font-size: 0.6rem;
+    text-align: center;
+    margin-left: 7rem;
+  }
+
+  #Livraison-btn{
+    /* border: 1px red solid; */
+    font-size: 0.6rem;
+    height: 20px;
+    margin-left: 10.5rem;
+    position: absolute;
+  }
+
+  .mes-commandes h2{
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  
+
+  .btn-link{
+    font-size: 0.1rem;
+  }
+
+}

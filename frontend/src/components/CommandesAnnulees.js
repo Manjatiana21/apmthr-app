@@ -83,10 +83,10 @@ function CommandesAnnulees() {
         <div className="header-CA">
           <h2>Commandes annulées</h2>
           <div className="actions">
-            <button className="btn-select" onClick={selectAll}>
+            <button className="btn-select" id="btn-select" onClick={selectAll}>
               {selection.length === commandes.length ? "Désélectionner tout" : "Sélectionner tout"}
             </button>
-            <button className="btn-effacer" onClick={effacerSelection}>
+            <button className="btn-effacer" id="btnS-effacer" onClick={effacerSelection}>
               🗑️ Effacer sélection
             </button>
           </div>
@@ -121,7 +121,7 @@ function CommandesAnnulees() {
                       <td data-label="Date">{formatDate(commande.date_commande)}</td>
                       <td data-label="Total">{commande.total} Ar</td>
                       <td>
-                        <span className="badge badge-annulee">{commande.statut}</span>
+                          <span className="badge badge-annulee" id="statut-commande-annulee">{commande.statut}</span>
                       </td>
                     </tr>
                   ))
@@ -139,7 +139,7 @@ function CommandesAnnulees() {
           </tbody>
         </table>
 
-        <Link to="/client-commandes" className="btn btn-outline-danger">Retour à mes commandes</Link>
+        <Link to="/client-commandes" className="btn btn-outline-danger" id="retour-mescommandes">Retour à mes commandes</Link>
       </div>
 
       {/* ✅ Message modal */}

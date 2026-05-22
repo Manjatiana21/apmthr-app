@@ -189,6 +189,7 @@ export const passerCommande = (data) =>
     headers: { "Content-Type": "application/json" },
   });
 
+  
 // Passer une commande avec plusieurs produits
 export const passerCommandeMultiple = (produits) =>
   api.post("/commandes/passer-multiple/", { produits });

@@ -112,3 +112,58 @@ h2 {
   background: #ccc;
   cursor: not-allowed;
 }
+
+@media (max-width: 640px) {
+  #Statut_livraison_btn{
+    margin-left: 21rem;
+    width: 120px;
+  }
+}
+@media (max-width: 600px) {
+  #Statut_livraison_btn{
+    margin-left: 19rem;
+    width: 120px;
+  }
+}
+
+@media (max-width: 414px){
+  .table-livraison{
+    font-size: 0.8rem;
+  }
+
+  #Statut_livraison_btn{
+    margin-left: 10rem;
+    height: 15px;
+    font-size: 0.6rem;
+    width: 75px;
+  }
+
+  .filters label, select option{
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (max-width: 360px){
+  .table-livraison{
+    font-size: 0.6rem;
+  }
+
+  .filters label, select option{
+    font-size: 0.8rem;
+  }
+  
+  #Statut_livraison_btn{
+    margin-left: 7rem;
+    height: 10px;
+    font-size: 0.6rem;
+    width: 65px;
+  }
+
+  #Precedent, #Suivant{
+    /* border: 1px red solid; */
+    font-size: 0.7rem;
+    height: 35px;
+  }
+}
+

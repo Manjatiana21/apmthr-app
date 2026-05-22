@@ -26,7 +26,7 @@ function ModifierMotDePasse() {
   return (
     <div className="modifier-mdp-container">
       <h2>Changer le mot de passe</h2>
-      <form onSubmit={handleSubmit} className="Form-input">
+      <form onSubmit={handleSubmit} className="Form-input-MDP">
         <label>Ancien mot de passe :</label>
         <input
           type="password"
@@ -44,9 +44,11 @@ function ModifierMotDePasse() {
           onChange={(e) => setNewPassword(e.target.value)}
           required
         />
+        <div id="btn-modification-MDP">
         <button type="submit" className="Valide-btn">Valider</button>
         <button type="submit" className="annuler-btn">
         <Link to="/modifier-profil" className="btn btn-outline-danger" id="retour-btn">Annuler</Link></button>
+        </div>
       </form>
       {message && <p className="feedback">{message}</p>}
     </div>

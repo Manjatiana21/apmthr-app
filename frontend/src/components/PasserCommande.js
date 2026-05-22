@@ -88,7 +88,7 @@ function PasserCommande({ onCommandeSuccess }) {
       <p>
         Produit choisi : <strong>{produit.designation}</strong> - {produit.prix} Ar
       </p>
-      {produit.description && <p className="description">{produit.description}</p>}
+      {produit.description && <p className="description1">{produit.description}</p>}
 
       <form onSubmit={handleSubmit}>
         <label>Quantité : 

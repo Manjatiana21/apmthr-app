@@ -12,12 +12,21 @@
   padding: 1rem 2rem;
   background: linear-gradient(120deg, #e49e09, #4ee429);
   color: white;
+  flex-direction: row;
 }
 
 .nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   list-style: none;
+}
+
+#nav-layout{
+  /* border: 1px red solid; */
+  margin-left: 10rem;
+  position: absolute;
+  width: auto;
+  margin-top: 2rem;
 }
 
 .nav a {
@@ -30,12 +39,6 @@
 .nav a:hover {
   color: #ffe082;
 }
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 
 .auth .btn-login,
 .auth .btn-logout {
@@ -80,6 +83,9 @@
   font-size: 22px;
   display: flex;
   align-items: center;
+  /* border: 1px red solid; */
+  margin-left: 4rem;
+  margin-top: 0;
 }
 
 
@@ -189,6 +195,12 @@
   margin-left: 5rem;
   column-gap: 3rem;
 
+}
+
+.header .header-left .logo{
+  /* border: 1px red solid; */
+  margin-right: 10rem;
+  /* position: absolute; */
 }
 
 #li{
@@ -357,6 +369,66 @@
 }
 
 
+
+@media (max-width: 1024px){
+  #nav-layout{
+  /* border: 1px red solid; */
+  margin-left: 6rem;
+  position: absolute;
+  width: 900Px;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+  .nav ul {
+  gap: 1rem;
+}
+
+.profil-dropdown{
+  margin-top: 0;
+}
+}
+
+@media (max-width: 992px) {
+   #nav-layout{
+  /* border: 1px red solid; */
+  margin-left: 6rem;
+  position: absolute;
+  width: 900Px;
+  margin-top: 0rem;
+  font-size: 0.89rem;
+}
+
+  .nav ul {
+  gap: 1rem;
+}
+
+.profil-dropdown{
+  margin-top: 0;
+  margin-left: 43rem;
+  position: absolute;
+  margin-right: 2rem;
+}
+  
+}
+
+@media (max-width: 940px) {
+  .profil-dropdown{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 870px) {
+  .profil-dropdown{
+    display: none;
+  }
+
+  #nav-layout{
+    width: 700px;
+  }
+  
+}
 @media (max-width: 768px) {
   .nav {
     display: none; 
@@ -396,11 +468,661 @@ footer #F-Email {
   .Icone-mobile{
     display: block;
     flex-direction: row;
+    margin-left: 10rem;
+    /* border: 1px red solid; */
+
+  }
+
+  .Notif-facture{
+    /* border: 1px red solid; */
+    margin-left: 28rem;
+    /* margin-right: 2rem; */
+    position: absolute;
   }
   
   .facture-icone-mobile{
-    display: block
+    display: block;
+
   }
 }
 
+@media (max-width: 640px){
+  footer .footer-info {
+    gap: 1.5rem;
+  }
+
+  footer .footer-info {
+    margin-left: 1rem;
+    /* border: 1px red solid; */
+  }
+
+  footer #F-Telephone {
+    margin-left: 10rem;
+    width: 200px;
+    margin-right: 5rem;
+  }
+
+  footer #F-Facebook {
+    margin-left: 5rem;
+  }
+
+  footer #F-Email {
+    margin-left: 13rem;
+    width: 100px;
+    margin-right: 7rem;
+  }
+
+    .Icone-mobile{
+      /* border: 1px solid red; */
+      display: block;
+      margin-left: 16rem;
+      width: 125px;
+      /* margin-top: 1.5rem; */
+    }
+
+    .Icone-flex-mobile{
+      gap: 0;
+      /* border: 1px solid red; */
+      row-gap: 2rem;
+      justify-content: right;
+    }
+
+    .Acceuil-mobile{
+      margin-right: 12rem;
+      position: absolute;
+    }
+
+    .panier-icon-mobile{
+      /* border: 1px red solid; */
+      position: absolute;
+      margin-right: 6rem;
+    }  
+    .badge-2{
+      position: absolute;
+    }
+
+    .icone-catalogue{
+      display: block;
+    }
+
+    .burger-btn, .notification-icon, .badge {
+      display: block;
+    }
+
+    .burger-btn{
+      margin-left: 32.5rem;
+    }
+
+    /* .logo{
+      height: 10px;
+      padding-left: 0;
+      justify-content: left;
+      position: absolute;
+      margin-left: 0;
+      margin-right: 70%;
+      margin-bottom: 10%;
+    } */
+
+    .header-left img{
+      object-fit: contain;
+      margin-left: 0;
+      position: relative;
+      margin-right: 10%;
+    }
+
+    .header-left{
+      margin-left: 0;
+      padding-left: 0;
+      margin-right: 3rem;
+      position: relative;
+      padding: 0;
+    }
+
+    .header{
+      height: 40px;
+    }
+
+    .nav{
+      display: none;
+    }
+
+    .facture-icone-mobile{
+      padding-top: 0;
+      margin-top: 0;
+      display: none;
+    }
+
+    .Notif-facture{
+      margin-left: 27rem;
+      /* margin-right: 5.8rem; */
+      width: 50px;
+      margin-top: 1rem;
+      /* border: 1px red solid; */
+      height: 40px;
+    }
+
+    .notification-icon{
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    .nav-mobile{
+      /* border: 1px red solid; */
+      width: 350px;
+      margin-right: 2rem;
+    }
+
+    #Facture-badge{
+      /* border: 1px green solid; */
+      margin-left: 10rem;
+    }
+
+    .badge{
+      font-size: 0.5rem;
+      position: absolute;
+    }
+
+    .panier-icon-mobile{
+      display: block;
+    }
+
+
+}
+
+
+@media (max-width: 600px){
+  footer .footer-info {
+    gap: 1.5rem;
+  }
+
+  footer #F-Adresse {
+    margin-left: 10rem;
+  }
+
+  footer #F-Telephone {
+    margin-left: 10rem;
+    width: 200px;
+    margin-right: 5rem;
+  }
+
+  footer #F-Facebook {
+    margin-left: 5rem;
+  }
+
+  footer #F-Email {
+    margin-left: 13rem;
+    width: 100px;
+    margin-right: 7rem;
+  }
+
+    .Icone-mobile{
+      /* border: 1px solid red; */
+      display: block;
+      margin-left: 16rem;
+      width: 125px;
+      /* margin-top: 1.5rem; */
+    }
+
+    .Icone-flex-mobile{
+      gap: 0;
+      /* border: 1px solid red; */
+      row-gap: 2rem;
+      justify-content: right;
+    }
+
+    .Acceuil-mobile{
+      margin-right: 12rem;
+      position: absolute;
+    }
+
+    .panier-icon-mobile{
+      /* border: 1px red solid; */
+      position: absolute;
+      margin-right: 6rem;
+    }  
+    .badge-2{
+      position: absolute;
+    }
+
+    .icone-catalogue{
+      display: block;
+    }
+
+    .burger-btn, .notification-icon, .badge {
+      display: block;
+    }
+
+    .burger-btn{
+      margin-left: 31.5rem;
+    }
+
+    /* .logo{
+      height: 10px;
+      padding-left: 0;
+      justify-content: left;
+      position: absolute;
+      margin-left: 0;
+      margin-right: 70%;
+      margin-bottom: 10%;
+    } */
+
+    .header-left img{
+      object-fit: contain;
+      margin-left: 0;
+      position: relative;
+      margin-right: 10%;
+    }
+
+    .header-left{
+      margin-left: 0;
+      padding-left: 0;
+      margin-right: 3rem;
+      position: relative;
+      padding: 0;
+    }
+
+    .header{
+      height: 40px;
+    }
+
+    .nav{
+      display: none;
+    }
+
+    .facture-icone-mobile{
+      padding-top: 0;
+      margin-top: 0;
+      display: none;
+    }
+
+    .Notif-facture{
+      /* margin-right: 4rem; */
+      margin-left: 26.5rem;
+      width: 50px;
+      margin-top: 1rem;
+      /* border: 1px red solid; */
+      height: 40px;
+    }
+
+    .notification-icon{
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .nav-mobile{
+      /* border: 1px red solid; */
+      width: 350px;
+      margin-right: 2rem;
+    }
+
+    #Facture-badge{
+      /* border: 1px green solid; */
+      margin-left: 10rem;
+    }
+
+    .badge{
+      font-size: 0.5rem;
+      position: absolute;
+    }
+
+    .panier-icon-mobile{
+      display: block;
+    }
+
+    .header-left #LOGO{
+    /* border: 1px red solid; */
+    width: 50px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  footer .footer-info {
+    gap: 1.5rem;
+  }
+
+  footer #F-Adresse {
+    margin-left: 7rem;
+  }
+
+  footer #F-Telephone {
+    margin-left: 6.5rem;
+    width: 200px;
+    margin-right: 5rem;
+  }
+
+  footer #F-Facebook {
+    margin-left: 1.2rem;
+  }
+
+  footer #F-Email {
+    margin-left: 9.2rem;
+    width: 100px;
+    margin-right: 7rem;
+  }
+
+  .Icone-mobile{
+    /* border: 1px solid red; */
+    display: block;
+    margin-left: 8rem;
+    width: 165px;
+    margin-bottom: 1.5rem;
+    height: 35px;
+  }
+
+  .Acceuil-mobile{
+    margin-right: 8.5rem;
+    position: absolute;
+  }
+
+  .panier-icon-mobile{
+    margin-right: 4rem;
+  }
+
+  .badge-2{
+    position: absolute;
+  }
+
+  .icone-catalogue{
+    display: none;
+  }
+
+  .burger-btn, .notification-icon, .badge {
+    display: block;
+  }
+
+  .burger-btn{
+    margin-left: 23.5rem;
+  }
+
+  /* .logo{
+    height: 10px;
+    padding-left: 0;
+    justify-content: left;
+    position: absolute;
+    margin-left: 0;
+    margin-right: 80%;
+    margin-bottom: 10%;
+  } */
+
+  .header-left img{
+    object-fit: contain;
+    margin-left: 0;
+    position: relative;
+    margin-right: 10%;
+  }
+
+  .header-left{
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 3rem;
+    position: relative;
+    padding: 0;
+  }
+
+  .header{
+    height: 40px;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .facture-icone-mobile{
+    padding-top: 0;
+    margin-top: 0;
+    display: none;
+  }
+
+  .Notif-facture{
+    margin-left: 17rem;
+    width: 90px;
+    margin-top: 1rem;
+    /* border: 1px red solid; */
+    height: 40px;
+  }
+
+  .notification-icon{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .nav-mobile{
+    /* border: 1px red solid; */
+    width: 290px;
+    margin-right: 0;
+  }
+
+  #Facture-badge{
+    /* border: 1px green solid; */
+    margin-left: 10rem;
+  }
+
+  .badge{
+    font-size: 0.5rem;
+    position: absolute;
+  }
+
+  .panier-icon-mobile{
+    display: block;
+  }
+
+  .header-left #LOGO{
+    /* border: 1px red solid; */
+    width: 50px;
+  }
+  
+}
+
+@media (max-width: 414px){
+  footer #F-Adresse{
+    margin-left: 4rem;
+  }
+  #F-Email{
+    margin-right: 2rem;
+  }
+  footer #F-Facebook{
+    margin-left: 3rem;
+  }
+  footer #F-Telephone{
+    margin-left: 5rem;
+  }
+
+  .Icone-flex-mobile{
+    gap: 0;
+    row-gap: 0;
+    justify-content: right;
+    height: 35px;
+
+  }
+
+  .Acceuil-mobile{
+    margin-right: 10rem;
+    position: absolute;
+  }
+
+  .panier-icon-mobile{
+    margin-right: 6rem;
+    /* border: 1px solid red; */
+    margin-top: 0;
+    position: absolute;
+
+  }
+
+  .badge-2{
+    position: absolute;
+  }
+
+  .icone-catalogue{
+    display: none;
+  }
+
+  .burger-btn, .notification-icon, .badge {
+    display: block;
+  }
+
+  .burger-btn{
+    margin-left: 19.5rem;
+  }
+
+  
+
+  .header-left img{
+    object-fit: contain;
+    margin-left: 0;
+    position: relative;
+    margin-right: 10%;
+  }
+
+  /* .header-left{
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 8rem;
+    width: 60px;
+    position: relative;
+    padding: 0;
+    border: 1px red solid;
+  } */
+
+  .header-left #LOGO{
+    /* border: 1px red solid; */
+    width: 50px;
+  }
+
+  .header{
+    height: 40px;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .facture-icone-mobile{
+    padding-top: 0;
+    margin-top: 0;
+    display: none;
+  }
+
+  .Notif-facture{
+    margin-left: 14rem;
+    width: 90px;
+    margin-top: 1rem;
+    /* border: 1px red solid; */
+    height: 40px;
+  }
+
+  .notification-icon{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .nav-mobile{
+    /* border: 1px red solid; */
+    width: 250px;
+  }
+
+  #Facture-badge{
+    /* border: 1px green solid; */
+    margin-left: 10rem;
+  }
+
+  .badge{
+    font-size: 0.5rem;
+    position: absolute;
+  }
+
+  .panier-icon-mobile{
+    display: block;
+  }
+
+
+}
+
+@media (max-width: 360px){
+  footer #F-Adresse{
+    margin-left: 4rem;
+  }
+  footer #F-Email{
+    margin-left: 5.5rem;
+  }
+  footer #F-Facebook{
+    margin-left: 3rem;
+  }
+  footer #F-Telephone{
+    margin-left: 5rem;
+  }
+
+  #burger-btn, #notification-icon, .badge {
+    display: block;
+  }
+
+  #burger-btn{
+    margin-left: 17rem;
+  }
+
+ 
+
+  .header-left img{
+    object-fit: contain;
+    margin-left: 0;
+    position: relative;
+    margin-right: 10%;
+  }
+
+  
+
+  .header{
+    height: 40px;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .facture-icone-mobile{
+    display: none;
+  }
+
+  
+  #Notif-facture{
+    margin-left: 13rem;
+    /* border: 1px red solid; */
+  }
+
+
+  .badge{
+    font-size: 0.5rem;
+  }
+
+   #Facture-badge{
+    /* border: 1px green solid; */
+    margin-left: 10rem;
+  }
+
+  #Icone-mobile{
+    display: block;
+    /* border: 1px red solid; */
+    height: 35px;
+    margin-left: 7rem;
+  }
+
+  #panier-icon-mobile{
+    margin-left: 0;
+  }
+
+  .header-left #LOGO{
+    /* border: 1px red solid; */
+    width: 50px;
+  }
+
+}
 

@@ -176,8 +176,190 @@ a.btnliste {
  
 }
 
+.paiement-info p{
+    margin-left: 2rem;
+}
+
 @media(max-width: 768px){
   .badge-success{
     width: 30px;
   }
+}
+
+@media (max-width: 640px) {
+  .facture-detail .logo{
+    /* border: 1px red solid; */
+    margin-bottom: 5rem;
+    margin-top: 0;
+    width: 100px;
+    height: 38px;
+  }
+  .facture-detail h2{
+    font-size: 0.9rem;
+  }
+  
+  .client-info h3{
+    font-size: 0.9rem;
+  }
+
+  .association-info h2{
+    font-size: 0.9rem;
+
+  }
+
+  .client-info p{
+    font-size: 0.8rem;
+  }
+
+  .association-info p{
+    font-size: 0.8rem;
+  }
+
+  .paiement-info p{
+    font-size: 0.8rem;
+  }
+
+  .total-right{
+    font-size: 0.8rem;
+  }
+
+  .actions{
+    margin-top: 2.5rem;
+  }
+
+  .Statut-facture{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .facture-detail .logo{
+    /* border: 1px red solid; */
+    margin-bottom: 5rem;
+    margin-top: 0;
+    width: 100px;
+    height: 38px;
+  }
+  .facture-detail h2{
+    font-size: 0.9rem;
+  }
+  .client-info h3{
+    font-size: 0.9rem;
+  }
+
+  .association-info h2{
+    font-size: 0.9rem;
+
+  }
+
+  .client-info p{
+    font-size: 0.8rem;
+  }
+
+  .association-info p{
+    font-size: 0.8rem;
+  }
+
+  .paiement-info p{
+    font-size: 0.8rem;
+  }
+
+  .total-right{
+    font-size: 0.8rem;
+  }
+
+  .actions{
+    margin-top: 2.5rem;
+  }
+
+  .Statut-facture{
+    display: none;
+  }
+  
+}
+
+
+
+@media (max-width: 414px){
+ 
+  .facture-detail .logo{
+    width: 90px;
+    margin-top: 0;
+  }
+
+  .facture-detail h2{
+    /* border: 1px red solid; */
+    font-size: small;
+    width: 180Px;
+    margin-left: 6rem;
+    /* margin-top: 3.5rem; */
+  }
+  
+  .client-info{
+    justify-content: left;
+    font-size: 0.6rem;
+    margin-top: 1.5rem;
+  }
+  .association-info{
+    display: none;
+  }
+
+  .table-facture{
+    font-size: 0.8rem;
+  }
+
+  .paiement-info, .total-right{
+    font-size: 0.6rem;
+  }
+
+  .Statut-facture{
+    display: none;
+  }
+
+  .actions #btn-Ngénéré{
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 360px){
+  .facture-detail .logo{
+    width: 90px;
+    margin-top: 0;
+  }
+
+  .facture-detail h2{
+    /* border: 1px red solid; */
+    font-size: small;
+    width: 180Px;
+    margin-left: 5rem;
+    margin-top: 3.5rem;
+  }
+  
+  .client-info{
+    justify-content: left;
+    font-size: 0.6rem;
+    margin-top: 1.5rem;
+  }
+  .association-info{
+    display: none;
+  }
+
+  .table-facture{
+    font-size: 0.8rem;
+  }
+
+  .paiement-info, .total-right{
+    font-size: 0.6rem;
+  }
+
+  .Statut-facture{
+    display: none;
+  }
+
+  .actions #btn-Ngénéré{
+    display: none;
+  }
+
 }

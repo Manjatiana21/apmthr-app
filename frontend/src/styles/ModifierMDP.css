@@ -28,5 +28,200 @@
     margin-left: 5rem;
 }
 
+@media (max-width: 1024px) {
+    .modifier-mdp-container{
+        margin-left: 20%;
+    }
+    
+}
+
+@media (max-width: 640px){
+    .modifier-mdp-container{
+        /* border: 1px red solid; */
+        margin-left: 3rem;
+        width: 450px;
+    }
+
+    .modifier-mdp-container h2{
+        font-size: large;
+    }
+
+    
+     form label{
+        font-size: 0.9rem;
+    }
+
+    #btn-modification-MDP{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 9rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+@media (max-width: 600px){
+    .modifier-mdp-container{
+        /* border: 1px red solid; */
+        margin-left: 1rem;
+        width: 400px;
+    }
+
+    .modifier-mdp-container h2{
+        font-size: large;
+    }
+
+    
+     form label{
+        font-size: 0.9rem;
+    }
+
+    #btn-modification-MDP{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 9rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px){
+     form label{
+        font-size: 0.9rem;
+    }
+    .modifier-mdp-container{
+        /* border: 1px red solid; */
+        margin-left: 2rem;
+        width: 350px;
+    }
+
+    .modifier-mdp-container h2{
+        font-size: large;
+    }
+
+    .Form-input input{
+        /* border: 1px red solid; */
+        margin-left: 0;
+        margin-top: 2rem;
+        /* position: absolute; */
+        width: 10px;
+    }
+
+
+    #btn-modification-MDP{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 13rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .Valide-btn, .annuler-btn{
+        font-size: 0.7rem;
+        height: 35px;
+    }
+    
+}
+@media (max-width: 414px){
+    .modifier-mdp-container{
+        /* border: 1px red solid; */
+        margin-left: 2rem;
+        width: 350px;
+    }
+
+    .modifier-mdp-container h2{
+        font-size: large;
+    }
+
+    .Form-input input{
+        /* border: 1px red solid; */
+        margin-left: 0.2rem;
+        margin-top: 2rem;
+        position: absolute;
+        width: 320px;
+    }
+
+    .Valide-btn{
+        /* border: 1px red solid; */
+        /* margin-top: 3rem; */
+        padding-left: 0;
+        
+    }
+
+    form label{
+        font-size: 0.8rem;
+    }
+
+    #btn-modification-MDP{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 13rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 360px){
+     form label{
+        font-size: 0.8rem;
+        max-width: 360px;
+    }
+
+    .modifier-mdp-container{
+        /* border: 1px red solid; */
+        margin-left: 2rem;
+        width: 350px;
+    }
+
+    .modifier-mdp-container h2{
+        font-size: large;
+    }
+
+    form input{
+        /* border: 1px red solid; */
+        margin-left: 0;
+        margin-top: 0.1rem;
+        margin-right: 5rem;
+        /* position: absolute; */
+        width: 10px;
+    }
+
+    
+    
+
+    #btn-modification-MDP{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 13rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .Valide-btn, .annuler-btn{
+        font-size: 0.7rem;
+        height: 35px;
+    }
+    
+}
+
 
 

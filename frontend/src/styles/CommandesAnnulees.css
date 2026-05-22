@@ -58,3 +58,137 @@
   display: flex;
   justify-content: space-around;
 }
+
+@media (max-width: 640px) {
+  #statut-commande-annulee{
+    width: 70px;
+    justify-content: center;
+    margin-left: 27.8rem;
+  }
+
+  #retour-mescommandes{
+    display: none;
+  }
+
+  
+}
+@media (max-width: 600px) {
+  .header-CA h2{
+    font-size: 1rem;
+  }
+
+  .header-CA .actions{
+    height: 40px;
+    width: 300px;
+  }
+
+  #btnS-effacer, #btn-select{
+    font-size: 0.7rem;
+  }
+
+  #statut-commande-annulee{
+    width: 70px;
+    justify-content: center;
+    margin-left: 25.5rem;
+  }
+
+  #retour-mescommandes{
+    display: none;
+  }
+
+  
+}
+@media (max-width: 480px) {
+  .header-CA .actions{
+    /* border: 1px red solid; */
+    position: absolute;
+    margin-top: 7rem;
+    height: 40px;
+    margin-left: 2rem;
+  }
+
+  .header-CA{
+    height: 40px;
+    /* border: 1px red solid; */
+    margin-bottom: 3.5rem;
+  }
+
+  .header-CA h2{
+    font-size: 1rem;
+  }
+  
+  #statut-commande-annulee{
+    width: 70px;
+    justify-content: center;
+    margin-left: 18rem;
+  }
+
+  #retour-mescommandes{
+    display: none;
+  }
+}
+
+@media (max-width: 414px){
+  .header-CA .actions{
+    /* border: 1px red solid; */
+    position: absolute;
+    margin-top: 7rem;
+    height: 30px;
+  }
+
+  .badge-annulee {
+    margin-left: 13rem;
+  }
+
+  #btn-select, #btn-effacer{
+    font-size: 0.7rem;
+  }
+
+  /* #btn-effacer{
+    width: 230px;
+  } */
+
+  .header-CA{
+    height: 40px;
+    /* border: 1px red solid; */
+    margin-bottom: 3rem;
+  }
+
+  /* #statut-commande-annulee1{
+    margin-left: 14rem;
+  } */
+
+  #retour-mescommandes{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 360px){
+  .header-CA .actions{
+    /* border: 1px red solid; */
+    position: absolute;
+    margin-top: 7rem;
+    height: 30px;
+  }
+
+  .btn-select, .btn-effacer{
+    font-size: 0.6rem;
+  }
+
+  .header-CA{
+    height: 40px;
+    /* border: 1px red solid; */
+    margin-bottom: 3rem;
+  }
+  #retour-mescommandes{
+    display: none;
+  }
+
+  #statut-commande-annulee{
+    margin-left: 10rem;
+  }
+  
+
+}
+

@@ -76,14 +76,14 @@ function ListeLivraisonsClient() {
                 {livraisonsFiltrees.length > 0 ? (
                   livraisonsFiltrees.map((liv) => (
                     <tr key={liv.id}>
-                      <td>{liv.commande.details[0]?.produit.designation}</td>
-                      <td>{liv.commande.statut}</td>
-                      <td>
-                        {liv.statut === "NON_DEMARREE" && <span className="badge badge-secondary">Non démarrée</span>}
-                        {liv.statut === "EN_COURS" && <span className="badge badge-warning">En cours</span>}
-                        {liv.statut === "LIVREE" && <span className="badge badge-success">Livrée</span>}
+                      <td data-label="Produit">{liv.commande.details[0]?.produit.designation}</td>
+                      <td data-label="Commande">{liv.commande.statut}</td>
+                      <td data-label="Livraison">
+                        {liv.statut === "NON_DEMARREE" && <span className="badge badge-secondary" id="Statut_livraison_btn">Non démarrée</span>}
+                        {liv.statut === "EN_COURS" && <span className="badge badge-warning" id="Statut_livraison_btn">En cours</span>}
+                        {liv.statut === "LIVREE" && <span className="badge badge-success" id="Statut_livraison_btn">Livrée</span>}
                       </td>
-                      <td>
+                      <td data-label="Date de livraison">
                         {liv.date_prevue?
                           (() => {
                             const parsed = new Date(liv.date_prevue);
@@ -106,9 +106,9 @@ function ListeLivraisonsClient() {
             </table>
 
             <div className="pagination">
-              <button disabled={page <= 1} onClick={() => setPage(page - 1)}>Précédent</button>
+              <button id="Precedent" disabled={page <= 1} onClick={() => setPage(page - 1)}>Précédent</button>
               <span>Page {page} / {totalPages}</span>
-              <button disabled={page >= totalPages} onClick={() => setPage(page + 1)}>Suivant</button>
+              <button id="Suivant" disabled={page >= totalPages} onClick={() => setPage(page + 1)}>Suivant</button>
             </div>
           </>
         )}

@@ -34,9 +34,11 @@ function ModifierEmail() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <button type="submit" className="Valide-btn">Valider</button>
-        <button type="submit" className="annuler-btn">
-        <Link to="/modifier-profil" className="btn btn-outline-danger" id="retour-btn">Annuler</Link></button>
+        <div id="btn-modification-profil">
+          <button type="submit" className="Valide-btn">Valider</button>
+          <button type="submit" className="annuler-btn">
+          <Link to="/modifier-profil" className="btn btn-outline-danger" id="retour-btn">Annuler</Link></button>
+        </div>
       </form>
       {message && <p className="feedback">{message}</p>}
     </div>

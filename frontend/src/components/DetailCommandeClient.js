@@ -73,7 +73,7 @@ function DetailCommandeClient({ commande: initialCommande }) {
         {commande.paiements && commande.paiements.length > 0 ? (
           commande.paiements.map((p) => (
             <p key={p.id}>
-              {p.mode_paiement}  {p.montant} Ar ({formatDate(p.date_paiement)})
+              {p.mode_paiement} {p.montant} Ar ({formatDate(p.date_paiement)})
             </p>
           ))
         ) : (
@@ -81,7 +81,7 @@ function DetailCommandeClient({ commande: initialCommande }) {
         )}
       </div>
 
-      <div className="actions">
+      <div className="actions" id="annulee_la_commande">
         {commande.statut !== "VALIDEE" && commande.statut !== "ANNULEE" ? (
           <button onClick={() => setConfirmAnnulation(true)} className="btn-annuler">
             ❌ Annuler la commande

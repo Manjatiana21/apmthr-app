@@ -9,8 +9,9 @@ function ModifierProfil() {
   return (
     <Layout>
     <div className="profil-container">
+        <h2 className="Informations-profil">Modifier les Informations personnels</h2>
       <div className="profil-titre">
-        <h2>Modifier les Informations personnels</h2>
+        <h2 className="profil-titreh2">Modifier les Informations personnels</h2>
         <Link to="/espace-client" className="btn btn-outline-danger" id="retour-btn">Retour</Link>
        </div>
       

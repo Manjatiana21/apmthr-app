@@ -161,7 +161,6 @@ function App() {
         <Route 
           path="/commandes/:id" 
           element={<CommandeDetail />
-
           } 
           />
 

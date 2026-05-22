@@ -38,10 +38,10 @@ function Layout({ children }) {
     <div className="layout">
       <header className="header shadow-sm">
         <div className="header-left">
-          <img src={logoImg} alt="Logo" className="logo" />
+          <img src={logoImg} alt="Logo" className="logo" id="LOGO" />
         </div>
 
-        <nav className="nav">
+        <nav className="nav" id="nav-layout">
           <ul>
             {user?.role === "CLIENT" && (
               <>
@@ -114,13 +114,13 @@ function Layout({ children }) {
 
 
         {user?.role === "CLIENT" && (
-          <div className="Icone-mobile">
+          <div className="Icone-mobile" id="Icone-mobile">
             <div className="Icone-flex-mobile">
-            <div className="Acceuil-mobile">
+            <div className="Acceuil-mobile" id="Acceuil-mobile">
               <li><Link to="/espace-client" onClick={() => setMenuOpen(false)}><FaHome className="i-home" />
               </Link></li>
             </div>
-            <div className="panier-icon-mobile">
+            <div className="panier-icon-mobile" id="panier-icon-mobile">
               <li>
                 <Link to="/panier">
                   <FaShoppingCart />
@@ -128,15 +128,19 @@ function Layout({ children }) {
                 </Link></li>
             </div>
             <div className="icone-catalogue">
-            <li><Link to="/catalogue" onClick={() => setMenuOpen(false)}><FaStore className="i-catalogue"/></Link></li>
+              <li>
+                <Link to="/catalogue" onClick={() => setMenuOpen(false)}>
+                <FaStore className="i-catalogue"/>
+                </Link>
+              </li>
             </div>
             </div>
           </div>
         )}
             
         {user && (
-          <div className="Notif-facture">
-          <div className="notification-icon">
+          <div className="Notif-facture" id="Notif-facture">
+          <div className="notification-icon" id="notification-icon">
               <Link to={user.role === "CLIENT" ? "/mes-notifications" : "/admin/notifications"}>
                 <FaBell />
                 {!loading && nbNonLues > 0 && (
@@ -153,7 +157,7 @@ function Layout({ children }) {
           </div>
         )}
 
-        <button className="burger-btn" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="burger-btn" id="burger-btn" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
@@ -167,7 +171,7 @@ function Layout({ children }) {
                 <li>
                   <Link to="/mes-factures"><FaFileInvoice/>
                     Facture(s) reçu(s)
-                    {count > 0 && <span className="badge">{count}</span>}
+                    {count > 0 && <span className="badge" id="Facture-badge">{count}</span>}
                   </Link>
                 </li>
                 <li><Link to="/client-commandes" onClick={() => setMenuOpen(false)}><FaStoreSlash/>Mes Commandes</Link></li>

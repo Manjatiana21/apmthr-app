@@ -12,6 +12,7 @@ class DetailCommandeSerializer(serializers.ModelSerializer):
         fields = ["id", "produit", "quantite", "prix_unitaire"]
 
 class PaiementSerializer(serializers.ModelSerializer):
+    paiement= Paiement.mode_paiement
     mode_paiement = serializers.CharField(source="mode_paiement.mode_paiement", read_only=True)  # ✅ correction
 
     class Meta:

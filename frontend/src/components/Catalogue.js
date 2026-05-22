@@ -79,7 +79,7 @@ function Catalogue() {
                   <p className="prix">{produit.prix} Ar</p>
                 </div>
                 {produit.description && (
-                  <p className="description">{produit.description}</p>
+                  <p className="description" >{produit.description}</p>
                 )}
                 {produit.type_produit && (
                   <p className="type">Type : {produit.type_produit.libelleTP}</p>
@@ -92,7 +92,7 @@ function Catalogue() {
                     Ajouter au panier 🛒
                   </button>
                   
-                <Link to={`/passer-commande/${produit.id}`} className="btn-commande">
+                <Link to={`/passer-commande/${produit.id}`} className="btn-commande" id="BTN-COMMANDEPASSER">
                   Passer commande
                 </Link>
 

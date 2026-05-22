@@ -66,7 +66,7 @@ function FactureDetailPage() {
   return (
     <Layout>
       <div className="facture-detail">
-        <img src={logoImg} alt="Logo" className="logo" />
+        <img src={logoImg} alt="Logo" className="logo" id="LOGO-Dfacture" />
         <h2 className="title"> Facture N° {facture.numero}</h2>
 
         <div className="facture-header">
@@ -87,9 +87,7 @@ function FactureDetailPage() {
 
         {facture.paiement && (
           <div className="paiement-info">
-            <h3>Paiement</h3>
-            <p><strong>Mode :</strong> {facture.paiement.mode_paiement}</p>
-            <p><strong>Date :</strong> {new Date(facture.paiement.date_paiement).toLocaleDateString()}</p>
+            <p><strong>Date de paiement :</strong> {new Date(facture.paiement.date_paiement).toLocaleDateString()}</p>
           </div>
         )}
 
@@ -119,15 +117,18 @@ function FactureDetailPage() {
           </div>
         </div>
 
-        <p>
+        <div className="Statut-facture">
+        <p >
           <strong>Envoyée :</strong>{" "}
-          <span className={`badge ${facture.envoyee ? "badge-success" : "badge-danger"}`}>
+          <span className={`badge ${facture.envoyee ? "badge-success" : "badge-danger"}`} id="Bool">
             {facture.envoyee ? "Oui" : "Non"}
           </span>
         </p>
+        </div>
+
 
         <div className="actions">
-          <button className="btn btn-secondary" disabled>
+          <button className="btn btn-secondary" id="btn-Ngénéré" disabled >
             Facture générée (N° {facture.numero})
           </button>
 

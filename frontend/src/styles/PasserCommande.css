@@ -66,3 +66,10 @@ form input, form select {
   margin: auto;
   padding: 1rem;
 }
+
+
+@media(max-width: 360px){
+  .commande-card{
+  border: 1px red solid;
+  }
+}

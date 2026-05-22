@@ -5,7 +5,7 @@
     margin-left:30%;
     margin-top: 5rem;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px black inset;
+    /* box-shadow: 5px 5px 10px black inset; */
 }
 
 .modifier-adresse-container h2{
@@ -28,6 +28,191 @@
     margin-left: 5rem;
 }
 
+@media (max-width: 1024px) {
+    .modifier-adresse-container{
+        margin-left: 20%;
+    }
+    
+}
 
+@media (max-width: 640px){
+    .modifier-adresse-container{
+        /* border: 1px red solid; */
+        margin-left: 3rem;
+        width: 450px;
+    }
+
+    .modifier-adresse-container h2{
+        font-size: large;
+    }
+
+    .Form-input input{
+        /* border: 1px red solid; */
+        margin-left: 0.6rem;
+        margin-top: 2rem;
+        position: absolute;
+        width: 350px;
+    }
+
+    #btn-modification-profil{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 5rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+@media (max-width: 600px){
+    .modifier-adresse-container{
+        /* border: 1px red solid; */
+        margin-left: 1rem;
+        width: 400px;
+    }
+
+    .modifier-adresse-container h2{
+        font-size: large;
+    }
+
+    .Form-input input{
+        /* border: 1px red solid; */
+        margin-left: 0.6rem;
+        margin-top: 2rem;
+        position: absolute;
+        width: 350px;
+    }
+
+    #btn-modification-profil{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 5rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px){
+    .modifier-adresse-container{
+        /* border: 1px red solid; */
+        margin-left: 2rem;
+        width: 350px;
+    }
+
+    .modifier-adresse-container h2{
+        font-size: large;
+    }
+
+    .Form-input input{
+        /* border: 1px red solid; */
+        margin-left: 0;
+        margin-top: 2rem;
+        position: absolute;
+        width: 280px;
+    }
+
+
+    #btn-modification-profil{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 5rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .Valide-btn, .annuler-btn{
+        font-size: 0.7rem;
+        height: 35px;
+    }
+    
+}
+
+@media (max-width: 414px){
+    .modifier-adresse-container{
+        /* border: 1px red solid; */
+        margin-left: 2rem;
+        width: 350px;
+    }
+
+    .modifier-adresse-container h2{
+        font-size: large;
+    }
+
+    .Form-input input{
+        /* border: 1px red solid; */
+        margin-left: 0.2rem;
+        margin-top: 2rem;
+        position: absolute;
+        width: 320px;
+    }
+
+    .Valide-btn{
+        /* border: 1px red solid; */
+        /* margin-top: 3rem; */
+        padding-left: 0;
+        
+    }
+
+    #btn-modification-profil{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 5rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 360px){
+    .modifier-adresse-container{
+        /* border: 1px red solid; */
+        margin-left: 2rem;
+        width: 350px;
+    }
+
+    .modifier-adresse-container h2{
+        font-size: large;
+    }
+
+    .Form-input input{
+        /* border: 1px red solid; */
+        margin-left: 0;
+        margin-top: 2rem;
+        position: absolute;
+        width: 300px;
+    }
+
+
+    #btn-modification-profil{
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        position: absolute;
+        gap: 1rem;
+        margin-top: 5rem;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .Valide-btn, .annuler-btn{
+        font-size: 0.7rem;
+        height: 35px;
+    }
+    
+}
 
 

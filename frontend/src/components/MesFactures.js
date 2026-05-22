@@ -15,7 +15,9 @@ function MesFactures() {
 
   return (
     <Layout>
+      <div className="mesfactures-title">
       <h2>Liste de vos factures réçus</h2>
+      </div>
       {message && <p className="message">{message}</p>}
       <table className="Facture-tableau">
         <thead>

@@ -30,9 +30,9 @@ function MesCommandes() {
         <h2>Mes commandes</h2>
 
         <div className="actions">
-          <Link to="/catalogue" className="btn btn-secondary">← Retour au catalogue</Link>
-          <Link to="/commandes-annulees" className="btn btn-outline-danger">Voir mes commandes annulées</Link>
-          <Link to="/client-livraisons" className="btn btn-outline-danger">Livraison(s)</Link>
+          <Link to="/catalogue" className="btn btn-secondary" id="btn-secondary-commande">← Retour au catalogue</Link>
+          <Link to="/commandes-annulees" className="btn btn-outline-danger" id="Voir-mes-commandes-btn">Voir les commandes annulées</Link>
+          <Link to="/client-livraisons" className="btn btn-outline-danger" id="Livraison-btn">Livraison(s)</Link>
         </div>
 
         {message && <p className="message">{message}</p>}
@@ -72,12 +72,12 @@ function MesCommandes() {
                       <td data-label="Date de commande">{formatDate(commande.date_commande)}</td>
                       <td data-label="Total">{commande.total} Ar</td>
                       <td data-label="statut">
-                        <span className={`badge statut-${commande.statut.toLowerCase()}`}>
+                        <span className={`badge statut-${commande.statut.toLowerCase()}`} id="statut-commande">
                           {commande.statut}
                         </span>
                       </td>
                       <td data-label="Action">
-                        <Link to={`/commandes/${commande.id}`} className="btn-link">Voir</Link>
+                        <Link to={`/commandes/${commande.id}`} className="btn-link" id="Voir">Voir</Link>
                       </td>
                       <td data-label="Paiement">
                         {commande.paiements && commande.paiements.length > 0 ? (

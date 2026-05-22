@@ -3,11 +3,11 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/EspaceClient.css";
 import { getProduits, getMesNotifications } from "../api";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaShoppingCart } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope,FaBell, FaFacebook, FaShoppingCart } from "react-icons/fa";
 import headerImg from "../assets/Presentation.png";
 import logoImg from "../assets/Logo.png";
 import CarouselClient from "./CarouselClient";
-import MessageModal from "./MessageModal"; 
+import MessageModal from "./MessageModal";
 
 import { FaUserCog } from "react-icons/fa";
 import { FaUserCircle, FaSignOutAlt } from "react-icons/fa";
@@ -83,6 +83,12 @@ function EspaceClient() {
   return (
     <div className="espace-client">
       <header className="header-client">
+        <div className="notification-icon" id="notification-mobile">
+                        <Link to={ "/mes-notifications" }>
+                          <FaBell />
+                            <span className="badge">{nbNotif}</span>
+                        </Link>        
+                    </div>
         <img src={headerImg} alt="Header de l’espace client" className="header-image" />
         <div className="header-top-client">
           <div className="logo">
@@ -94,18 +100,18 @@ function EspaceClient() {
               {cartCount > 0 && <span className="badge-2">{cartCount}</span>}
             </Link>
 
-            <Link to="/mes-notifications" >
+            <Link to="/mes-notifications" className="Notifications-Espace" >
               🔔 Notifications {nbNotif > 0 && <span className="badge">{nbNotif}</span>}
             </Link>
           </nav>
-            <div className="profil-dropdown">
+            <div className="profil-dropdown-espace" id="drop-profil">
                 <button
                   className="profil-icon-btn"
                   onClick={() => setMenuProfilOpen(!menuProfilOpen)}
                   >
                     <FaUserCircle size={22} />
                 </button>
-          
+
                     {menuProfilOpen && (
                       <div className="profil-menu-dropdown">
                           <Link to="/modifier-profil" onClick={() => setMenuProfilOpen(false)}>
@@ -137,24 +143,52 @@ function EspaceClient() {
           <p>Votre satisfaction, notre priorité</p>
         </div>
 
-        <div className="header-bottom-client">
+        <div className="header-bottom-client" id="header-bottom-client">
           <ul className="nav-client">
-            <li><Link to="/espace-client">Accueil</Link></li>
-            <li><Link to="/catalogue">Nos Produits</Link></li>
-            <li><Link to="/client-commandes">Mes Commandes</Link></li>
-            <li><Link to="/">Nos Services</Link></li>
+            <li id="Accueil-bottom"><Link to="/espace-client">Accueil</Link></li>
+            <li id="Produit-bottom"><Link to="/catalogue">Nos Produits</Link></li>
+            <li id="Commandes-bottom"><Link to="/client-commandes">Mes Commandes</Link></li>
+            <li id="Services-bottom">
+              <Link 
+                  to="/espace-client" 
+                  onClick={() => {
+                    const section = document.getElementById("SECTION_services");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
+                  Nos Services
+              </Link></li>
           </ul>
+        </div>
+        <div className="bottom-responsive" id="bottom-reponsive">
+        <div className="nav-client1" id="Espacenav">
+            <Link to="/espace-client">Accueil</Link>
+            <Link to="/catalogue">Nos Produits</Link>
+            <Link to="/client-commandes">Mes Commandes</Link>
+            <Link 
+                  to="/espace-client" 
+                  onClick={() => {
+                    const section = document.getElementById("SECTION_services");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
+                  Nos Services</Link>
+          </div>
         </div>
       </header>
 
-      <section>
+      <section >
         <div className="SLIDE">
-          <CarouselClient />
+          <CarouselClient className="Carousel"/>
         </div>
       </section>
 
       <section className="section_PROPOS">
-        <h2>A PROPOS DE NOUS</h2>
+        <h2 className="section-title">A PROPOS DE NOUS</h2>
         <h4>APMTHR</h4>
         <h5>Association pour la Professionnalisation aux Métiers du Tourisme et de l'Hôtellerie Restauration</h5>
         <p className="petiteintro">
@@ -169,7 +203,7 @@ function EspaceClient() {
       </section>
 
     
-      <section className="section-produits" ref={produitsSectionRef}>
+      <section className="section-produits" ref={produitsSectionRef} >
         <h2 className="section-title">NOS PRODUITS</h2>
         <p className="petiteintro">
           Découvrez une sélection unique de créations artisanales et de délices gourmands...
@@ -177,18 +211,18 @@ function EspaceClient() {
         {loading ? (
           <p>Chargement des produits...</p>
         ) : (
-          <div className="produits-gridEspace">
+          <div className="produits-gridEspace" id="GRIDESPACEPRODUITS">
             {produits.length > 0 ? (
               produits.map((p) => (
-                <div key={p.id} className="produit-cardEspace">
+                <div key={p.id} className="produit-cardEspace" id="CARD-RESPONSIVE">
                   <div className="flex">
-                    <img src={p.image || "/images/default.png"} alt={p.designation} />
+                    <img src={p.image || "/images/default.png"} alt={p.designation} className="Image-card" />
                     <h3 className="T-Designation">{p.designation}</h3>
                     <div className="P-PrixEspace">
                       <p className="prix">{p.prix} Ar</p>
                     </div>
                     {p.type_produit && (
-                      <p className="">Type : {p.type_produit.libelleTP}</p>
+                      <p className="T-Type">Type : {p.type_produit.libelleTP}</p>
                     )}
                   </div>
                 </div>
@@ -219,7 +253,7 @@ function EspaceClient() {
       </section>
 
       
-      <section className="section-service">
+      <section className="section-service" id="SECTION_services">
         <h2 className="section-title">NOS SERVICES</h2>
         <p className="petiteintro" id="paragraphe-service">
           Notre engagement ne s'arrête pas aux produits...
@@ -229,22 +263,22 @@ function EspaceClient() {
           L'APMTHR oeuvre à la professionnalisation aux différent métiers du Tourisme-Hôtellerie-Restauration et métiers connexes.
         </p>
         <h1 className="titre-Service">Formations proposées</h1>
-        <li className="liste-Service" id="paragraphe-service">Personnel d'acceuil et de service</li>
-        <li className="liste-Service" id="paragraphe-service">Concierge</li>
-        <li className="liste-Service" id="paragraphe-service">Femme de chambre</li>
-        <li className="liste-Service" id="paragraphe-service">Valet</li>
-        <li className="liste-Service" id="paragraphe-service">Lingère</li>
-        <li className="liste-Service" id="paragraphe-service">Serveur</li>
-        <li className="liste-Service" id="paragraphe-service">Agent d'accueil</li>
-        <li className="liste-Service" id="paragraphe-service">Guide et accompagnateurs touristiques</li>
-        <li className="liste-Service" id="paragraphe-service">Personnel de maison</li>
+        <li className="liste-Service">Personnel d'acceuil et de service</li>
+        <li className="liste-Service">Concierge</li>
+        <li className="liste-Service">Femme de chambre</li>
+        <li className="liste-Service" >Valet</li>
+        <li className="liste-Service" >Lingère</li>
+        <li className="liste-Service" >Serveur</li>
+        <li className="liste-Service" >Agent d'accueil</li>
+        <li className="liste-Service" >Guide et accompagnateurs touristiques</li>
+        <li className="liste-Service" >Personnel de maison</li>
         <h1 className="titre-Service">Formations et conseil</h1>
         <p className="Service" id="paragraphe-service">
           Compte tenu des spécialités de ses membres (formateurs, enseignants, étudiants) et partenaires, l'assocition répond à des demandes en : FORMATION et CONSEIL, pour les secteurs : PUBLIC et PRIVE
         </p>
         <h1 className="titre-Service">Zone d'intervention</h1>
-        <li className="liste-Service" id="paragraphe-service">Nationale</li>
-        <li className="liste-Service" id="paragraphe-service">Internationale</li>
+        <li className="liste-Service" >Nationale</li>
+        <li className="liste-Service" >Internationale</li>
         
       </section>
 

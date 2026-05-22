@@ -8,7 +8,7 @@ export default function CommandeDetail() {
   const [commande, setCommande] = useState(null);
 
   useEffect(() => {
-    api.get(`/api/commandes/${id}/`)
+    api.get(`/commandes/${id}/`)
       .then((res) => setCommande(res.data))
       .catch((err) => console.error("Erreur API:", err));
   }, [id]);

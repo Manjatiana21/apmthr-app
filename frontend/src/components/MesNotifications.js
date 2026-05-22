@@ -59,15 +59,15 @@ function MesNotifications() {
   return (
     <Layout>
       <div className="mes-notifications">
-        <h2>Mes Notifications</h2>
+        <h2>Notifications</h2>
         {message && <p className="message">{message}</p>}
 
         <div className="notif-counter">
-          <span className="badge badge-danger">
+          <span className="badge badge-danger" id="NON_LUES">
             Notifications non lues : {nbNonLues}
           </span>
           {nbNonLues > 0 && (
-            <button className="btn-mark-all" onClick={marquerToutesCommeLues}>
+            <button className="btn-mark-all" onClick={marquerToutesCommeLues} id="M_Tous_lus">
               Tout marquer comme lues
             </button>
           )}

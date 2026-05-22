@@ -119,9 +119,9 @@ function Panier() {
             <tbody>
               {cart.map((item) => (
                 <tr key={item.id}>
-                  <td>{item.designation}</td>
-                  <td>{item.prix} Ar</td>
-                  <td>
+                  <td data-label="Désignation">{item.designation}</td>
+                  <td data-label="Prix">{item.prix} Ar</td>
+                  <td data-label="Qté">
                     <input
                       type="number"
                       min="1"
@@ -129,7 +129,7 @@ function Panier() {
                       onChange={(e) => updateQuantity(item.id, e.target.value)}
                     />
                   </td>
-                  <td>{item.prix * item.quantite} Ar</td>
+                  <td data-label="Montant Total">{item.prix * item.quantite} Ar</td>
                   <td>
                     <button
                       onClick={() => removeFromCart(item.id)}
