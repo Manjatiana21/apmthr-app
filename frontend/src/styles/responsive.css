@@ -4,6 +4,21 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Très petits téléphones (≤ 320px) */
+@media (max-width: 320px) {
+  body {
+    font-size: 13px;
+  }
+  .menu {
+    flex-direction: column;
+    padding: 4px;
+  }
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 /* 📱 Petits téléphones (≤ 360px) */
 @media (max-width: 360px) {
   body {
