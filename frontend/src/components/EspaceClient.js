@@ -83,12 +83,13 @@ function EspaceClient() {
   return (
     <div className="espace-client">
       <header className="header-client">
-        <div className="notification-icon" id="notification-mobile">
+          <div className="notification-icon" id="notification-mobile">
                         <Link to={ "/mes-notifications" }>
                           <FaBell />
                             <span className="badge">{nbNotif}</span>
                         </Link>        
-                    </div>
+          </div>
+
         <img src={headerImg} alt="Header de l’espace client" className="header-image" />
         <div className="header-top-client">
           <div className="logo">
@@ -111,7 +112,6 @@ function EspaceClient() {
                   >
                     <FaUserCircle size={22} />
                 </button>
-
                     {menuProfilOpen && (
                       <div className="profil-menu-dropdown">
                           <Link to="/modifier-profil" onClick={() => setMenuProfilOpen(false)}>
@@ -122,7 +122,7 @@ function EspaceClient() {
                           </Link>
                       </div>
                     )}
-              </div>
+            </div>
           </div>
 
       
@@ -188,7 +188,7 @@ function EspaceClient() {
       </section>
 
       <section className="section_PROPOS">
-        <h2 className="section-title">A PROPOS DE NOUS</h2>
+        <h2 className="section-title" id="litle-PROPOS">A PROPOS DE NOUS</h2>
         <h4>APMTHR</h4>
         <h5>Association pour la Professionnalisation aux Métiers du Tourisme et de l'Hôtellerie Restauration</h5>
         <p className="petiteintro">

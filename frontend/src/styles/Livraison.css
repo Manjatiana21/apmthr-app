@@ -114,54 +114,64 @@ h2 {
 }
 
 @media (max-width: 640px) {
-  #Statut_livraison_btn{
-    margin-left: 21rem;
+  #Statut_livraison_btn {
+    margin: 0 auto;   /* ✅ centré automatiquement */
     width: 120px;
-  }
-}
-@media (max-width: 600px) {
-  #Statut_livraison_btn{
-    margin-left: 19rem;
-    width: 120px;
+    text-align: center;
+    display: block;
   }
 }
 
-@media (max-width: 414px){
-  .table-livraison{
+@media (max-width: 600px) {
+  #Statut_livraison_btn {
+    margin: 0 auto;
+    width: 120px;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media (max-width: 414px) {
+  .table-livraison {
     font-size: 0.8rem;
   }
 
-  #Statut_livraison_btn{
-    margin-left: 10rem;
+  #Statut_livraison_btn {
+    margin: 1rem auto;
     height: 15px;
     font-size: 0.6rem;
     width: 75px;
+    display: block;
+    text-align: center;
   }
 
-  .filters label, select option{
+  .filters label,
+  .filters select option {
     font-size: 0.8rem;
   }
-
 }
 
-@media (max-width: 360px){
-  .table-livraison{
+@media (max-width: 360px) {
+  .table-livraison {
     font-size: 0.6rem;
   }
 
-  .filters label, select option{
+  .filters label,
+  .filters select option {
     font-size: 0.8rem;
   }
-  
-  #Statut_livraison_btn{
-    margin-left: 7rem;
+
+  #Statut_livraison_btn {
+    margin: 1rem auto;
     height: 10px;
     font-size: 0.6rem;
     width: 65px;
+    display: block;
+    text-align: center;
   }
 
-  #Precedent, #Suivant{
-    /* border: 1px red solid; */
+  #Precedent,
+  #Suivant {
     font-size: 0.7rem;
     height: 35px;
   }

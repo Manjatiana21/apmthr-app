@@ -4,7 +4,6 @@
   min-height: 100vh;
 }
 
-
 .header {
   display: flex;
   justify-content: space-between; 
@@ -13,20 +12,35 @@
   background: linear-gradient(120deg, #e49e09, #4ee429);
   color: white;
   flex-direction: row;
-}
-
-.nav ul {
-  display: flex;
-  gap: 3rem;
-  list-style: none;
-}
-
-#nav-layout{
-  /* border: 1px red solid; */
-  margin-left: 10rem;
-  position: absolute;
+  position: relative;
   width: auto;
-  margin-top: 2rem;
+}
+
+.header-left{
+  width: 50px;
+}
+
+.header-navigation ul {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  font-size: 1rem;
+  margin-left: 10%;
+  /* border: 1px red solid; */
+  width: 120%;
+  margin: 0;
+  /* border: 1px red solid; */
+
+}
+
+.header-navigation{
+  display: flex;
+  margin-left: 0rem;
+  /* position: absolute; */
+  width: 90974px;
+  margin-top: 1%;
+  /* border: 1px red solid; */
+  /* margin-top: 2rem; */
 }
 
 .nav a {
@@ -197,9 +211,11 @@
 
 }
 
-.header .header-left .logo{
+.header .header-left .logo-layout{
   /* border: 1px red solid; */
   margin-right: 10rem;
+  height: 60px;
+
   /* position: absolute; */
 }
 
@@ -295,19 +311,23 @@
   list-style: none;
 }
 
-.Icone-mobile{
+
+.header .navigation-mobile{
   display: none;
-  flex-direction: row;
-  position: absolute;
-  margin-left: 14rem;
-  gap: 5rem;
-  width: 250px;
+  margin-left: 0.1rem ;
+
+  /* position: relative; */
+
 }
 
-.Icone-mobile .Icone-flex-mobile{
+.navigation-mobile .navigation-flex-mobile{
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 2rem;
+  width: 150px;
+  margin: 0.5rem;
+  /* border: 1px red solid; */
+
 }
 
 .Acceuil-mobile li{
@@ -369,760 +389,424 @@
 }
 
 
+@media (max-width: 1024px) {
+  .header-left{
+    width: 50px;
+  }
 
-@media (max-width: 1024px){
-  #nav-layout{
+  .header-navigation ul {
+  display: flex;
+  gap: 2rem;
+  /* list-style: none; */
+  font-size: 0.8rem;
+  margin-left: 0;
   /* border: 1px red solid; */
-  margin-left: 6rem;
-  position: absolute;
-  width: 900Px;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+  /* width: 105%; */
+  margin: 0;
+  /* border: 1px red solid; */
+
 }
 
-  .nav ul {
-  gap: 1rem;
+.header-navigation{
+  margin-left: 0rem;
+  /* position: absolute; */
+  /* width: 90974px; */
+  margin-top: 2%;
+  /* border: 1px red solid; */
+  /* margin-top: 2rem; */
 }
 
 .profil-dropdown{
-  margin-top: 0;
+  display: block;
 }
 }
 
 @media (max-width: 992px) {
-   #nav-layout{
-  /* border: 1px red solid; */
-  margin-left: 6rem;
-  position: absolute;
-  width: 900Px;
-  margin-top: 0rem;
-  font-size: 0.89rem;
-}
-
-  .nav ul {
-  gap: 1rem;
-}
-
-.profil-dropdown{
-  margin-top: 0;
-  margin-left: 43rem;
-  position: absolute;
-  margin-right: 2rem;
-}
-  
-}
-
-@media (max-width: 940px) {
-  .profil-dropdown{
-    display: none;
-  }
-  
-}
-
-@media (max-width: 870px) {
-  .profil-dropdown{
-    display: none;
-  }
-
-  #nav-layout{
-    width: 700px;
-  }
-  
-}
-@media (max-width: 768px) {
-  .nav {
-    display: none; 
-  }
-  .burger-btn, .notification-icon, .badge {
-    display: block;
-  }
-footer {
-  max-width: 768px;
-}
-
-footer .footer-info {
-  gap: 1.5rem;
-}
-
-footer #F-Adresse {
-  margin-left: 5rem;
-}
-
-footer #F-Telephone {
-  margin-left: 5rem;
-  width: 200px;
-  margin-right: 5rem;
-}
-
-footer #F-Facebook {
-  margin-left: 1.5rem;
-}
-
-footer #F-Email {
-  margin-left: 5rem;
-  width: 100px;
-  margin-right: 7rem;
-}
-
-
-  .Icone-mobile{
-    display: block;
-    flex-direction: row;
-    margin-left: 10rem;
-    /* border: 1px red solid; */
-
-  }
-
-  .Notif-facture{
-    /* border: 1px red solid; */
-    margin-left: 28rem;
-    /* margin-right: 2rem; */
-    position: absolute;
-  }
-  
-  .facture-icone-mobile{
-    display: block;
-
-  }
-}
-
-@media (max-width: 640px){
-  footer .footer-info {
-    gap: 1.5rem;
-  }
-
-  footer .footer-info {
-    margin-left: 1rem;
-    /* border: 1px red solid; */
-  }
-
-  footer #F-Telephone {
-    margin-left: 10rem;
-    width: 200px;
-    margin-right: 5rem;
-  }
-
-  footer #F-Facebook {
-    margin-left: 5rem;
-  }
-
-  footer #F-Email {
-    margin-left: 13rem;
-    width: 100px;
-    margin-right: 7rem;
-  }
-
-    .Icone-mobile{
-      /* border: 1px solid red; */
-      display: block;
-      margin-left: 16rem;
-      width: 125px;
-      /* margin-top: 1.5rem; */
-    }
-
-    .Icone-flex-mobile{
-      gap: 0;
-      /* border: 1px solid red; */
-      row-gap: 2rem;
-      justify-content: right;
-    }
-
-    .Acceuil-mobile{
-      margin-right: 12rem;
-      position: absolute;
-    }
-
-    .panier-icon-mobile{
-      /* border: 1px red solid; */
-      position: absolute;
-      margin-right: 6rem;
-    }  
-    .badge-2{
-      position: absolute;
-    }
-
-    .icone-catalogue{
-      display: block;
-    }
-
-    .burger-btn, .notification-icon, .badge {
-      display: block;
-    }
-
-    .burger-btn{
-      margin-left: 32.5rem;
-    }
-
-    /* .logo{
-      height: 10px;
-      padding-left: 0;
-      justify-content: left;
-      position: absolute;
-      margin-left: 0;
-      margin-right: 70%;
-      margin-bottom: 10%;
-    } */
-
-    .header-left img{
-      object-fit: contain;
-      margin-left: 0;
-      position: relative;
-      margin-right: 10%;
-    }
-
-    .header-left{
-      margin-left: 0;
-      padding-left: 0;
-      margin-right: 3rem;
-      position: relative;
-      padding: 0;
-    }
-
-    .header{
-      height: 40px;
-    }
-
-    .nav{
-      display: none;
-    }
-
-    .facture-icone-mobile{
-      padding-top: 0;
-      margin-top: 0;
-      display: none;
-    }
-
-    .Notif-facture{
-      margin-left: 27rem;
-      /* margin-right: 5.8rem; */
-      width: 50px;
-      margin-top: 1rem;
-      /* border: 1px red solid; */
-      height: 40px;
-    }
-
-    .notification-icon{
-      display: flex;
-      flex-direction: row;
-      padding-bottom: 0;
-      margin-bottom: 0;
-      margin-left: 0;
-    }
-
-    .nav-mobile{
-      /* border: 1px red solid; */
-      width: 350px;
-      margin-right: 2rem;
-    }
-
-    #Facture-badge{
-      /* border: 1px green solid; */
-      margin-left: 10rem;
-    }
-
-    .badge{
-      font-size: 0.5rem;
-      position: absolute;
-    }
-
-    .panier-icon-mobile{
-      display: block;
-    }
-
-
-}
-
-
-@media (max-width: 600px){
-  footer .footer-info {
-    gap: 1.5rem;
-  }
-
-  footer #F-Adresse {
-    margin-left: 10rem;
-  }
-
-  footer #F-Telephone {
-    margin-left: 10rem;
-    width: 200px;
-    margin-right: 5rem;
-  }
-
-  footer #F-Facebook {
-    margin-left: 5rem;
-  }
-
-  footer #F-Email {
-    margin-left: 13rem;
-    width: 100px;
-    margin-right: 7rem;
-  }
-
-    .Icone-mobile{
-      /* border: 1px solid red; */
-      display: block;
-      margin-left: 16rem;
-      width: 125px;
-      /* margin-top: 1.5rem; */
-    }
-
-    .Icone-flex-mobile{
-      gap: 0;
-      /* border: 1px solid red; */
-      row-gap: 2rem;
-      justify-content: right;
-    }
-
-    .Acceuil-mobile{
-      margin-right: 12rem;
-      position: absolute;
-    }
-
-    .panier-icon-mobile{
-      /* border: 1px red solid; */
-      position: absolute;
-      margin-right: 6rem;
-    }  
-    .badge-2{
-      position: absolute;
-    }
-
-    .icone-catalogue{
-      display: block;
-    }
-
-    .burger-btn, .notification-icon, .badge {
-      display: block;
-    }
-
-    .burger-btn{
-      margin-left: 31.5rem;
-    }
-
-    /* .logo{
-      height: 10px;
-      padding-left: 0;
-      justify-content: left;
-      position: absolute;
-      margin-left: 0;
-      margin-right: 70%;
-      margin-bottom: 10%;
-    } */
-
-    .header-left img{
-      object-fit: contain;
-      margin-left: 0;
-      position: relative;
-      margin-right: 10%;
-    }
-
-    .header-left{
-      margin-left: 0;
-      padding-left: 0;
-      margin-right: 3rem;
-      position: relative;
-      padding: 0;
-    }
-
-    .header{
-      height: 40px;
-    }
-
-    .nav{
-      display: none;
-    }
-
-    .facture-icone-mobile{
-      padding-top: 0;
-      margin-top: 0;
-      display: none;
-    }
-
-    .Notif-facture{
-      /* margin-right: 4rem; */
-      margin-left: 26.5rem;
-      width: 50px;
-      margin-top: 1rem;
-      /* border: 1px red solid; */
-      height: 40px;
-    }
-
-    .notification-icon{
-      display: flex;
-      flex-direction: row;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    .nav-mobile{
-      /* border: 1px red solid; */
-      width: 350px;
-      margin-right: 2rem;
-    }
-
-    #Facture-badge{
-      /* border: 1px green solid; */
-      margin-left: 10rem;
-    }
-
-    .badge{
-      font-size: 0.5rem;
-      position: absolute;
-    }
-
-    .panier-icon-mobile{
-      display: block;
-    }
-
-    .header-left #LOGO{
-    /* border: 1px red solid; */
+  .header-left{
     width: 50px;
   }
+ .header-navigation{
+  margin-left: 0;
+  }
 
+  .header-navigation ul{
+    gap:1.2%;
+    padding-top: 1%;
+  }
+}
+
+@media (max-width: 940px), (max-width: 870px) {
+  .header-left{
+    width: 50px;
+  }
+ .header-navigation{
+  margin-left: 0;
+  }
+
+  .header-navigation ul{
+    gap:1%;
+    padding-top: 1%;
+    font-size: 0.9rem;
+  
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .burger-btn,
+  .notification-icon,
+  .badge {
+    display: block;
+    margin: 0 auto;
+  }
+
+  footer {
+    max-width: 768px;
+    text-align: center;
+  }
+
+  footer .footer-info {
+    gap: 5.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer #F-Adresse{
+    margin-left: 5%;
+  }
+  .footer #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 20%;
+    /* margin: 10%; */
+  }
+  .header .navigation-mobile{
+      display: block;
+      /* border: 1px red solid; */
+      width: 150px;
+      margin: 0 auto;
+      margin-right: 20%;
+      /* gap: 50px; */
+    }
+
+
+      .navigation-mobile .icone-catalogue{
+    /* border: 1px red solid; */
+    margin-right: 50%;
+  }
+
+  .navigation-mobile .panier-icon-mobile{
+    margin-right: 20%;
+  }
+
+  .navigation-mobile .Acceuil-mobile{
+    margin-right: 30%;
+  }
+  .burger-btn{
+    margin: 88%;
+  }
+  .Notif-facture {
+    margin: 1rem auto;
+    width: 500px;
+  }
+
+  .notification-icon{
+    /* border: 1px red solid; */
+    width: 100px;
+  }
+
+  .facture-icone-mobile {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+
+  }
+}
+
+@media (max-width: 640px),(max-width: 600px) {
+  footer .footer-info {
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+
+  .burger-btn {
+    margin: 0;
+    display: block;
+    margin-left: 85%;
+    margin-top: 1.5%;
+  }
+
+
+  .header-left{
+  width: 60px;
+  }
+  .header .navigation-mobile{
+      display: block;
+      /* border: 1px red solid; */
+      width: 30px;
+      margin: 0 auto;
+      margin-right: 45%;
+      /* gap: 50px; */
+    }
+
+  .navigation-mobile .icone-catalogue{
+    /* border: 1px red solid; */
+    margin-right: 50%;
+  }
+
+  .navigation-mobile .panier-icon-mobile{
+    margin-right: 20%;
+  }
+
+  .navigation-mobile .Acceuil-mobile{
+    margin-right: 30%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .facture-icone-mobile {
+    display: none;
+  }
+
+   .Notif-facture{
+    margin-top: 3.5%;
+
+  }
+  
+.notification-icon {
+    /* margin: 0 auto; */
+    width: 100px;
+  }
+
+
+
+  /* .notification-icon {
+    display: flex;
+    justify-content: center;
+  } */
+
+  .nav-mobile {
+    max-width: 350px;
+    width: 100%;
+    margin: 0;
+    margin-left: 30%;
+    /* border: 1px red solid; */
+  }
 }
 
 @media (max-width: 480px) {
-  footer .footer-info {
-    gap: 1.5rem;
-  }
-
-  footer #F-Adresse {
-    margin-left: 7rem;
-  }
-
-  footer #F-Telephone {
-    margin-left: 6.5rem;
-    width: 200px;
-    margin-right: 5rem;
-  }
-
-  footer #F-Facebook {
-    margin-left: 1.2rem;
-  }
-
-  footer #F-Email {
-    margin-left: 9.2rem;
-    width: 100px;
-    margin-right: 7rem;
-  }
-
-  .Icone-mobile{
-    /* border: 1px solid red; */
-    display: block;
-    margin-left: 8rem;
-    width: 165px;
-    margin-bottom: 1.5rem;
-    height: 35px;
-  }
-
-  .Acceuil-mobile{
-    margin-right: 8.5rem;
-    position: absolute;
-  }
-
-  .panier-icon-mobile{
-    margin-right: 4rem;
-  }
-
-  .badge-2{
-    position: absolute;
-  }
-
-  .icone-catalogue{
-    display: none;
-  }
-
-  .burger-btn, .notification-icon, .badge {
-    display: block;
-  }
-
-  .burger-btn{
-    margin-left: 23.5rem;
-  }
-
-  /* .logo{
-    height: 10px;
-    padding-left: 0;
-    justify-content: left;
-    position: absolute;
-    margin-left: 0;
-    margin-right: 80%;
-    margin-bottom: 10%;
-  } */
-
-  .header-left img{
-    object-fit: contain;
-    margin-left: 0;
+  .layout{
     position: relative;
-    margin-right: 10%;
+    max-width: 480px;
+  }
+
+  .layout .header{
+    height: 50px;
+  }
+
+  footer .footer-info {
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #burger-btn,
+  #notification-icon,
+  .badge {
+    display: block;
+    margin: 0 auto;
+  }
+
+
+    .navigation-mobile .icone-catalogue{
+    /* border: 1px red solid; */
+        margin: 0 auto;
+
+  }
+
+  .navigation-mobile .panier-icon-mobile{
+        margin: 0 auto;
+
+  }
+
+  .navigation-mobile .Acceuil-mobile{
+    margin: 0 auto;
+  }
+
+  
+.header-left{
+  width: 60px;
+}
+.header .navigation-mobile{
+    display: block;
+    width: 50px;
+    margin: 0;
+    margin-right: 35%;
+  }
+
+
+  .layout #burger-btn{
+    margin-left: 80%;
+    margin-top: 2%;
+  }
+
+  .Notif-facture{
+    margin-top: 6%;
+
+  }
+  
+.notification-icon {
+    /* margin: 0 auto; */
+    width: 100px;
+  }
+
+  .nav-mobile {
+    max-width: 220px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 414px) {
+  .layout{
+    position: relative;
+
+    /* height: 100px; */
+  }
+
+  .layout .header{
+    /* border: 1px red solid; */
+    height: 50px;
+  }
+
+  footer .footer-info {
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #burger-btn,
+  #notification-icon,
+  .badge {
+    display: block;
+    margin: 0 auto;
   }
 
   .header-left{
-    margin-left: 0;
-    padding-left: 0;
-    margin-right: 3rem;
-    position: relative;
-    padding: 0;
+    /* border: 1px red solid; */
+    width: 50px;
   }
 
-  .header{
-    height: 40px;
+  .header .navigation-mobile{
+    display: block;
+    margin:0;
+    /* margin: 0.1rem auto; */
+    /* gap:20px; */
+    width: 70px;
+    margin-right: 35%;
+    /* border: 1px red solid; */
   }
 
-  .nav{
-    display: none;
-  }
 
-  .facture-icone-mobile{
-    padding-top: 0;
-    margin-top: 0;
-    display: none;
+  .layout #burger-btn{
+    margin-left: 77%;
+    margin-top: 2%;
+
   }
 
   .Notif-facture{
-    margin-left: 17rem;
-    width: 90px;
-    margin-top: 1rem;
-    /* border: 1px red solid; */
-    height: 40px;
+    margin-top: 7%;
+  }
+  
+  #notification-icon {
+    width: 80px;
   }
 
-  .notification-icon{
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 0;
-    margin-bottom: 0;
+  .nav-mobile {
+    max-width: 220px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .layout{
+    position: relative;
+
+    /* height: 100px; */
   }
 
-  .nav-mobile{
+  
+  .header-left{
     /* border: 1px red solid; */
-    width: 290px;
+    width: 50px;
+    }
+  .header{
+    position: relative;
+  }
+  .layout .header-navigation{
+    display: none;
+  }
+
+  .layout .header{
+    /* border: 1px red solid; */
+    height: 50px;
+  }
+
+  footer .footer-info {
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #burger-btn,
+  #notification-icon,
+  .badge {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .header .navigation-mobile{
+    display: block;
+    /* margin: 0.5rem auto; */
+    gap:1%;
+    width: 80px;
+    /* border: 1px red solid; */
+  }
+
+  .layout #burger-btn{
+    margin-left: 76%;
+    margin-top: 3%;
+
+  }
+
+  #Notif-facture #notification-icon{
+    /* border: 1px red solid; */
+    width: 60px;
     margin-right: 0;
   }
-
-  #Facture-badge{
-    /* border: 1px green solid; */
-    margin-left: 10rem;
-  }
-
-  .badge{
-    font-size: 0.5rem;
-    position: absolute;
-  }
-
-  .panier-icon-mobile{
-    display: block;
-  }
-
-  .header-left #LOGO{
-    /* border: 1px red solid; */
-    width: 50px;
-  }
   
+  #Notif-facture {
+    margin-top: 8%;
+  }
+
+  .nav-mobile {
+    max-width: 220px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
-@media (max-width: 414px){
-  footer #F-Adresse{
-    margin-left: 4rem;
-  }
-  #F-Email{
-    margin-right: 2rem;
-  }
-  footer #F-Facebook{
-    margin-left: 3rem;
-  }
-  footer #F-Telephone{
-    margin-left: 5rem;
-  }
-
-  .Icone-flex-mobile{
-    gap: 0;
-    row-gap: 0;
-    justify-content: right;
-    height: 35px;
-
-  }
-
-  .Acceuil-mobile{
-    margin-right: 10rem;
-    position: absolute;
-  }
-
-  .panier-icon-mobile{
-    margin-right: 6rem;
-    /* border: 1px solid red; */
-    margin-top: 0;
-    position: absolute;
-
-  }
-
-  .badge-2{
-    position: absolute;
-  }
-
-  .icone-catalogue{
-    display: none;
-  }
-
-  .burger-btn, .notification-icon, .badge {
-    display: block;
-  }
-
-  .burger-btn{
-    margin-left: 19.5rem;
-  }
-
-  
-
-  .header-left img{
-    object-fit: contain;
-    margin-left: 0;
-    position: relative;
-    margin-right: 10%;
-  }
-
-  /* .header-left{
-    margin-left: 0;
-    padding-left: 0;
-    margin-right: 8rem;
-    width: 60px;
-    position: relative;
-    padding: 0;
-    border: 1px red solid;
-  } */
-
-  .header-left #LOGO{
-    /* border: 1px red solid; */
-    width: 50px;
-  }
-
-  .header{
-    height: 40px;
-  }
-
-  .nav{
-    display: none;
-  }
-
-  .facture-icone-mobile{
-    padding-top: 0;
-    margin-top: 0;
-    display: none;
-  }
-
-  .Notif-facture{
-    margin-left: 14rem;
-    width: 90px;
-    margin-top: 1rem;
-    /* border: 1px red solid; */
-    height: 40px;
-  }
-
-  .notification-icon{
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-
-  .nav-mobile{
-    /* border: 1px red solid; */
-    width: 250px;
-  }
-
-  #Facture-badge{
-    /* border: 1px green solid; */
-    margin-left: 10rem;
-  }
-
-  .badge{
-    font-size: 0.5rem;
-    position: absolute;
-  }
-
-  .panier-icon-mobile{
-    display: block;
-  }
-
-
-}
-
-@media (max-width: 360px){
-  footer #F-Adresse{
-    margin-left: 4rem;
-  }
-  footer #F-Email{
-    margin-left: 5.5rem;
-  }
-  footer #F-Facebook{
-    margin-left: 3rem;
-  }
-  footer #F-Telephone{
-    margin-left: 5rem;
-  }
-
-  #burger-btn, #notification-icon, .badge {
-    display: block;
-  }
-
-  #burger-btn{
-    margin-left: 17rem;
-  }
-
- 
-
-  .header-left img{
-    object-fit: contain;
-    margin-left: 0;
-    position: relative;
-    margin-right: 10%;
-  }
-
-  
-
-  .header{
-    height: 40px;
-  }
-
-  .nav{
-    display: none;
-  }
-
-  .facture-icone-mobile{
-    display: none;
-  }
-
-  
-  #Notif-facture{
-    margin-left: 13rem;
-    /* border: 1px red solid; */
-  }
-
-
-  .badge{
-    font-size: 0.5rem;
-  }
-
-   #Facture-badge{
-    /* border: 1px green solid; */
-    margin-left: 10rem;
-  }
-
-  #Icone-mobile{
-    display: block;
-    /* border: 1px red solid; */
-    height: 35px;
-    margin-left: 7rem;
-  }
-
-  #panier-icon-mobile{
-    margin-left: 0;
-  }
-
-  .header-left #LOGO{
-    /* border: 1px red solid; */
-    width: 50px;
-  }
-
-}
 

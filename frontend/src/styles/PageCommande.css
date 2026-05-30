@@ -21,38 +21,30 @@
   color: #666;
   font-style: italic;
 }
-
 @media (max-width: 640px) {
-  .page-commande{
-    /* border: 1px red solid; */
+  .page-commande {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* ✅ passe en colonne sur mobile */
   }
-  
 }
 
 @media (max-width: 600px) {
-  .page-commande{
-    /* border: 1px red solid; */
+  .page-commande {
     display: flex;
     flex-direction: column;
   }
-  
-}
-@media(max-width: 414px){
-  .page-commande{
-  /* border: 1px red solid; */
-  display: flex;
-  flex-direction: column;
-  }
-
 }
 
-@media(max-width: 360px){
-  .page-commande{
-  /* border: 1px red solid; */
-  display: flex;
-  flex-direction: column;
+@media (max-width: 414px) {
+  .page-commande {
+    display: flex;
+    flex-direction: column;
   }
+}
 
+@media (max-width: 360px) {
+  .page-commande {
+    display: flex;
+    flex-direction: column;
+  }
 }

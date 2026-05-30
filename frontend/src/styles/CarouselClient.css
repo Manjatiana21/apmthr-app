@@ -1,7 +1,7 @@
 .carousel-client {
   width: 100%;
   margin: 20px auto;
-  height: 33rem;
+  height: 600px;
   margin-top: 15px;
   padding-top: 0;
 }
@@ -13,60 +13,115 @@
 
 .carousel-image {
   width: 90%;
-  height: 500px;
+  height: 550px;
   object-fit: contain;
-  border-radius: 28px;
+  border-radius: 30px;
   transition: transform 0.5s ease;
   background: linear-gradient(125deg, rgb(240, 23, 229), rgb(11, 225, 233));
   position: relative;
   
 }
 
-/* ✅ Zoom sur l’image centrale */
 .slick-center .carousel-image {
   transform: scale(1.1);
 }
 
-@media (max-width:768px){
-  .carousel-client{
-    height: 23rem;
-  }
-
-  .carousel-image{
-    height: 300px;
-  }
-
-}
-
-@media (max-width: 480px) {
-  .carousel-client{
-    /* border: 1px red solid; */
-    height: 15rem;
-  }
-
-  .carousel-image{
-    height: 210px;
-  }
-  
-}
-
 @media (max-width: 360px) {
   .carousel-client{
-    height: 15rem;
+    /* height: 200px; */
+    margin-top: 15px;
+    position: relative;
+    max-width: 360px;
   }
 
-  .carousel-image{
-    height: 150px;
+  #carousel-image{
+    height: 5%;
   }
 }
 
 @media (max-width: 414px) {
   .carousel-client{
-    height: 15rem;
+    height: 200px;
+    margin-top: 15px;
+    position: relative;
+    max-width: 414px;
+  }
+
+  #carousel-image{
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-client{
+    /* border: 1px red solid; */
+    margin-top: 15px;
+    max-width: 480px;
+  }
+  
+  #carousel-image{
+    height: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-client{
+    height: 300px;
+    margin-top: 15px;
+    position: relative;
+    max-width: 600px;
+    margin-bottom: 0;
+  }
+  
+  .carousel-image{
+    height: 300px;
+  }
+
+  
+}
+
+@media (max-width: 640px) {
+  .carousel-client{
+     margin: 20px auto;
+    height: 300px;
+    margin-top: 15px;
+    position: relative;
+    max-width: 600px;
+  }
+
+  #carousel-image{
+    height: 300px;
+  }
+}
+
+
+
+
+@media (max-width: 992px) {
+  .carousel-client{
+     margin: 20px auto;
+    /* height: 300px; */
+    margin-top: 15px;
+    position: relative;
+    max-width: 800px;
+  }
+
+
+}
+
+
+@media (max-width: 768px) {
+  .carousel-client{
+     margin: 20px auto;
+    /* height: 500px; */
+    margin-top: 15px;
+    position: relative;
+    max-width: 800px;
   }
 
   .carousel-image{
-    height: 150px;
+    height: 450px;
   }
 }
+
 

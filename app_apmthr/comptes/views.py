@@ -16,17 +16,9 @@ from django.contrib.auth import authenticate, login
 
 # Create your views here.
 def password_is_strong(password):
-    if len(password) < 8:
-         return False 
-    if not re.search(r"[A-Z]", password): 
-        return False 
-    if not re.search(r"[a-z]", password): 
-        return False 
-    if not re.search(r"[0-9]", password): 
-        return False 
-    if not re.search(r"[@$!%*?&]", password): 
-        return False 
-    return True
+    #Vérification simple : longueur minimale
+    return len(password) >= 8
+
 
 
 def inscription_client(request):

@@ -16,6 +16,10 @@
 
 #notification-mobile{
     display: none;
+    position: absolute;
+    margin: 0.5rem auto;
+    justify-content: center;
+    margin-left: 50%;
   }
 
 .logo-image img {
@@ -87,10 +91,11 @@
   background: transparent;
   width: 60rem;
   position: absolute;
-  margin-left: 23rem;
+  margin-left: 28rem;
   margin-top: 128px;
   border-radius: 15px;
   border-radius: 2px solid red;
+  /* border: 1px red solid; */
 }
 
 .nav-client {
@@ -247,7 +252,7 @@
 
 .P-PrixEspace{
   background: orange;
-  width: 120px;
+  width: 110px;
   height: 40px;
   border-radius : 9px 0 9px 9px;
   margin-left: 5rem;
@@ -257,7 +262,7 @@
 
 .P-PrixEspace p{
   padding-left: 1rem;
-  padding-top: 0.5rem;
+  padding-top: 0.7rem;
 }
 
 .T-Designation{
@@ -453,2047 +458,1370 @@ width: 250px;
 .profil-dropdown-espace{
   /* border: 1px red solid; */
   margin-right: 2rem;
-}
-
-@media (max-width: 1024px){
-  .header-middle-client h1{
-  width: 550px;
-  margin-left: 5rem ;
-  margin-top: 1rem;
- }
-
- .header-middle-client p{
-  margin-left: 5.5rem;
- }
-
- .header-bottom-client{
-  margin-left: 9rem;
- }
-
- .section_PROPOS h4{
-  margin-left: 45%;
- }
-
- .section_PROPOS h5{
-  margin-left: 15%;
- }
-
- .section_PROPOS p{
-  margin-left: 12%;
- }
-
- .section-title{
-    width: 20rem;
-  }
-
-  .produits-gridEspace{
-    /* border: 1px red solid; */
-    max-width: 900px;
-    margin-left: 0;
-    gap: 5.9rem;
-
-  }
-
-  .produit-cardEspace{
-    margin-left: 1rem;
-    gap: 0;
-    /* border: 1px red solid; */
-    width: 280px;
-  }
-
-  .section-service p{
-    margin-left: 10%;
-  }
-}
-@media (max-width:992px){ 
-  .espace-client{
-    max-width: 992px;
-  }
- 
- .header-middle-client h1{
-  width: 450px;
-  margin-left: 5rem ;
-  margin-top: 1rem;
- }
-
- .header-client .logo{
-  margin-left: 2rem;
- }
-
- .header-links{
-  width: 400px;
-  gap:0;
-  height: 50px;
-  /* border: 1px red solid; */
-  margin-top: 3.5rem;
- }
-
- .header-links .Out{
-  margin-left: 25rem;
-  margin-bottom: 5%;
-  margin-top: 0;
- }
- 
- .DECONNEXION{
-  text-decoration: none;
-  margin-top: 2rem;
-  color: white;
-  margin-right: 1rem;
-  font-family: bold;
- }
-
- .header-client .header-image{
-  margin-left: 35rem;
- }
-
- .Recherche{
-  margin-top: 15rem;
- }
-
- #BRecherche{
-  margin-top: 18.47rem;
- }
- .header-middle-client p{
-  width: 400px;
-  margin-left: 6rem;
- }
-
-  .section{
-    max-width: 992px;
-  }
-
-  footer{
-    max-width: 992px;
-  }
-
-  .header-bottom-client{
-  margin-top: 5rem;
-  margin-left: 14rem;
-  width: 750px;
-  /* border: 1px red solid; */
-  }
-  .section {
-    padding: 2rem;
-    text-align: center;
-  } 
-  .section-title{
-    width: 20rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #ff9800;
-    padding-left: 0.5rem;
-    padding-top: 1rem;
-  }
-
-  h4.littletitle{
-    width: 25rem;
-    margin-left: 20rem;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .paragraphe_propos{
-    margin-left: 3rem;
-    width: 50rem;
-    position: relative;
-    font-family: 'Times New Roman', Times, serif;
-    /* border: red solid 2px; */
-  }
-
-  .produits-gridEspace{
-    margin-left: 0;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 6rem;
-    row-gap: 2cap;
-  }
-
-  .produit-cardEspace {
-  width: 300px;
-  /* height: 500px; */
-  margin-left: 3rem;
-}
-
-.section_PROPOS h4{
-  font-family:cursive;
-  width: 200px;
-  margin-left: 25rem;
-}
-
-.section_PROPOS h5{
-  width: 700px;
-  text-align: center;
-  margin-left: 8rem;
-  font-family:serif;
-}
-
-.section_PROPOS h6{
-  width: 500px;
-  font-family: cursive;
-  margin-left: 3rem;
-  margin-bottom: 0;
-  margin-top: 0;
-  text-align: justify;
-}
-
-.section_PROPOS p{
-  width: 800px;
-  text-align: justify, center;
-  margin-left: 5rem;
-}
-}
-
-@media (max-width:768px){ 
-  .espace-client{
-    max-width: 768px;
-  }
- 
- .header-middle-client h1{
-  width: 450px;
-  margin-left: 0 ;
-  margin-top: 1rem;
- }
-
- .header-client .logo{
-  margin-left: 1rem;
- }
-
- .header-links{
-  width: 320px;
-  margin-left: 0rem;
-  gap:0;
-  height: 50px;
-  margin-top: 3.5rem;
-  display: flex;
-  flex-direction: row;
-  row-gap: 5rem;
-  margin-right: 0rem;
-  /* border: 1px red solid; */
- }
-
- .header-links .badge{
-  position: absolute;
-  display: inline-block;
-  width: 0.8rem;
-  margin-top: 0;
-  height: 18px;
-  padding-left: 0.5rem;
-  padding-bottom: 0.3rem;
- }  
- .header-client .header-image{
-  margin-left: 27rem;
- }
-
- .Recherche{
-  margin-top: 15rem;
-  width: 17rem;
- }
-
- #BRecherche{
-  margin-top: 18.37rem;
-  margin-left: 20rem;
- }
- .header-middle-client p{
-  width: 400px;
-  margin-left: 1rem;
- }
-
-  .section{
-    max-width: 768px;
-  }
-
-  footer{
-    max-width: 768px;
-    .footer-info{
-      gap: 1.5rem;
-    }
-    
-    #F-Adresse{
-      margin-left: 5rem;
-    }
-
-    
-    #F-Telephone{
-      margin-left: 5rem;
-      width: 200px;
-      margin-right: 5rem;
-    }
-
-      #F-Facebook{
-      margin-left: 1.5rem;
-    }
-
-      #F-Email{
-      margin-left: 5rem;
-      width: 100px;
-      margin-right: 7rem;
-    }
-  }
-
-  .header-bottom-client{
-  margin-top: 5rem;
-  margin-left: 0;
-  width: 750px;
-  padding-left: 0;
-  width: 700px;
-  }
-  .section {
-    padding: 2rem;
-    text-align: center;
-    max-width: 768px;
-  } 
-  .section-title{
-    width: 20rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #ff9800;
-    padding-left: 0.5rem;
-    padding-top: 1rem;
-  }
-
-  .produits-gridEspace{
-    margin-left: 0;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 6rem;
-    row-gap: 2cap;
-  }
-
-  .produit-cardEspace {
-  width: 300px;
-  height: 500px;
-  margin-left: 2rem;
-}
-
-.section_PROPOS h4{
-  font-family:cursive;
-  width: 200px;
-  margin-left: 17rem;
-  margin-bottom: 0;
-}
-
-.section_PROPOS h5{
-  margin-top: 0;
-  margin-left: 5rem;
-  font-size: 1.2rem;
-  width: 500px;
-  /* border: 1px red solid; */
-}
-
-.section_PROPOS h6{
-  margin-left: 1.5rem;
-}
-
-.section_PROPOS p{
-  width: 600px;
-  margin-left: 4rem;
-}
-
-.produits-gridEspace{
-  gap: 2.5rem;
-  width: 700px;
-  margin-left: 0;
-}
-
-.produit-cardEspace{
-   height: 600px;
-}
-
-/* .flex p{
-  text-align: center;
-} */
-
-.btn-Commande{
-  margin-left: 17rem;
-  width: 160px;
-}
-
-
-.btn-more1{
-  margin-left: 7rem;
-}
-
-#paragraphe-commande{
-  width: 500px;
-  margin-left: 7rem;
-}
-
-#paragraphe-service{
-  width: 500px;
-  margin-left: 7rem;
-}
-
-
-}
-
-@media (max-width: 640px){
-  .espace-client {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .header-middle-client h1 {
-    /* width: 220px; */
-    margin: 0.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-    /* border: 1px red solid; */
-  }
-  .header-middle-client p{
-    display: block;
-    margin-top: 0;
-  }
-
-  .header-links {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    display: none;
-  }
-
-  .header-client .header-image {
-    margin-right: 0;
-    margin-left: 4rem;
-    position: absolute;
-  }
-
-  
-  
-  #GRIDESPACEPRODUITS{
-    /* border: 1px red solid; */
-    display: grid;
-    width: 650px;
-    column-gap: 0;
-
-    /* gap: 0; */
-  }
-
-  .produit-cardEspace{
-  width: 210px;
-  height: 350px;
-  margin-left: 0;
-  
-}
-
-#CARD-RESPONSIVE{
-  /* border: 1px red solid; */
-  gap: 0;
-  row-gap: 0;
-}
-
-  /* footer {
-    max-width: 100%;
-    text-align: center;
-  } */
-
-  .header-client .logo{
-    height: 5px;
-    padding-left: 0;
-    justify-content: left;
-    position: absolute;
-    margin-left: 0;
-    margin-right: 82%;
-    margin-bottom: 19%;
-  }
-
-  .header-top-client{
-    padding: 0;
-    gap: 10%;
-    height: 30px;
-    /* width: 500px; */
-    margin-right: 5px;
-    padding-left: 0;
-    margin-left: 0;
-    position: relative;
-    /* border: 1px solid red; */
-    justify-content: right;
-    margin-left: 1%;
-    width: 530px;
-
-  }
-
-  .profil-dropdown{
-    position: absolute;
-  }
-
-
-
-  .header-client{
-    position: relative;
-    height: 255px;
-  }
-  .header-image{
-    object-fit: contain;
-    width: 100px;
-    height: 160px;
-    padding-top: 10%;
-    margin-right: 0;
-    padding-left: 60%;
-    position: absolute;
-  }
-
-  #notification-mobile{
-    /* border: 1px red solid; */
-    margin-left: 18rem;
-    position: absolute;
-    display: block;
-  }
-  .Recherche {
-    margin-top: 90px;
-    margin-left: 0;
-    width: 120px;
-    height: 80px;
-  }
-
-  .Recherche ::placeholder{
-    font-size: 0.5rem;
-
-  }
-  #BRecherche{
-    /* border: red solid 1px; */
-    margin-top: 144.5px;
-    margin-left: 9rem;
-    height: 28px;
-    width: 50px;
-  }
-
-  .header-bottom-client{
-    row-gap: 0;
-    width: 500px;
-    margin-left: 0;
-    margin-right: 10px;
-    padding-left: 0;
-  }
- 
-  .nav-client{
-    display: none;
-  }
-
-  .nav-client1{
-    display: block;
-    /* border: 1px red solid; */
-    margin-top: 5.5rem;
-    margin-left: 1.5rem;
-    gap: 5rem;
-    }
-
-    /* .SLIDE{
-      height: 230px;
-    } */
-
-  .section_PROPOS h2{
-  margin-top: 0.5rem;
-  font-size: 1.3rem;
-  padding-left: 0.5rem;
-  margin-left: 0;
-  }
-
-
-  /* .section_PROPOS{
-    margin-left: 0;
-    margin-top: 0;
-  } */
-
-  .section_PROPOS h4{
-    margin-left: 12rem;
-    font-size: 1.5rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h5{
-    margin-left: 1rem;
-    font-size: 1.1rem;
-    width: 480px;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h6{
-    margin-left: 0;
-    font-size: 0.8rem;
-    width: 280px;
-    margin-top: 0.5rem;
-  }
-
-  .section_PROPOS p{
-    /* border: 1px red solid; */
-    margin-left: 1rem;
-    width: 480px;
-  }
-
-.section-title {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  padding-left: 0.5rem;
-  height: 25px;
-  margin-top: 2rem;
-  margin-left: 2rem;
-}
-
-.bottom-responsive{
-  display: block;
-}
-
-.section-produits p{
-  font-size: 0.99rem;
-  margin-left: 3rem;
-}
-
-.produit-cardEspace{
-  margin-left: 1.5rem;
-}
-
-.produit-cardEspace img{
-  height: 200px;
-  width: 200px;
-  margin-left: 0.4rem;
-  /* border: 1px red solid; */
-}
-
-.P-PrixEspace{
-  width: 140px;
-  /* border: 1px red solid; */
-  margin-left: 2rem;
-}
-
-.T-Designation{
-  margin-left: 0.5rem;
-  margin-top: 0;
-}
-
-.P-PrixEspace .prix{
-  /* border: 1px red solid; */
-  margin-left: 0.5rem;
-  padding-top: 0.7rem;
-}
-.cardindication .indication{
-  margin-top: 0;
-  padding-top: 0;
-  margin-left: 0;
-  /* border: 1px red solid; */
-
-}
-
-.cardindication{
-  height: 85px;
-  position: absolute;
-  margin-left: 17rem;
-  /* border: 1px red solid; */
-  margin-top: 58rem;
-
-}
-
-.cardindication .btn-more1{
-  margin-left: 6rem;
-  font-size: 0.9rem;
-  width: 50px;
-}
-
-.indication p{
-  margin-left: 0;
-  font-size: 0.9rem;
-
-}
-
-#paragraphe-commande{
-  margin-left: 3rem;
-  margin-right: 0;
-  width: 500px;
-  /* margin: 0.5rem; */
-  font-size: 1rem;
-  /* border: 1px rgb(15, 10, 10) solid; */
-
-}
-
-.btn-Commande{
-  margin-left: 12rem;
-  font-size: 1rem;
-  width: 150px;
-  margin-top: 0;
-  height: 30px;
-  margin-bottom: 0;
-}
-#VOTRECOMMANDE{
-  width: 350px;
-  margin-left: 2rem;
-  padding-left: 0.6rem;
-  /* border: 1px red solid; */
-
-}
-
-#paragraphe-service{
-  margin-right: 0;
-  width: 510px;
-  margin: 0.5rem;
-  font-size: 1rem;
-  /* border: 1px red solid; */
-  margin-left: 3rem;
-}
-
-li{
-  margin: 1rem;
-}
-
-
-.section-service .titre-Service{
-  font-size: 1rem;
-  margin-left: 2rem;
-  margin-bottom: 0.3rem;
-  /* border: 1px red solid; */
-
-}
-
-.liste-Service{
-  margin-left: 4rem;
-}
-
-.footer .footer-info #F-Adresse{
-  margin-left: 11rem;
-  /* border: 1px red solid; */
-
-}
-
-.footer .footer-info #F-Email{
-  margin-left: 13rem;
-}
-
-.footer .footer-info #F-Facebook{
-  margin-left: 5rem;
-  margin-right: 2.2rem;
-}
-
-.footer .footer-info #F-Telephone{
-  margin-left: 10rem;
-}
-
-
-  .logo-image{
-    /* border: 1px red solid; */
-    margin-left: 1rem;
-    height: 82px;
-    margin-top: 1rem;
-  }
-
-
-}
-
-
-@media (max-width: 600px){
-  .espace-client {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .header-middle-client h1 {
-    /* width: 220px; */
-    margin: 0.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-    /* border: 1px red solid; */
-  }
-  .header-middle-client p{
-    display: block;
-    margin-top: 0;
-  }
-
-  .header-links {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    display: none;
-  }
-
-  .header-client .header-image {
-    margin-right: 0;
-    margin-left: 4rem;
-    position: absolute;
-  }
-
-  
-  
-  #GRIDESPACEPRODUITS{
-    /* border: 1px red solid; */
-    display: grid;
-    width: 650px;
-    column-gap: 0;
-
-    /* gap: 0; */
-  }
-
-  .produit-cardEspace{
-  width: 210px;
-  height: 350px;
-  margin-left: 0.1rem;
-  
-}
-
-#CARD-RESPONSIVE{
-  /* border: 1px red solid; */
-  gap: 0;
-  row-gap: 0;
-}
-
-  .header-client .logo{
-    height: 5px;
-    padding-left: 0;
-    justify-content: left;
-    position: absolute;
-    margin-left: 0;
-    margin-right: 82%;
-    margin-bottom: 19%;
-  }
-
-  .header-top-client{
-    padding: 0;
-    gap: 10%;
-    height: 30px;
-    /* width: 500px; */
-    margin-right: 5px;
-    padding-left: 0;
-    margin-left: 0;
-    position: relative;
-    /* border: 1px solid red; */
-    justify-content: right;
-    margin-left: 1%;
-    width: 530px;
-
-  }
-
-  .profil-dropdown{
-    position: absolute;
-  }
-
-
-
-  .header-client{
-    position: relative;
-    height: 255px;
-  }
-  .header-image{
-    object-fit: contain;
-    width: 100px;
-    height: 160px;
-    padding-top: 10%;
-    margin-right: 0;
-    padding-left: 60%;
-    position: absolute;
-  }
-
-  #notification-mobile{
-    /* border: 1px red solid; */
-    margin-left: 18rem;
-    position: absolute;
-    display: block;
-  }
-  .Recherche {
-    margin-top: 90px;
-    margin-left: 0;
-    width: 120px;
-    height: 80px;
-  }
-
-  .Recherche ::placeholder{
-    font-size: 0.5rem;
-
-  }
-  #BRecherche{
-    /* border: red solid 1px; */
-    margin-top: 144.5px;
-    margin-left: 9rem;
-    height: 28px;
-    width: 50px;
-  }
-
-  .header-bottom-client{
-    row-gap: 0;
-    width: 500px;
-    margin-left: 0;
-    margin-right: 10px;
-    padding-left: 0;
-  }
- 
-  .nav-client{
-    display: none;
-  }
-
-  .nav-client1{
-    display: block;
-    /* border: 1px red solid; */
-    margin-top: 5.5rem;
-    margin-left: 1.5rem;
-    gap: 5rem;
-    }
-
-    /* .SLIDE{
-      height: 230px;
-    } */
-
-  .section_PROPOS h2{
-  margin-top: 0.5rem;
-  font-size: 1.3rem;
-  padding-left: 0.5rem;
-  margin-left: 0;
-  }
-
-
-  /* .section_PROPOS{
-    margin-left: 0;
-    margin-top: 0;
-  } */
-
-  .section_PROPOS h4{
-    margin-left: 12rem;
-    font-size: 1.5rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h5{
-    margin-left: 1rem;
-    font-size: 1.1rem;
-    width: 480px;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h6{
-    margin-left: 0;
-    font-size: 0.8rem;
-    width: 280px;
-    margin-top: 0.5rem;
-  }
-
-  .section_PROPOS p{
-    /* border: 1px red solid; */
-    margin-left: 1rem;
-    width: 480px;
-  }
-
-.section-title {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  padding-left: 0.5rem;
-  height: 25px;
-  margin-top: 2rem;
-  margin-left: 2rem;
-}
-
-.bottom-responsive{
-  display: block;
-}
-
-.section-produits p{
-  font-size: 0.99rem;
-  margin-left: 3rem;
-}
-
-
-.produit-cardEspace img{
-  height: 200px;
-  width: 200px;
-  margin-left: 0.4rem;
-  /* border: 1px red solid; */
-}
-
-.P-PrixEspace{
-  width: 140px;
-  /* border: 1px red solid; */
-  margin-left: 2rem;
-}
-
-.T-Designation{
-  margin-left: 0.5rem;
-  margin-top: 0;
-}
-
-.P-PrixEspace .prix{
-  /* border: 1px red solid; */
-  margin-left: 0.5rem;
-  padding-top: 0.7rem;
-}
-.cardindication .indication{
-  margin-top: 0;
-  padding-top: 0;
-  margin-left: 0;
-  /* border: 1px red solid; */
-
-}
-
-.cardindication{
-  height: 85px;
-  position: absolute;
-  margin-left: 17rem;
-  /* border: 1px red solid; */
-  margin-top: 58rem;
-
-}
-
-.cardindication .btn-more1{
-  margin-left: 6rem;
-  font-size: 0.9rem;
-  width: 50px;
-}
-
-.indication p{
-  margin-left: 0;
-  font-size: 0.9rem;
-
-}
-
-#paragraphe-commande{
-  margin-left: 2.5rem;
-  width: auto;
-  /* margin: 0.5rem; */
-  font-size: 1rem;
-  /* border: 1px red solid; */
-
-}
-
-.btn-Commande{
-  margin-left: 12rem;
-  font-size: 1rem;
-  width: 150px;
-  margin-top: 0;
-  height: 30px;
-  margin-bottom: 0;
-}
-#VOTRECOMMANDE{
-  width: 350px;
-  margin-left: 2rem;
-  padding-left: 0.6rem;
-  /* border: 1px red solid; */
-
-}
-
-#paragraphe-service{
-  margin-right: 0;
-  width: 510px;
-  /* margin: 0.5rem; */
-  font-size: 1rem;
-  /* border: 1px red solid; */
-  margin-left: 3rem;
-}
-
-li{
-  margin: 1rem;
-}
-
-
-.logo-image{
-    /* border: 1px red solid; */
-    margin-left: 0.5rem;
-    height: 82px;
-    margin-top: 1rem;
-  }
-
-
-.section-service .titre-Service{
-  font-size: 1rem;
-  margin-left: 2rem;
-  margin-bottom: 0.3rem;
-  /* border: 1px red solid; */
-
-}
-
-.liste-Service{
-  margin-left: 4rem;
-}
-
-}
-
-@media (max-width: 480px) {
-    .espace-client {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .header-middle-client h1 {
-    width: 350px;
-    margin: 0.5rem;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-left: 0;
-    /* border: 1px red solid; */
-  }
-  .header-middle-client p{
-    display: block;
-    margin-top: 1.5rem;
-    width: 250px;
-    margin-left: 3rem;
-  }
-
-  
-  .logo-image{
-    /* border: 1px red solid; */
-    margin-left: 0.6rem;
-    height: 82px;
-    margin-top: 1rem;
-  }
-
-  .header-links {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    display: none;
-  }
-
-  .header-client .header-image {
-    margin-right: 0;
-    margin-left: 2.5rem;
-    position: absolute;
-  }
-
-   .Recherche {
-    margin-top: 100px;
-    margin-left: 1.2rem;
-    width: 120px;
-    height: 80px;
-  }
-
-  .Recherche ::placeholder{
-    font-size: 0.5rem;
-
-  }
-  #BRecherche{
-    /* border: red solid 1px; */
-    margin-top: 155px;
-    margin-left: 10rem;
-    height: 28px;
-    width: 50px;
-  }
-
-  .nav-client1{
-    display: block;
-    /* border: 1px red solid; */
-    margin-top: 5.5rem;
-    margin-left: 0.9rem;
-    gap: 2.2rem;
-    }
-
-  #notification-mobile{
-    /* border: 1px red solid; */
-    margin-left: 15rem;
-    margin-top: 0.5rem;
-    position: absolute;
-    display: block;
-  }
-
-  .header-top-client  .logo{
-    height: 7px;
-    padding-left: 0;
-    justify-content: left;
-    position: absolute;
-    margin-left: 0;
-    margin-right: 86%;
-    margin-bottom: 30%;
-  }
-
-  .header-top-client{
-    padding: 0;
-    gap: 10%;
-    height: 30px;
-    width: 300px;
-    margin-right: 5px;
-    padding-left: 0;
-    margin-left: 0;
-    position: relative;
-    /* border: 1px solid red; */
-    justify-content: right;
-    margin-left: 14%;
-    width: 354px;
-
-  }
-
-  .section_PROPOS h2{
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  padding-left: 0.5rem;
-  margin-left: 1rem;
-  }
-
-
-  .section_PROPOS{
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  .section_PROPOS h4{
-    margin-left: 12rem;
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h5{
-    margin-left: 2rem;
-    font-size: 1rem;
-    width: 380px;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h6{
-    margin-left: 1rem;
-    font-size: 0.8rem;
-    width: 280px;
-    margin-top: 0.5rem;
-  }
-
-  .section_PROPOS p{
-    /* border: 1px red solid; */
-    margin-left: 1rem;
-    width: 410px;
-  }
-
-.section-title {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 0.5rem;
-  height: 25px;
-  margin-top: 1rem;
-  margin-left: 1rem;
-
-}
-
-.bottom-responsive{
-  display: block;
-}
-
-.section-produits p{
-  font-size: 0.9rem;
-}
-
-/* .produits-gridEspace{
-  width: 150px;
-  margin-left: 0;
-    border: 1px red solid;
-
-} */
-
-#GRIDESPACEPRODUITS{
-    /* border: 1px red solid; */
-    display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
-    width: 350px;
-}
-
-.produit-cardEspace{
-  width: 300px;
-  height: 350px;
-    /* border: 1px red solid; */
-
-}
-
-.produit-cardEspace img{
-  height: 200px;
-  width: 250px;
-  margin-left: 1.5rem;
-} 
-
-.P-PrixEspace{
-  width: 120px;
-  margin-left: 5rem;
-  /* border: 1px red solid; */
-
-}
-
-.T-Designation{
-  margin-left: 3rem;
-
-}
-
-.prix{
-  justify-content: center;
-  padding-top: rem;
-  margin-top: 0;
-  margin-bottom:0;
-}
-
-.cardindication .indication{
-  margin-top: 0;
-  padding-top: 0;
-  margin-left: 0;
-  display: none;
-  /* position: absolute; */
-    /* border: 1px red solid; */
-
-}
-
-.cardindication{
-  height: 85px;
   position: relative;
-  margin-left: 0;
-  display: none;
 }
 
-.cardindication .btn-more1{
-  display: none;
-  margin-left: 5rem;
-  font-size: 0.9rem;
-  width: 50px;
-  display: none;
-}
-
-#paragraphe-commande{
-  margin-left: 0;
-  width: auto;
-  margin: 1.5rem;
-  font-size: 0.9rem;
-}
-
-.btn-Commande{
-  margin-left: 8rem;
-  font-size: 0.9rem;
-  width: 150px;
-  margin-top: 0;
-  height: 18px;
-  margin-bottom: 0;
-}
-#VOTRECOMMANDE{
-  width: 250px;
-  margin-left: 1rem;
-  padding-left: 0.5rem;
-
-}
-
-#paragraphe-service{
-  margin-right: 0;
-  width: 400px;
-  margin: 0.5rem;
-  font-size: 0.9rem;
-  /* border: 1px red solid; */
-  margin-left: 2rem;
-}
-
-li{
-  margin: 1rem;
+.profil-menu-dropdown{
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 1000;
+  min-width: 160px;
 }
 
 
-.section-service .titre-Service{
-  font-size: 0.9rem;
-  margin-left: 1.5rem;
-  margin-bottom: 0.3rem;
-  /* border: 1px red solid; */
-
-}
-
-.liste-Service{
-  margin-left: 3rem;
-}
-
-}
-
-
-/* 📱 Téléphones moyens (Huawei P Smart, iPhone X, ≤ 414px) */
-@media (max-width: 414px) {
-  .espace-client {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  #drop-profil{
-    /* border: 1px red solid; */
-    width: 65px;
-  }
-
+@media (max-width: 1024px) {
   .header-middle-client h1 {
-    width: 220px;
-    margin: 0.5rem;
-    font-size: 1.2rem;
+    max-width: 550px;
+    margin: 1rem auto;
     text-align: center;
+    margin-left: 13%;
     /* border: 1px red solid; */
-  }
-
-  .header-middle-client p{
-    display: none;
-  }
-  .header-links {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    display: none;
-  }
-
-  .header-client .header-image {
-    margin: 0 auto;
-    display: block;
-    max-width: 200px;
-    margin-left: 0.6rem;
-  }
-
-  footer {
-    max-width: 100%;
-    text-align: center;
-  }
-
- 
-  .logo-image{
-    /* border: 1px red solid; */
-    margin-left: 4rem;
-    height: 82px;
-    margin-top: 1rem;
-  }
-
-
-  .header-top-client{
-    padding: 0;
-    gap: 10%;
-    height: 30px;
-    width: 300px;
-    margin-right: 5px;
-    padding-left: 0;
-    margin-left: 0;
-    position: relative;
-    /* border: 1px solid red; */
-    justify-content: right;
-    margin-left: 1%;
-    width: 354px;
-
-  }
-
-  .header-client{
-    position: relative;
-    height: 235px;
-  }
-  .header-image{
-    object-fit: contain;
-    width: 100px;
-    height: 160px;
-    padding-top: 10%;
-    margin-right: 0;
-    padding-left: 60%;
-    position: absolute;
-  }
-
-  #notification-mobile{
-    /* border: 1px red solid; */
-    margin-left: 12rem;
-    position: absolute;
-    display: block;
-  }
-  .Recherche {
-    margin-top: 85px;
-    margin-left: 0;
-    width: 120px;
-    height: 80px;
-  }
-
-  .Recherche ::placeholder{
-    font-size: 0.5rem;
-
-  }
-  #BRecherche{
-    /* border: red solid 1px; */
-    margin-top: 140px;
-    margin-left: 9rem;
-    height: 28px;
-    width: 50px;
-  }
-
-  .header-bottom-client{
-    row-gap: 0;
-    width: 300px;
-    margin-left: 0;
-    margin-right: 10px;
-    padding-left: 0;
-  }
- 
-  .nav-client{
-    display: none;
-  }
-
-  .nav-client1{
-    display: block;
-    /* border: 1px red solid; */
-    margin-top: 4.5rem;
-    margin-left: 0.5rem;
-    gap: 1.5rem;
-
-    }
-
-    .SLIDE{
-      height: 230px;
-    }
-
-  .section_PROPOS h2{
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  padding-left: 0.5rem;
-  margin-left: 0;
-  }
-
-
-  .section_PROPOS{
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  .section_PROPOS h4{
-    margin-left: 8rem;
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h5{
-    margin-left: 1rem;
-    font-size: 1rem;
-    width: 280px;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h6{
-    margin-left: 0;
-    font-size: 0.8rem;
-    width: 280px;
-    margin-top: 0.5rem;
-  }
-
-  .section_PROPOS p{
-    /* border: 1px red solid; */
-    margin-left: 1rem;
-    width: 320px;
-  }
-
-.section-title {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 0.5rem;
-  height: 25px;
-  margin-top: 1rem;
-  margin-left: 0;
-
-}
-
-.bottom-responsive{
-  display: block;
-}
-
-.section-produits p{
-  font-size: 0.9rem;
-}
-
-
-.section-produits{
-  height: auto;
-}
-
- #GRIDESPACEPRODUITS{
-    /* border: 1px red solid; */
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-    width: 280px;
-}
-
-.produit-cardEspace{
-  width: 280px;
-}
- 
-.produits-gridEspace{
-  max-width: 300px;
-  margin-left: 1rem;
-}
-
-
-.produit-cardEspace img{
-  /* height: 200px; */
-  width: 250px;
-  margin-left: 0.5rem;
-}
-
-.P-PrixEspace{
-  width: 120px;
-  /* border: 1px red solid; */
-  margin-left: 4.5rem;
-}
-
-.T-Designation{
-  margin-left: 2.5rem;
-}
-
-.prix{
-  justify-content: center;
-  padding-top: 1rem;
-  margin-top: 0;
-  margin-bottom:0;
-}
-
-.cardindication .indication{
-  margin-top: 0;
-  padding-top: 0;
-  margin-left: 0;
-  display: none;
-
-}
-
-.cardindication{
-  height: 85px;
-  position: relative;
-  margin-left: 0;
-  display: none;
-}
-
-.cardindication .btn-more1{
-  margin-left: 5rem;
-  font-size: 0.9rem;
-  width: 50px;
-  display: none;
-}
-
-.indication p{
-  margin-left: 0;
-  font-size: 0.9rem;
-
-}
-
-#paragraphe-commande{
-  margin-left: 0;
-  width: auto;
-  margin: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.btn-Commande{
-  margin-left: 6rem;
-  font-size: 0.9rem;
-  width: 100px;
-  margin-top: 0;
-  height: 30px;
-  margin-bottom: 0;
-}
-#VOTRECOMMANDE{
-  width: 250px;
-  margin-left: 0;
-  padding-left: 0.5rem;
-}
-
-#paragraphe-service{
-  margin-right: 0;
-  width: 310px;
-  margin: 0.5rem;
-  font-size: 0.9rem;
-  /* border: 1px red solid; */
-}
-
-li{
-  margin: 1rem;
-}
-
-
-.section-service .titre-Service{
-  font-size: 0.9rem;
-  margin-left: 0.8rem;
-  margin-bottom: 0.3rem;
-}
-
-.liste-Service{
-  margin-left: 2rem;
-}
-
-footer .footer-info{
-  /* height: 100px; */
-  display: flex;
-  flex-direction: row;
-  row-gap: 0;
-  margin-left: 0;
-}
-
-.footer .footer-info #F-Adresse{
-  margin-left: 4rem;
-}
-
-.footer .footer-info #F-Email{
-  margin-left: 6rem;
-}
-
-.footer .footer-info #F-Facebook{
-  margin-left: 0;
-  margin-right: 2.2rem;
-}
-
-.footer .footer-info #F-Telephone{
-  margin-left: 4rem;
-}
-
-/* .footer-bottom {
-  border: 1px red solid;
-  width: 350px;
-  margin-left: 0;
-  padding-left: 0;
-  margin-right: 14rem;
-} */
-}
-
-/* 📱 Petits téléphones (≤ 360px) */
-@media (max-width: 360px) {
-  .header-middle-client h1 {
-    font-size: 1rem;
-    margin: 0.2rem;
-    width: 200px;
-    /* border: 1px solid red; */
   }
 
   .header-middle-client p {
-    width: auto;
-    margin: 0.5rem;
-    font-size: 0.9rem;
-    display: none;
-  }
-
-  .header-links {
-    display: none;
-  }
-
-  #notification-mobile{
-    /* border: 1px red solid; */
-    margin-left: 10rem;
-    margin-right: 1.5rem;
-    /* position: absolute; */
-    display: block;
-  }
-  
-  .section_PROPOS p {
-    width: auto;
-    margin: 0.5rem;
-    font-size: 0.9rem;
-    text-align: justify;
-  }
-
-  .logo-image{
-    /* border: 1px red solid; */
-    margin-left: 4rem;
-    height: 82px;
-    margin-top: 1rem;
-  }
-
-  .header-top-client{
-    padding: 0;
-    gap: 10%;
-    height: 30px;
-    width: 300px;
-    margin-right: 5px;
-    padding-left: 0;
-    margin-left: 0;
-    position: relative;
-    /* border: 1px solid red; */
-    justify-content: right;
-    margin-left: 1%;
-
-  }
-
-  .header-client{
-    position: relative;
-    height: 235px;
-  }
-  .header-image{
-    object-fit: contain;
-    width: 100px;
-    height: 160px;
-    padding-top: 10%;
-    margin-right: 0;
-    padding-left: 60%;
-    position: absolute;
-  }
-
-  .Recherche {
-    margin-top: 100px;
-    margin-left: 0;
-    width: 120px;
-    height: 80px;
-  }
-
-  .Recherche ::placeholder{
-    font-size: 0.5rem;
-
-  }
-  #BRecherche{
-    /* border: red solid 1px; */
-    margin-top: 154px;
-    margin-left: 9rem;
-    height: 28px;
-    width: 50px;
-  }
-
-  #header-bottom-client{
-    row-gap: 0;
-    width: 300px;
-    margin-left: 0;
-    margin-right: 10px;
-    padding-left: 0;
-  }
- 
-  .nav-client{
-    display: none;
-  }
-
-  .nav-client1{
-    display: block;
-    /* border: 1px red solid; */
-    margin-top: 6rem;
-    }
-
-  .nav-client1 :link{
-    font-size: 0.5rem;
-
-  }
-
-    .SLIDE{
-      height: 230px;
-    }
-
-  .section_PROPOS h2{
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  padding-left: 0.5rem;
-  margin-left: 0;
-  }
-
-
-  .section_PROPOS{
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  .section_PROPOS h4{
-    margin-left: 8rem;
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h5{
-    margin-left: 1rem;
-    font-size: 1rem;
-    width: 280px;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .section_PROPOS h6{
-    margin-left: 0;
-    font-size: 0.8rem;
-    width: 280px;
-    margin-top: 0.5rem;
-  }
-
-  li{
-  margin: 1rem;
-}
-
-.section-title {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 0.5rem;
-  height: 25px;
-  margin-top: 1rem;
-  margin-left: 0;
-
-}
-
-#bottom-responsive{
-  display: block;
-}
-
-.section-produits p{
-  font-size: 0.9rem;
-}
-
- .produits-gridEspace{
-  width: 300px;
-  margin-left: 1rem;
-}
-
-.produit-cardEspace{
-  width: 250px;
-} 
-
-.produit-cardEspace img{
-  height: 200px;
-  width: 250px;
-  margin-left: 0rem;
-}
-
-.P-PrixEspace{
-  width: 120px;
-  margin-left: 4rem;
-}
-
-.T-Designation{
-  margin-left: 2rem;
-}
-
-.prix{
-  justify-content: center;
-  padding-top: 1rem;
-  margin-top: 0;
-  margin-bottom:0;
-}
-
-.cardindication .indication{
-  margin-top: 0;
-  padding-top: 0;
-  margin-left: 0;
-  display: none;
-}
-
-.cardindication{
-  height: 85px;
-  position: relative;
-  margin-left: 0;
-  display: none;
-}
-
-.cardindication .btn-more1{
-  margin-left: 4.5rem;
-  font-size: 0.9rem;
-  width: 50px;
-  display: none;
-}
-
-.indication p{
-  margin-left: 0;
-  font-size: 0.9rem;
-}
-
-#paragraphe-commande{
-  margin-left: 0;
-  width: auto;
-  margin: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.section-produits{
-  height: auto;
-}
-.btn-Commande{
-  margin-left: 6rem;
-  font-size: 0.9rem;
-  width: 100px;
-  margin-top: 0;
-  height: 30px;
-  margin-bottom: 0;
-}
-#VOTRECOMMANDE{
-  width: 250px;
-  margin-left: 0;
-  padding-left: 0.5rem;
-}
-
-#paragraphe-service{
-  margin-left: 0;
-  width: auto;
-  margin: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.section-service .titre-Service{
-  font-size: 0.9rem;
-  margin-left: 0.8rem;
-  margin-bottom: 0.3rem;
-}
-
-.liste-Service{
-  margin-left: 2rem;
-}
-
-footer .footer-info{
-  /* height: 100px; */
-  display: flex;
-  flex-direction: row;
-  row-gap: 0;
-  margin-left: 0;
-}
-
-.footer .footer-info #F-Adresse{
-  margin-left: 4rem;
-}
-
-.footer .footer-info #F-Email{
-  margin-left: 6rem;
-}
-
-.footer .footer-info #F-Facebook{
-  margin-left: 0;
-  margin-right: 1rem;
-}
-
-.footer .footer-info #F-Telephone{
-  margin-left: 4rem;
-}
-}
-
-
-/* @media (max-width:640px){
-  .header-client{
-    max-width: 640px;
-    width: 640px;
-    border: red solid 2px;
-  }
-
-  .section{
-    max-width: 640px;
-  }
-
-  footer{
-    max-width: 640px;
-  }
-  .header-middle-client{
-    margin-left: 15px;
-    width: 40rem;
-  } 
-   .header-bottom-client{
-    margin-left: 0px;
-  }
-  .header-image{
-    margin-right: 10px;
-  }
-
-  .section {
-    padding: 2rem;
+    margin: 0 auto;
     text-align: center;
-  } 
+    max-width: 500px;
+    margin-left: 12%;
+  }
+
+  .header-bottom-client {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 750px;
+    margin-top: 15%;
+    margin-left: 23.5%;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h4,
+  .section_PROPOS h5,
+  .section_PROPOS p {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .produits-gridEspace {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+    margin-left: 3.5%;
+  }
+
   .section-title{
-    width: 20rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #ff9800;
-    padding-left: 0.5rem;
-    height: 5rem;
-    padding-top: 1rem;
-  }
-
-  h4.littletitle{
-    width: 25rem;
-    margin-left: 20rem;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .paragraphe_propos{
-    margin-left: 3rem;
-    width: 50rem;
-    position: relative;
-    font-family: 'Times New Roman', Times, serif;
-    /* border: red solid 2px; */
-  /* }*/ 
-
-  /* .produits-gridEspace{
-    margin-left: 0;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 6rem;
-    row-gap: 2cap;
+    width: 800px;
+    /* border: 1px red solid; */
   }
 
   .produit-cardEspace {
-  width: 300px;
-  height: 500px;
-  margin-left: 3rem;
+    margin: 0 auto;
+    width: 280px;
+  }
+
+  .section-service p {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
- .nav {
-    display: none; /* cacher menu classique */
-  /* }
-  .burger-btn {
+@media (max-width: 992px) {
+  .espace-client {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+
+  .header-middle-client h1 {
+    max-width: 450px;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .header-client .logo {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto;
     display: block;
   }
-} */ 
- 
 
- 
+  .header-links {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .header-links .Out {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .header-client .header-image {
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-left: 60%;
+  }
+
+  .Recherche {
+    width: 80%;
+    max-width: 300px;
+    margin: 1rem auto;
+  }
+
+  #BRecherche {
+    width: 80px;
+    margin: 0.5rem auto;
+    display: block;
+  }
+
+  .produits-gridEspace {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+    row-gap: 2rem;
+    margin: 0 auto;
+    max-width: 900px;
+    margin-left: 2%;
+  }
+
+  .produit-cardEspace {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section_PROPOS p {
+    margin: 0 auto;
+    text-align: justify;
+    max-width: 910px;
+    margin-top: 1%;
+  }
+
+  .section_PROPOS h5{
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+
+  .section-title{
+    width: 300px;
+    margin-left: 3.5%;
+  }
+
+  #litle-PROPOS{
+    margin-left: 0;
+  }
+
+  .header-middle-client h1{
+    /* border: 1px red solid; */
+    margin-left: 5%;
+    max-width: 500px;
+  }
+    .header-middle-client p {
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 2%;
+  }
+
+   .header-client .Recherche {
+    
+    margin: 0.2rem auto;
+    margin-top: 20%;
+    margin-left: 10%;
+    /* display: none; */
+  }
+
+  .header-client #BRecherche {
+    margin: 0.2rem auto;
+    margin-top: 25.5%;
+    margin-left: 38%;
+    /* display: none; */
+  }
+
+  .header-bottom-client{
+    margin-top: 14%;
+    /* border: 1px red solid; */
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-client {
+    height: 380px;
+    position: relative;
+  }
+
+  .header-links{
+    width:  350px;
+  }
+
+  .header-bottom-client{
+    /* border: 1px red solid; */
+    margin-top: 9%;
+    margin-left: 0;
+    width: 710px;
+  }
+
+  .header-links .Notifications-Espace{
+    display: flex;
+  }
+
+  .header-middle-client h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    margin-left: 5%;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 68%;
+    margin-right: 0;
+    margin-top: 90px;
+    /* position: relative; */
+    width: auto;
+    max-width: 150px;
+  }
+
+  .header-middle-client p {
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    margin-left: 0;
+  }
+
+   .header-client .Recherche {
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 16%;
+    margin-left: 15%;
+    /* display: none; */
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 23.2%;
+    margin-left: 38%;
+    /* display: none; */
+  }
+
+    .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 680px;
+  }
+
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 680px;
+    margin-left: 2%;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 680px;
+  }
+
+  .produits-gridEspace {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 55px;
+    margin: 0 auto;
+    max-width: 620px;
+  }
 
 
+  .produit-cardEspace {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-Commande {
+    margin: 1rem auto;
+    display: block;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h4 {
+    margin: 0.5rem auto;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 700px;
+    font-size: 18px;
+    margin: 0.5rem auto;
+    margin-left: 1%;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 720px;
+    font-size: 15px;
+    margin: 0.5rem auto;
+    /* border: 1px red solid; */
+    margin-left: 3.5%;
+
+  }
+
+  .section-service p {
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 700px;
+    /* border: 1px red solid; */
+  }
+
+  .section-service h1{
+    font-size: 17px;
+    
+  }
+
+  .section-service li{
+    margin-left: 15%;
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .section-title{
+    /* border: 1px red solid; */
+    font-size: 1.5rem;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1.5rem;
+
+  }
+}
+
+
+@media (max-width: 640px){
+.header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 1.4rem;
+    margin: 0.2rem auto;
+    max-width: 350px;
+    margin-left: 3%;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+
+  .header-middle-client p {
+    display: block;
+    margin: 0.5rem auto;
+    margin-left: 12%;
+    width: 230px;
+    /* border: 1px red solid; */
+  }
+
+  .header-top-client{
+    /* border: 1px red solid; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 40px;
+  }
+
+  .header-top-client .logo{
+    /* border: 1px red solid; */
+    margin-right: 60%;
+  }
+  .header-client .Recherche {
+    /* width: 7%; */
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 17%;
+    margin-left: 8%;
+    /* display: none; */
+  }
+
+   .bottom-responsive{
+    display: block;
+  }
+
+  .bottom-responsive #Espacenav{
+    gap: 13%;
+    margin-left: 8%;
+  }
+
+  #notification-mobile{
+    display: block;
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 25.8%;
+    margin-left: 37%;
+    /* display: none; */
+  }
+
+  .header-links{
+    display: none;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 62%;
+    margin-right: 0;
+    margin-top: 25px;
+    /* position: relative; */
+    width: auto;
+
+  }
+
+  .profil-dropdown-espace{
+    /* border: 1px red solid; */
+    margin: 0.5rem auto;
+  }
+
+  .header-bottom-client .nav-client{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 520px;
+    margin-left: 2%;
+  }
+
+  .section-title{
+    margin-left: 5%;
+    font-size: 1rem;
+    width: 1000px;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1rem;
+    margin-left: 0%;
+  }
+
+  .produits-gridEspace {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-left: 15%;
+  }
+
+  .produit-cardEspace {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 520px;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 520px;
+  }
+
+  .section_PROPOS h4 {
+    /* font-size: 0.9rem; */
+    margin: 0.5rem;
+    text-align: center;
+    max-width: 520px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 500px;
+    font-size: 18px;
+    margin: 0.5rem auto;
+    margin-left: 6%;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 520px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-service p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 520px;
+    /* border: 1px red solid; */
+  }
+
+  .section-service h1{
+    font-size: 15px;
+    
+  }
+
+  .section-service li{
+    margin-left: 0;
+    margin: 0.5rem auto;
+    /* border: 1px red solid; */
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer .footer-info #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 50%;
+    margin: 0.2rem auto;
+  }
+}
+
+@media (max-width: 600px){
+.header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 1.4rem;
+    margin: 0.2rem auto;
+    max-width: 350px;
+    margin-left: 3%;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+
+  .header-middle-client p {
+    display: block;
+    margin: 0.5rem auto;
+    margin-left: 16%;
+    width: 200px;
+    /* border: 1px red solid; */
+  }
+
+  .header-top-client{
+    /* border: 1px red solid; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 40px;
+  }
+
+  .header-top-client .logo{
+    /* border: 1px red solid; */
+    margin-right: 45%;
+  }
+  .header-client .Recherche {
+    /* width: 7%; */
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 17%;
+    margin-left: 8%;
+    /* display: none; */
+  }
+
+   .bottom-responsive{
+    display: block;
+  }
+
+  .bottom-responsive #Espacenav{
+    gap: 13%;
+    margin-left: 8%;
+  }
+
+  #notification-mobile{
+    display: block;
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 26.3%;
+    margin-left: 37%;
+    /* display: none; */
+  }
+
+  .header-links{
+    display: none;
+  }
+.header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 62%;
+    margin-right: 0;
+    margin-top: 25px;
+    /* position: relative; */
+    width: auto;
+
+  }
+
+  .profil-dropdown-espace{
+    /* border: 1px red solid; */
+    margin: 0.5rem auto;
+  }
+
+  .header-bottom-client .nav-client{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 520px;
+    margin-left: 2%;
+  }
+
+  .section-title{
+    margin-left: 5%;
+    font-size: 1rem;
+    width: 1000px;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1rem;
+    margin-left: 0%;
+  }
+
+  .produits-gridEspace {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-left: 15%;
+  }
+
+  .produit-cardEspace {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 520px;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 520px;
+  }
+
+  .section_PROPOS h4 {
+    /* font-size: 0.9rem; */
+    margin: 0.5rem;
+    text-align: center;
+    max-width: 520px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 500px;
+    font-size: 18px;
+    margin: 0.5rem auto;
+    margin-left: 6%;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 520px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-service p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 520px;
+    /* border: 1px red solid; */
+  }
+
+  .section-service h1{
+    font-size: 15px;
+    
+  }
+
+  .section-service li{
+    margin-left: 0;
+    margin: 0.5rem auto;
+    /* border: 1px red solid; */
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer .footer-info #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 50%;
+    margin: 0.2rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+.header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 1rem;
+    margin: 0.2rem auto;
+    max-width: 250px;
+    margin-left: 2%;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+
+  .header-middle-client p {
+    display: block;
+    margin: 0.5rem auto;
+    margin-left: 6.5%;
+    width: 200px;
+    /* border: 1px red solid; */
+  }
+
+  .header-top-client{
+    /* border: 1px red solid; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 40px;
+  }
+
+  .header-top-client .logo{
+    /* border: 1px red solid; */
+    margin-right: 45%;
+  }
+  .header-client .Recherche {
+    /* width: 7%; */
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 20%;
+    margin-left: 5%;
+    /* display: none; */
+  }
+
+   .bottom-responsive{
+    display: block;
+  }
+
+  .bottom-responsive #Espacenav{
+    gap: 13%;
+    margin-left: 0;
+    margin-top: 20%;
+  }
+
+  #notification-mobile{
+    display: block;
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 31.7%;
+    margin-left: 40%;
+    /* display: none; */
+  }
+
+  .header-links{
+    display: none;
+  }
+.header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 58%;
+    margin-right: 0;
+    margin-top: 25px;
+    /* position: relative; */
+    width: auto;
+
+  }
+
+  .profil-dropdown-espace{
+    /* border: 1px red solid; */
+    margin: 0.5rem auto;
+  }
+
+  .header-bottom-client .nav-client{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 400px;
+    margin-left: 2%;
+  }
+
+  .section-title{
+    margin-left: 5%;
+    font-size: 1rem;
+    width: 1000px;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1rem;
+    margin-left: 0%;
+  }
+
+  .produits-gridEspace {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-left: 15%;
+  }
+
+  .produit-cardEspace {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 380px;
+  }
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 400px;
+  }
+
+  .section_PROPOS h4 {
+    /* font-size: 0.9rem; */
+    margin: 0.5rem;
+    text-align: center;
+    max-width: 330px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 300px;
+    font-size: 12px;
+    margin: 0.5rem auto;
+    margin-left: 6%;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 280px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-service p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 400px;
+    /* border: 1px red solid; */
+  }
+
+  .section-service h1{
+    font-size: 15px;
+    
+  }
+
+  .section-service li{
+    margin-left: 17%;
+    margin: 0.5rem auto;
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer .footer-info #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 50%;
+    margin: 0.2rem auto;
+    /* margin: 10%; */
+  }
+}
+
+@media (max-width: 414px) {
+  .header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 0.9rem;
+    margin: 0.2rem auto;
+    max-width: 200px;
+    margin-left: 0;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+
+  .header-middle-client p {
+    display: none;
+  }
+
+  .header-top-client{
+    /* border: 1px red solid; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 40px;
+  }
+
+  .header-top-client .logo{
+    /* border: 1px red solid; */
+    margin-right: 45%;
+  }
+  .header-client .Recherche {
+    /* width: 7%; */
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 22%;
+    /* display: none; */
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 35.5%;
+    margin-left: 42%;
+    /* display: none; */
+  }
+
+  .header-links{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  .bottom-responsive{
+    display: block;
+  }
+
+  .bottom-responsive #Espacenav{
+    gap: 9%;
+    margin-left: 0;
+    margin-top: 35%;
+  }
+
+  #notification-mobile{
+    display: block;
+    margin-right: 30%;
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    width: auto;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 58%;
+    margin-right: 0;
+    margin-top: 35px;
+    /* position: relative; */
+    width: auto;
+
+  }
+
+  .profil-dropdown-espace{
+    /* border: 1px red solid; */
+    margin: 0.5rem auto;
+  }
+
+  .header-bottom-client .nav-client{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem ;
+    text-align: justify;
+    max-width: 334px;
+    margin-left: 5%;
+  }
+
+  .section-title{
+    margin-left: 5%;
+    font-size: 1rem;
+    width: 1000px;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1rem;
+    margin-left: 0%;
+  }
+
+  .produits-gridEspace {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .produit-cardEspace {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 280px;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 334px;
+  }
+
+  .section_PROPOS h4 {
+    margin: 0.5rem;
+    text-align: center;
+    max-width: 330px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 300px;
+    font-size: 12px;
+    margin: 0.5rem auto;
+    margin-left: 6%;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 280px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-service p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 334px;
+    /* border: 1px red solid; */
+  }
+
+  .section-service h1{
+    font-size: 15px;
+    
+  }
+
+  .section-service li{
+    margin-left: 17%;
+    margin: 0.5rem auto;
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer .footer-info #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 50%;
+    margin: 0.2rem auto;
+    /* margin: 10%; */
+  }
+}
+
+@media (max-width: 360px) {
+  .header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 0.9rem;
+    margin: 0.2rem auto;
+    max-width: 200px;
+    margin-left: 0;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+  
+  .profil-menu-dropdown{
+    margin-top: 0;
+  }
+
+  .header-middle-client p {
+    display: none;
+  }
+
+  .header-top-client{
+    /* border: 1px red solid; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 40px;
+  }
+
+  .header-top-client .logo{
+    /* border: 1px red solid; */
+    margin-right: 45%;
+  }
+  .header-client .Recherche {
+    /* width: 7%; */
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 22%;
+    /* display: none; */
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 37.5%;
+    margin-left: 42%;
+    /* display: none; */
+  }
+
+  .header-links{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  .bottom-responsive{
+    display: block;
+  }
+
+  .bottom-responsive #Espacenav{
+    gap: 5%;
+    /* border: 1px red solid; */
+    margin-left: 0;
+    margin-top: 35%;
+    margin-bottom: 0;
+  }
+
+  #notification-mobile{
+    display: block;
+    margin-right: 30%;
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    width: auto;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 58%;
+    margin-right: 0;
+    margin-top: 35px;
+    /* position: relative; */
+    width: auto;
+
+  }
+
+  
+
+  .header-bottom-client .nav-client{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem ;
+    text-align: justify;
+    max-width: 280px;
+    margin-left: 5%;
+
+  }
+
+  .section-title{
+    margin-left: 5%;
+    font-size: 1rem;
+    width: 1000px;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1rem;
+    margin-left: 0%;
+  }
+
+  .produits-gridEspace {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .produit-cardEspace {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 280px;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem ;
+    text-align: justify;
+    max-width: 280px;
+  }
+
+  .section_PROPOS h4 {
+    margin: 0.5rem;
+    text-align: center;
+    max-width: 310px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 300px;
+    font-size: 12px;
+    margin: 0.5rem auto;
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 280px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-service p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 300px;
+    /* margin-left: 10%; */
+  }
+
+  .section-service h1{
+    font-size: 15px;
+    
+  }
+
+  .section-service li{
+    margin-left: 17%;
+    margin: 0.5rem auto;
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer .footer-info #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 50%;
+    margin: 0.2rem auto;
+  }
+}

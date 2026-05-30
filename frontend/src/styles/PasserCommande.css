@@ -68,8 +68,3 @@ form input, form select {
 }
 
 
-@media(max-width: 360px){
-  .commande-card{
-  border: 1px red solid;
-  }
-}

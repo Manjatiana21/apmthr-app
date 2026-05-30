@@ -80,13 +80,16 @@ function Inscription() {
 
             <div className="form-group">
               <input
-                type="text"
-                name="telephone"
-                placeholder="Téléphone"
-                value={formData.telephone}
-                onChange={handleChange}
-                required
-              />
+                  type="tel"
+                  name="telephone"
+                  placeholder="Téléphone"
+                  value={formData.telephone}
+                  onChange={(e) => {
+                    const onlyNumbers = e.target.value.replace(/[^0-9]/g, "");
+                    setFormData({ ...formData, telephone: onlyNumbers });
+                  }}
+                  required
+                />
             </div>
           </div>
 

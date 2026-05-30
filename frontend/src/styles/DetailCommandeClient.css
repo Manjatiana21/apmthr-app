@@ -51,20 +51,22 @@
   background: #c62828;
 }
 
-@media(max-width: 414px){
-  #annulee_la_commande{
-  /* border: 1px red solid; */
-  font-size: 0.6rem;
-  width: 170Px;
-  height: 55px;
+@media (max-width: 414px) {
+  #annulee_la_commande {
+    font-size: 0.6rem;
+    width: 170px; /* ✅ px en minuscule */
+    height: 55px;
+    margin: 0 auto; /* ✅ centré */
+    display: block;
   }
 }
 
-@media(max-width: 360px){
-  #annulee_la_commande{
-  /* border: 1px red solid; */
-  font-size: 0.6rem;
-  width: 170Px;
-  height: 55px;
+@media (max-width: 360px) {
+  #annulee_la_commande {
+    font-size: 0.6rem;
+    width: 150px; /* ✅ un peu plus petit pour très petits écrans */
+    height: 50px;
+    margin: 0 auto;
+    display: block;
   }
 }

@@ -11,29 +11,25 @@
 }
 
 @media (max-width: 600px) {
-    .mesfactures-title h2{
-        font-size: 1rem;
-    }
-    
+  .mesfactures-title h2 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .mesfactures-title h2{
-        font-size: 1rem;
-    }
-    
+  .mesfactures-title h2 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 414px) {
-    .mesfactures-title h2{
-        font-size: 1rem;
-    }
-
+  .mesfactures-title h2 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 360px) {
-    .mesfactures-title h2{
-        font-size: 1rem;
-    }
-    
+  .mesfactures-title h2 {
+    font-size: 1rem;
+  }
 }

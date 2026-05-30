@@ -44,10 +44,19 @@
 
 .nav-admin {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 2rem;
+  /* border: 1px red solid; */
 }
 
+.Nav-administrateur{
+  /* border: 1px red solid; */
+  display: flex;
+  justify-content: center;
+  gap: 9rem;
+  width: 1200px;
+
+}
 .nav-admin a {
   color: #2e7d32;
   font-weight: bold;
@@ -181,9 +190,8 @@ th, td {
   color: white;
 }
 
-
-
 #card-titre{
   color: white;
   font-weight: bold;
 }
+

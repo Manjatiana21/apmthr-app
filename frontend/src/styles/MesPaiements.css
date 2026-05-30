@@ -69,7 +69,12 @@ th, td {
 
 
 @media (max-width: 768px) {
-  table, thead, tbody, th, td, tr {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
     display: block;
   }
 
@@ -84,7 +89,7 @@ th, td {
   }
 
   .table-responsive td::before {
-    content: attr(data-label); 
+    content: attr(data-label);
     font-weight: bold;
     color: #555;
   }
@@ -101,3 +106,4 @@ th, td {
     margin-right: 0.5rem;
   }
 }
+

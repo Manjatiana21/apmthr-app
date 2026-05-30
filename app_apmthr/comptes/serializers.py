@@ -74,7 +74,7 @@ class PaiementSerializer(serializers.ModelSerializer):
 # 🔹 Inscription (client)
 # =========================
 class InscriptionSerializer(serializers.ModelSerializer):
-    """Serializer pour inscription avec validation du mot de passe."""
+    """Serializer pour inscription avec mot de passe simple (8 caractères min)."""
     password1 = serializers.CharField(write_only=True)
     password2 = serializers.CharField(write_only=True)
 
@@ -83,17 +83,9 @@ class InscriptionSerializer(serializers.ModelSerializer):
         fields = ["username", "email", "adresse", "telephone", "password1", "password2"]
 
     def validate_password1(self, value):
-        # ✅ Vérification de la complexité du mot de passe
+        # ✅ Vérification simple : longueur minimale
         if len(value) < 8:
             raise serializers.ValidationError("Le mot de passe doit contenir au moins 8 caractères.")
-        if not re.search(r"[A-Z]", value):
-            raise serializers.ValidationError("Le mot de passe doit contenir au moins une majuscule.")
-        if not re.search(r"[a-z]", value):
-            raise serializers.ValidationError("Le mot de passe doit contenir au moins une minuscule.")
-        if not re.search(r"[0-9]", value):
-            raise serializers.ValidationError("Le mot de passe doit contenir au moins un chiffre.")
-        if not re.search(r"[@$!%*?&]", value):
-            raise serializers.ValidationError("Le mot de passe doit contenir au moins un caractère spécial (@$!%*?&).")
         return value
 
     def validate(self, data):
@@ -107,12 +99,13 @@ class InscriptionSerializer(serializers.ModelSerializer):
             username=validated_data["username"],
             email=validated_data.get("email"),
             adresse=validated_data.get("adresse"),
-            role="CLIENT" ,
-            telephone=validated_data.get('telephone')
+            role="CLIENT",
+            telephone=validated_data.get("telephone")
         )
         user.set_password(validated_data["password1"])
         user.save()
         return user
+
 
 class ModifierProfilSerializer(serializers.ModelSerializer):
     old_password = serializers.CharField(write_only=True, required=False)

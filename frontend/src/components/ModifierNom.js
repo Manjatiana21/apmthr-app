@@ -26,7 +26,7 @@ function ModifierNom() {
   return (
     <div className="modifier-nom-container">
       <h2>Changer le nom</h2>
-      <form onSubmit={handleSubmit} className="Form-input">
+      <form onSubmit={handleSubmit} className="Form-input" id="Input-Form-Nom">
         <label>Nouveau nom :</label>
         <input
           type="text"
@@ -35,7 +35,7 @@ function ModifierNom() {
           onChange={(e) => setUsername(e.target.value)}
           required
         />
-        <div id="btn-modification-profil">
+        <div className="btn-nom-modification" id="btn-modification-profil" >
           <button type="submit" className="Valide-btn">Valider</button>
           <button type="submit" className="annuler-btn">
           <Link to="/modifier-profil" className="btn btn-outline-danger" id="retour-btn">Annuler</Link></button>

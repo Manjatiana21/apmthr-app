@@ -26,191 +26,194 @@
 .Valide-btn{
     width: 300px;
     margin-left: 5rem;
-}
-@media (max-width: 1024px) {
-    .modifier-telephone-container{
-        margin-left: 20%;
-    }
-    
-}
-
-@media (max-width: 640px){
-    .modifier-telephone-container{
-        /* border: 1px red solid; */
-        margin-left: 3rem;
-        width: 450px;
-    }
-
-    .modifier-telephone-container h2{
-        font-size: large;
-    }
-
-    .Form-input input{
-        /* border: 1px red solid; */
-        margin-left: 0.6rem;
-        margin-top: 2rem;
-        position: absolute;
-        width: 350px;
-    }
-
-    #btn-modification-profil{
-        /* border: 1px red solid; */
-        display: flex;
-        flex-direction: row;
-        width: 350px;
-        position: absolute;
-        gap: 1rem;
-        margin-top: 5rem;
-        margin-left: 0;
-        padding-left: 0;
-    }
+}@media (max-width: 1024px) {
+  .modifier-telephone-container {
+    margin: 0 auto;   /* ✅ centré automatiquement */
+    width: 80%;
+    max-width: 500px;
+  }
 }
 
-@media (max-width: 600px){
-    .modifier-telephone-container{
-        /* border: 1px red solid; */
-        margin-left: 1rem;
-        width: 400px;
-    }
+@media (max-width: 640px) {
+  .modifier-telephone-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 450px;
+  }
 
-    .modifier-telephone-container h2{
-        font-size: large;
-    }
+  .modifier-telephone-container h2 {
+    font-size: large;
+    text-align: center;
+  }
 
-    .Form-input input{
-        /* border: 1px red solid; */
-        margin-left: 0.6rem;
-        margin-top: 2rem;
-        position: absolute;
-        width: 350px;
-    }
+  .Form-input input {
+    margin: 1rem auto;
+    width: 100%;      /* ✅ fluide */
+    position: relative;
+    display: block;
+    margin-top: 0;
+  }
 
-    #btn-modification-profil{
-        /* border: 1px red solid; */
-        display: flex;
-        flex-direction: row;
-        width: 350px;
-        position: absolute;
-        gap: 1rem;
-        margin-top: 5rem;
-        margin-left: 0;
-        padding-left: 0;
-    }
+  #btn-modification-profil {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    margin-top: 10%;
+    max-width: 480px;
+  }
 }
 
-@media (max-width: 480px){
-    .modifier-telephone-container{
-        /* border: 1px red solid; */
-        margin-left: 2rem;
-        width: 350px;
-    }
+@media (max-width: 600px) {
+  .modifier-telephone-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+  }
 
-    .modifier-telephone-container h2{
-        font-size: large;
-    }
+  .modifier-telephone-container h2 {
+    font-size: large;
+    text-align: center;
+  }
 
-    .Form-input input{
-        /* border: 1px red solid; */
-        margin-left: 0;
-        margin-top: 2rem;
-        position: absolute;
-        width: 280px;
-    }
+  .Form-input input {
+    margin: 1rem auto;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-top: 0;
+  }
 
-
-    #btn-modification-profil{
-        /* border: 1px red solid; */
-        display: flex;
-        flex-direction: row;
-        width: 300px;
-        position: absolute;
-        gap: 1rem;
-        margin-top: 5rem;
-        margin-left: 0;
-        padding-left: 0;
-    }
-
-    .Valide-btn, .annuler-btn{
-        font-size: 0.7rem;
-        height: 35px;
-    }
-    
+  #btn-modification-profil {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    margin-top: 15%;
+    max-width: 400px;
+  }
 }
 
-@media (max-width: 414px){
-    .modifier-adresse-container{
-        /* border: 1px red solid; */
-        margin-left: 2rem;
-        width: 350px;
-    }
+@media (max-width: 480px) {
+  .modifier-telephone-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 350px;
+  }
 
-    .modifier-adresse-container h2{
-        font-size: large;
-    }
+  .modifier-telephone-container h2 {
+    font-size: large;
+    text-align: center;
+  }
 
-    .Form-input input{
-        /* border: 1px red solid; */
-        margin-left: 0.2rem;
-        margin-top: 2rem;
-        position: absolute;
-        width: 320px;
-    }
+  .Form-input input {
+    margin: 1rem auto;
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+    display: block;
+  }
 
-    .Valide-btn{
-        /* border: 1px red solid; */
-        /* margin-top: 3rem; */
-        padding-left: 0;
-        
-    }
+  #btn-modification-profil {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    margin-top: 15%;
+    max-width: 350px;
+  }
 
-    #btn-modification-profil{
-        /* border: 1px red solid; */
-        display: flex;
-        flex-direction: row;
-        width: 350px;
-        position: absolute;
-        gap: 1rem;
-        margin-top: 5rem;
-        margin-left: 0;
-        padding-left: 0;
-    }
+  .Valide-btn,
+  .annuler-btn {
+    margin: 0 auto;
+    font-size: 0.7rem;
+    /* height: 35px; */
+  }
 }
 
-@media (max-width: 360px){
-    .modifier-telephone-container{
-        /* border: 1px red solid; */
-        margin-left: 2rem;
-        width: 350px;
-    }
+@media (max-width: 414px) {
+  .modifier-telephone-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 350px;
+  }
 
-    .modifier-telephone-container h2{
-        font-size: large;
-    }
+  .modifier-telephone-container h2 {
+    font-size: large;
+    text-align: center;
+  }
 
-    .Form-input input{
-        /* border: 1px red solid; */
-        margin-left: 0;
-        margin-top: 2rem;
-        position: absolute;
-        width: 300px;
-    }
+  .Form-input input {
+    margin: 1rem auto;
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+    display: block;
+  }
+
+  .Valide-btn {
+    padding-left: 0;
+  }
+
+  #btn-modification-profil {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* gap: 1rem; */
+    margin-top: 15%;
+    max-width: 350px;
+    margin-left: 0;
+    height: 15px;
+    /* border: 1px red solid; */
+  }
+
+  .Valide-btn,
+  .annuler-btn {
+    margin: 0 auto;
+    font-size: 0.7rem;
+    /* height: 5px; */
+    /* border: 1px red solid; */
+
+  }
+}
+
+@media (max-width: 360px) {
+  .modifier-telephone-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .modifier-telephone-container h2 {
+    font-size: large;
+    text-align: center;
+  }
+
+  .Form-input input {
+    margin: 1rem auto;
+    width: 100%;
+    position: relative;
+    display: block;
+  }
 
 
-    #btn-modification-profil{
-        /* border: 1px red solid; */
-        display: flex;
-        flex-direction: row;
-        width: 300px;
-        position: absolute;
-        gap: 1rem;
-        margin-top: 5rem;
-        margin-left: 0;
-        padding-left: 0;
-    }
+  #btn-modification-profil{
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    /* border: 1px red solid; */
+    max-width: 300px;
+    margin-top: 30%;
+  }
+  .Valide-btn,
+  .annuler-btn {
+    margin: 0 auto;
+    font-size: 0.7rem;
+    /* height: 5px; */
+    /* border: 1px red solid; */
 
-    .Valide-btn, .annuler-btn{
-        font-size: 0.7rem;
-        height: 35px;
-    }
-    
+  }
 }

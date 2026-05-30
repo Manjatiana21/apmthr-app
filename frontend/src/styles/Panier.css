@@ -146,8 +146,10 @@
   animation-fill-mode:forwards;
 }
 
-@media(max-width: 360px){
-  .numero-admin input[type="text"]{
-    margin-left: 0;
+@media (max-width: 360px) {
+  .numero-admin input[type="text"] {
+    margin-left: 0;  
+    width: 100%;      
+    display: block;   
   }
 }

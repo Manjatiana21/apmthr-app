@@ -29,7 +29,7 @@ function CarouselClient() {
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index} className="carousel-slide">
-            <img src={src} alt={`Slide ${index}`} className="carousel-image" />
+            <img src={src} alt={`Slide ${index}`} className="carousel-image" id="carousel-image" />
           </div>
         ))}
       </Slider>

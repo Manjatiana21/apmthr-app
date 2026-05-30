@@ -38,9 +38,10 @@ function Layout({ children }) {
     <div className="layout">
       <header className="header shadow-sm">
         <div className="header-left">
-          <img src={logoImg} alt="Logo" className="logo" id="LOGO" />
+            <img src={logoImg} alt="Layout" className="logo-layout" />
         </div>
 
+        <div className="header-navigation">
         <nav className="nav" id="nav-layout">
           <ul>
             {user?.role === "CLIENT" && (
@@ -93,29 +94,34 @@ function Layout({ children }) {
                     </div>
               </>
             )}
-            {user?.role === "ADMIN" && (
-              <>
-                <li><Link to="/admin">Tableau de bord</Link></li>
-                <li><Link to="/admin/catalogue">Nos Produits</Link></li>
-                <li className="notification-link">
-                  <Link to="/admin/notifications">
-                    🔔 Notifications Admin
-                    {!loading && nbNonLues > 0 && (
-                      <span className="badge">{nbNonLues}</span>
-                    )}
-                  </Link>
-                </li>
-                <li><Link to="/corbeille-produits">Corbeille</Link></li>
-                <li><Link className="btn-logout" to="/logout">Déconnexion</Link></li>
-              </>
-            )}
+
+              <div className="Nav-administrateur">
+              {user?.role === "ADMIN" && (
+                <>
+                  <li><Link to="/admin">Tableau de bord</Link></li>
+                  <li><Link to="/admin/catalogue">Nos Produits</Link></li>
+                  <li className="notification-link">
+                    <Link to="/admin/notifications">
+                      🔔 Notifications Admin
+                      {!loading && nbNonLues > 0 && (
+                        <span className="badge">{nbNonLues}</span>
+                      )}
+                    </Link>
+                  </li>
+                  <li><Link to="/corbeille-produits">Corbeille</Link></li>
+                  <li><Link className="btn-logout" to="/logout">Déconnexion</Link></li>
+                </>
+              )}
+            </div>
           </ul>
         </nav>
+        </div>
+
 
 
         {user?.role === "CLIENT" && (
-          <div className="Icone-mobile" id="Icone-mobile">
-            <div className="Icone-flex-mobile">
+          <div className="navigation-mobile" id="Icone-mobile">
+            <div className="navigation-flex-mobile" id="Icone-flex-mobile">
             <div className="Acceuil-mobile" id="Acceuil-mobile">
               <li><Link to="/espace-client" onClick={() => setMenuOpen(false)}><FaHome className="i-home" />
               </Link></li>

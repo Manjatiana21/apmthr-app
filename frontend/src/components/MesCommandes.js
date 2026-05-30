@@ -10,6 +10,8 @@ function MesCommandes() {
   const [commandes, setCommandes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
+  const [page, setPage] = useState(1);
+  const pageSize = 5;
 
   useEffect(() => {
     getCommandesClient()
@@ -23,6 +25,12 @@ function MesCommandes() {
         setLoading(false);
       });
   }, []);
+
+  const startIndex = (page - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const commandesPage = commandes.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(commandes.length / pageSize);
+
 
   return (
     <Layout>
@@ -99,8 +107,20 @@ function MesCommandes() {
                 </tr>
               )}
             </tbody>
+
+          <div className="pagination">
+          {page > 1 && (
+            <button onClick={() => setPage(page - 1)} className="btn-prev">Précédent</button>
+          )}
+          <span>Page {page} / {totalPages}</span>
+          {page < totalPages && (
+            <button onClick={() => setPage(page + 1)} className="btn-next">Suivant</button>
+          )}
+        </div>
+        
           </table>
         )}
+      
       </div>
     </Layout>
   );

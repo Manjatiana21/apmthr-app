@@ -66,158 +66,141 @@ h2 {
 }
 
 @media (max-width: 640px) {
-  #statut-commande{
-    margin-left: 22rem;
+  #statut-commande {
+    margin: 0 auto; /* ✅ centré automatiquement */
     width: 100px;
     text-align: center;
   }
-
 }
 
 @media (max-width: 600px) {
-  #btn-secondary-commande{
+  #btn-secondary-commande {
     display: none;
   }
-  
-  #statut-commande{
-    margin-left: 20rem;
+
+  #statut-commande {
+    margin: 0 auto;
     width: 95px;
     text-align: center;
   }
-
 }
 
-@media (max-width: 480px){
-  .actions{
-    /* border: 1px red solid; */
-    width: 350px;
-    margin-left: 0;
+@media (max-width: 480px) {
+  .actions {
+    width: 100%; /* ✅ fluide */
+    margin: 0 auto;
   }
 
-   #Voir-mes-commandes-btn{
-    /* border: 1px red solid; */
+  #Voir-mes-commandes-btn {
     font-size: 0.8rem;
     height: 20px;
-    /* margin-right: 2rem; */
   }
 
-  #Livraison-btn{
-    /* border: 1px red solid; */
+  #Livraison-btn {
     font-size: 0.8rem;
     height: 20px;
-    margin-left: 13.5rem;
-    position: absolute;
+    margin: 0 auto;
+    display: block;
   }
 
-  #statut-commande{
+  #statut-commande {
     width: 62px;
     font-size: 0.6rem;
     text-align: center;
-    margin-left: 14.5rem;
+    margin: 0 auto;
   }
 
-  td{
+  td {
     font-size: 0.9rem;
   }
-
-
 }
 
-@media (max-width: 414px){
-  .actions{
-    /* border: 1px red solid; */
-    width: 280px;
-    margin-left: 0;
+@media (max-width: 414px) {
+  .actions {
+    width: 100%;
+    margin: 0 auto;
   }
 
-  #btn-secondary-commande{
+  #btn-secondary-commande {
     display: none;
   }
 
-  #Voir-mes-commandes-btn{
-    /* border: 1px red solid; */
+  #Voir-mes-commandes-btn {
     font-size: 0.6rem;
     height: 20px;
-    /* margin-right: 2rem; */
   }
 
-  #Livraison-btn{
-    /* border: 1px red solid; */
+  #Livraison-btn {
     font-size: 0.6rem;
     height: 20px;
-    margin-left: 10.5rem;
-    position: absolute;
+    margin: 0 auto;
+    display: block;
   }
 
-  .mes-commandes h2{
+  .mes-commandes h2 {
     text-align: center;
     margin-bottom: 0;
   }
 
-   #statut-commande{
+  #statut-commande {
     width: 62px;
     font-size: 0.6rem;
     text-align: center;
-    margin-left: 10.5rem;
+    margin: 0 auto;
   }
 
-
-  .btn-link{
+  .btn-link {
     font-size: 0.1rem;
   }
 
-  .table-commandes{
+  .table-commandes {
     font-size: 0.8rem;
   }
-  
-  #Voir{
-    /* border: 1px red solid; */
+
+  #Voir {
     font-size: 0.99rem;
   }
 }
 
-@media (max-width: 360px){
-  .actions{
+@media (max-width: 360px) {
+  .actions {
+    width: 100%;
+    margin: 0 auto;
     /* border: 1px red solid; */
-    width: 280px;
-    margin-left: 0;
   }
 
-  #btn-secondary-commande{
+  #btn-secondary-commande {
     display: none;
   }
 
-  #Voir-mes-commandes-btn{
+
+  #Voir-mes-commandes-btn {
     /* border: 1px red solid; */
     font-size: 0.6rem;
     height: 20px;
-    /* margin-right: 2rem; */
+    padding: 0;
   }
 
-  #statut-commande{
+  #statut-commande {
     width: 60px;
     font-size: 0.6rem;
     text-align: center;
-    margin-left: 7rem;
+    margin: 0.5rem auto;
   }
 
-  #Livraison-btn{
-    /* border: 1px red solid; */
+  #Livraison-btn {
     font-size: 0.6rem;
     height: 20px;
-    margin-left: 10.5rem;
-    position: absolute;
+    margin: 0 auto;
+    display: block;
   }
 
-  .mes-commandes h2{
+  .mes-commandes h2 {
     text-align: center;
     margin-bottom: 0;
   }
 
-  
-
-  .btn-link{
+  .btn-link {
     font-size: 0.1rem;
   }
-
 }

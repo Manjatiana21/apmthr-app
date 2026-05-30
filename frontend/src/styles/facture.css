@@ -180,186 +180,119 @@ a.btnliste {
     margin-left: 2rem;
 }
 
-@media(max-width: 768px){
-  .badge-success{
+@media (max-width: 768px) {
+  .badge-success {
     width: 30px;
   }
 }
 
 @media (max-width: 640px) {
-  .facture-detail .logo{
-    /* border: 1px red solid; */
+  .facture-detail .logo {
     margin-bottom: 5rem;
-    margin-top: 0;
     width: 100px;
     height: 38px;
   }
-  .facture-detail h2{
+  .facture-detail h2,
+  .client-info h3,
+  .association-info h2,
+  .client-info p,
+  .association-info p,
+  .paiement-info p,
+  .total-right {
     font-size: 0.9rem;
   }
-  
-  .client-info h3{
-    font-size: 0.9rem;
-  }
-
-  .association-info h2{
-    font-size: 0.9rem;
-
-  }
-
-  .client-info p{
-    font-size: 0.8rem;
-  }
-
-  .association-info p{
-    font-size: 0.8rem;
-  }
-
-  .paiement-info p{
-    font-size: 0.8rem;
-  }
-
-  .total-right{
-    font-size: 0.8rem;
-  }
-
-  .actions{
+  .actions {
     margin-top: 2.5rem;
   }
-
-  .Statut-facture{
+  .Statut-facture {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
-  .facture-detail .logo{
-    /* border: 1px red solid; */
+  /* ✅ inutile de répéter, même règles que 640px */
+  .facture-detail .logo {
     margin-bottom: 5rem;
-    margin-top: 0;
     width: 100px;
     height: 38px;
   }
-  .facture-detail h2{
+  .facture-detail h2 {
     font-size: 0.9rem;
   }
-  .client-info h3{
-    font-size: 0.9rem;
-  }
-
-  .association-info h2{
-    font-size: 0.9rem;
-
-  }
-
-  .client-info p{
+  .client-info h3,
+  .association-info h2,
+  .client-info p,
+  .association-info p,
+  .paiement-info p,
+  .total-right {
     font-size: 0.8rem;
   }
-
-  .association-info p{
-    font-size: 0.8rem;
-  }
-
-  .paiement-info p{
-    font-size: 0.8rem;
-  }
-
-  .total-right{
-    font-size: 0.8rem;
-  }
-
-  .actions{
+  .actions {
     margin-top: 2.5rem;
   }
-
-  .Statut-facture{
+  .Statut-facture {
     display: none;
   }
-  
 }
 
-
-
-@media (max-width: 414px){
- 
-  .facture-detail .logo{
+@media (max-width: 414px) {
+  .facture-detail .logo {
     width: 90px;
     margin-top: 0;
   }
-
-  .facture-detail h2{
-    /* border: 1px red solid; */
-    font-size: small;
-    width: 180Px;
-    margin-left: 6rem;
-    /* margin-top: 3.5rem; */
+  .facture-detail h2 {
+    font-size: 0.8rem;
+    width: 180px; /* ✅ px minuscule */
+    margin: 0 auto; /* ✅ centré */
+    text-align: center;
   }
-  
-  .client-info{
-    justify-content: left;
+  .client-info {
     font-size: 0.6rem;
     margin-top: 1.5rem;
   }
-  .association-info{
+  .association-info {
     display: none;
   }
-
-  .table-facture{
+  .table-facture {
     font-size: 0.8rem;
   }
-
-  .paiement-info, .total-right{
+  .paiement-info,
+  .total-right {
     font-size: 0.6rem;
   }
-
-  .Statut-facture{
+  .Statut-facture,
+  .actions #btn-Ngénéré {
     display: none;
   }
-
-  .actions #btn-Ngénéré{
-    display: none;
-  }
-
 }
 
-
-@media (max-width: 360px){
-  .facture-detail .logo{
+@media (max-width: 360px) {
+  .facture-detail .logo {
     width: 90px;
     margin-top: 0;
   }
-
-  .facture-detail h2{
-    /* border: 1px red solid; */
-    font-size: small;
-    width: 180Px;
-    margin-left: 5rem;
-    margin-top: 3.5rem;
+  .facture-detail h2 {
+    font-size: 0.8rem;
+    width: 160px;
+    margin: 0 auto;
+    text-align: center;
   }
-  
-  .client-info{
-    justify-content: left;
+  .client-info {
     font-size: 0.6rem;
     margin-top: 1.5rem;
   }
-  .association-info{
+  .association-info {
     display: none;
   }
-
-  .table-facture{
+  .table-facture {
     font-size: 0.8rem;
   }
-
-  .paiement-info, .total-right{
+  .paiement-info,
+  .total-right {
     font-size: 0.6rem;
   }
-
-  .Statut-facture{
+  .Statut-facture,
+  .actions #btn-Ngénéré {
     display: none;
   }
-
-  .actions #btn-Ngénéré{
-    display: none;
-  }
-
 }
