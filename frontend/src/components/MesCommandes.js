@@ -59,8 +59,8 @@ function MesCommandes() {
               </tr>
             </thead>
             <tbody>
-              {commandes.length > 0 ? (
-                commandes
+              {commandesPage.length > 0 ? (
+                commandesPage
                   // ✅ filtrer les commandes annulées
                   .filter((commande) => commande.statut.toUpperCase() !== "ANNULEE" && commande.statut.toUpperCase() !== "ANNULÉE")
 

@@ -712,7 +712,7 @@ width: 250px;
     margin: 0.2rem auto;
     margin-top: 23.2%;
     margin-left: 38%;
-    /* display: none; */
+    display: none;
   }
 
     .section-produits p {
