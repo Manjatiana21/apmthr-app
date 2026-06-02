@@ -1914,7 +1914,7 @@ width: 250px;
     width: 50px;
     margin: 0.2rem auto;
     margin-top: 39.4%;
-    margin-left: 50%;
+    margin-left: 49%;
     /* display: none; */
   }
 
@@ -2017,12 +2017,12 @@ width: 250px;
   .section_PROPOS h4 {
     margin: 0.5rem;
     text-align: center;
-    max-width: 310px;
+    max-width: 300px;
     /* border: 1px red solid; */
   }
 
   .section_PROPOS h5{
-    max-width: 280px;
+    max-width: 290px;
     font-size: 12px;
     margin-left: 0;
     margin: 0.5rem auto;
