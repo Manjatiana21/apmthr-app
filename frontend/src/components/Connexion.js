@@ -1,21 +1,30 @@
-// frontend/src/components/Connexion.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { login } from "../api";
 import "../styles/Connexion.css";
 
 function Connexion() {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-  });
+  const [formData, setFormData] = useState({ username: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
+  // ✅ Empêcher l'accès à /login si déjà connecté
+  useEffect(() => {
+    const token = localStorage.getItem("access_token");
+    if (token) {
+      const role = localStorage.getItem("role");
+      if (role === "ADMIN") {
+        navigate("/admin", { replace: true });
+      } else {
+        navigate("/espace-client", { replace: true });
+      }
+    }
+  }, [navigate]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (!loading) { // ✅ empêcher modification pendant chargement
+    if (!loading) {
       setFormData({ ...formData, [name]: value });
     }
   };
@@ -29,12 +38,10 @@ function Connexion() {
       const res = await login(formData);
 
       if (res.data.access && res.data.refresh) {
-        // ✅ Stockage du token et du rôle
         localStorage.setItem("access_token", res.data.access);
         localStorage.setItem("refresh_token", res.data.refresh);
         localStorage.setItem("role", res.data.role);
 
-        // ✅ Redirection selon rôle
         if (res.data.role === "ADMIN") {
           navigate("/admin", { replace: true });
         } else {
