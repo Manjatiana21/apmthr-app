@@ -15,6 +15,7 @@ import os
 import dj_database_url
 from datetime import timedelta
 from dotenv import load_dotenv
+
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")

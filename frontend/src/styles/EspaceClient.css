@@ -1653,7 +1653,7 @@ width: 250px;
 
 @media (max-width: 360px) {
   .espace-client{
-    border: 1px red solid;
+    /* border: 1px red solid; */
     max-width: 360px;
   }
   .header-client{
