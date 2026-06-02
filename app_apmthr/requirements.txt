@@ -9,3 +9,4 @@ django-filter
 djangorestframework-simplejwt
 xhtml2pdf
 reportlab
+python-dotenv
