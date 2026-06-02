@@ -183,3 +183,21 @@
     display: block;
   }
 }
+
+@media (max-width: 320px) {
+  .header-CA .actions {
+    position: relative;
+    margin: 1rem auto;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-left: 0;
+    /* border: 1px red solid; */
+  }
+
+  .header-CA h2{
+    /* border: 1px red solid; */
+    font-size: small;
+  }
+  
+}

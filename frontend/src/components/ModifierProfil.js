@@ -28,7 +28,7 @@ function ModifierProfil() {
         </div>
         <div>
         <button onClick={() => navigate("/profil/modifier-telephone")}>
-          Modifier le téléphone
+          Modifier le contact
         </button>
         </div>
         <div>

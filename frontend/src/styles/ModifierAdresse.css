@@ -51,13 +51,13 @@
     width: 350px;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-adresse {
     display: flex;
     flex-direction: row;
     width: 350px;
     /* position: absolute; */
     gap: 1rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     margin-left: 0;
     padding-left: 0;
   }
@@ -80,13 +80,13 @@
     width: 350px;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-adresse {
     display: flex;
     flex-direction: row;
     width: 350px;
     /* position: absolute; */
     gap: 1rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     margin-left: 0;
     padding-left: 0;
   }
@@ -109,13 +109,13 @@
     width: 280px;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-adresse {
     display: flex;
     flex-direction: row;
     width: 300px;
     /* position: absolute; */
     gap: 1rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     margin-left: 0;
     padding-left: 0;
   }
@@ -148,13 +148,13 @@
     padding-left: 0;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-adresse {
     display: flex;
     flex-direction: row;
     width: 350px;
     /* position: absolute; */
     gap: 1rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     margin-left: 0;
     padding-left: 0;
   }
@@ -181,13 +181,52 @@
     width: 300px;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-adresse {
     display: flex;
     flex-direction: row;
     width: 300px;
     /* position: absolute; */
     gap: 1rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .Valide-btn,
+  .annuler-btn {
+    font-size: 0.7rem;
+    height: 35px;
+  }
+}
+
+@media (max-width: 320px) {
+  .modifier-adresse-container {
+    margin-left: 2rem;
+    width: 300px;
+  }
+
+  .modifier-adresse-container h2 {
+    font-size: large;
+  }
+
+  .Form-input input {
+    margin-left: 0;
+    /* margin-top: 2rem; */
+    position: relative;
+    max-width: 250px;
+  }
+
+  .Form-input label{
+    width: 280px;
+  }
+
+  #btn-modification-profil-adresse {
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    /* position: absolute; */
+    gap: 1rem;
+    /* margin-top: 5rem; */
     margin-left: 0;
     padding-left: 0;
   }

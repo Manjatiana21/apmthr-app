@@ -111,14 +111,18 @@
 }
 
 .bottom-responsive{
-  display: none;
+  display:none;
+  max-width: 350px;
+  /* border: 1px red solid; */
 }
 .nav-client1{
   margin-top: 100px;
   padding: 0;
   margin-left: 0;
-  display: none;
-  gap: 8px;
+  /* font-size: 2rem; */
+  gap: 25px;
+  /* border: 1px red solid; */
+
 }
 
 
@@ -476,6 +480,9 @@ width: 250px;
 
 
 @media (max-width: 1024px) {
+  .espace-client{
+    max-width: 1024px;
+  }
   .header-middle-client h1 {
     max-width: 550px;
     margin: 1rem auto;
@@ -655,6 +662,9 @@ width: 250px;
 }
 
 @media (max-width: 768px) {
+  .espace-client{
+    max-width: 768px;
+  }
   .header-client {
     height: 380px;
     position: relative;
@@ -712,7 +722,6 @@ width: 250px;
     margin: 0.2rem auto;
     margin-top: 23.2%;
     margin-left: 38%;
-    display: none;
   }
 
     .section-produits p {
@@ -821,6 +830,9 @@ width: 250px;
 
 
 @media (max-width: 640px){
+  .espace-client{
+    max-width: 640px;
+  }
 .header-client{
     height: auto;
     position: relative;
@@ -867,8 +879,10 @@ width: 250px;
   }
 
   .bottom-responsive #Espacenav{
-    gap: 13%;
-    margin-left: 8%;
+    gap: 35px;
+    /* margin-left: 8%; */
+    text-align: center;
+    width: 460px;
   }
 
   #notification-mobile{
@@ -1068,8 +1082,10 @@ width: 250px;
   }
 
   .bottom-responsive #Espacenav{
-    gap: 13%;
-    margin-left: 8%;
+    /* gap: 13%; */
+    /* margin-left: 8%; */
+    text-align: center;
+    width: 460px;
   }
 
   #notification-mobile{
@@ -1087,7 +1103,8 @@ width: 250px;
   .header-links{
     display: none;
   }
-.header-client .header-image{
+
+  .header-client .header-image{
     /* border: 1px red solid; */
     margin-left: 62%;
     margin-right: 0;
@@ -1222,7 +1239,10 @@ width: 250px;
 }
 
 @media (max-width: 480px) {
-.header-client{
+  .espace-client{
+    max-width: 480px;
+  }
+  .header-client{
     height: auto;
     position: relative;
   }
@@ -1268,9 +1288,12 @@ width: 250px;
   }
 
   .bottom-responsive #Espacenav{
-    gap: 13%;
-    margin-left: 0;
-    margin-top: 20%;
+    gap: 30px;
+    /* margin-left: 0; */
+    margin-top: 27%;
+    text-align: center;
+    width: 400px;
+    /* border: 1px red solid; */
   }
 
   #notification-mobile{
@@ -1422,6 +1445,9 @@ width: 250px;
 }
 
 @media (max-width: 414px) {
+  .espace-client{
+    max-width: 414px;
+  }
   .header-client{
     height: auto;
     position: relative;
@@ -1476,9 +1502,11 @@ width: 250px;
   }
 
   .bottom-responsive #Espacenav{
-    gap: 9%;
-    margin-left: 0;
+    gap: 25px;
+    /* margin-left: 0; */
     margin-top: 35%;
+    max-width: 414px;
+    text-align: center;
   }
 
   #notification-mobile{
@@ -1624,6 +1652,10 @@ width: 250px;
 }
 
 @media (max-width: 360px) {
+  .espace-client{
+    border: 1px red solid;
+    max-width: 360px;
+  }
   .header-client{
     height: auto;
     position: relative;
@@ -1682,11 +1714,13 @@ width: 250px;
   }
 
   .bottom-responsive #Espacenav{
-    gap: 5%;
+    gap: 20px;
     /* border: 1px red solid; */
-    margin-left: 0;
+    /* margin-left: 0; */
     margin-top: 35%;
-    margin-bottom: 0;
+    max-width: 360px;
+    text-align: center;
+    /* margin-bottom: 0; */
   }
 
   #notification-mobile{
@@ -1813,6 +1847,222 @@ width: 250px;
 
   .btn-Commande{
     font-size: 11px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer .footer-info #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 50%;
+    margin: 0.2rem auto;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .espace-client{
+    max-width: 320px;
+  }
+  .header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 0.9rem;
+    margin: 0.2rem auto;
+    max-width: 150px;
+    margin-left: 0;
+    /* text-align: left; */
+    /* border: 1px red solid; */
+  }
+  
+  .profil-menu-dropdown{
+    margin-top: 0;
+    /* margin-right: 0; */
+  }
+
+  .header-middle-client p {
+    display: none;
+  }
+
+  .header-top-client{
+    /* border: 1px red solid; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 40px;
+  }
+
+  .header-top-client .logo{
+    /* border: 1px red solid; */
+    margin-right: 45%;
+  }
+  .header-client .Recherche {
+    width: 7%;
+    /* max-width: 20px; */
+    /* margin: 0.2rem auto; */
+    margin-top: 22%;
+    /* display: none; */
+  }
+
+  .header-client .Recherche ::placeholder{
+    font-size: 10px;
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 39.4%;
+    margin-left: 43%;
+    /* display: none; */
+  }
+
+
+  .header-links{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  .bottom-responsive{
+    display: block;
+  }
+
+  .bottom-responsive #Espacenav{
+    gap: 10px;
+    /* border: 1px red solid; */
+    /* margin-left: 0; */
+    margin-top: 35%;
+    max-width: 320px;
+    text-align: center;
+    /* margin-bottom: 0; */
+  }
+
+  #notification-mobile{
+    display: block;
+    margin-right: 30%;
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    width: auto;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 53%;
+    margin-right: 0;
+    margin-top: 25px;
+    /* position: relative; */
+    width: auto;
+    max-width: 100px;
+  }
+
+  
+
+  .header-bottom-client .nav-client{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem ;
+    text-align: justify;
+    max-width: 280px;
+    margin-left: 0.5%;
+
+  }
+
+  .section-title{
+    margin-left: 5%;
+    font-size: 1rem;
+    width: 1000px;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1rem;
+    margin-left: 0%;
+  }
+
+  .produits-gridEspace {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .produit-cardEspace {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 280px;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem ;
+    text-align: justify;
+    max-width: 280px;
+  }
+
+  .section_PROPOS h4 {
+    margin: 0.5rem;
+    text-align: center;
+    max-width: 310px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 300px;
+    font-size: 12px;
+    margin: 0.5rem auto;
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 280px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-service p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 300px;
+    /* margin-left: 10%; */
+  }
+
+  .section-service h1{
+    font-size: 15px;
+    
+  }
+
+  .section-service li{
+    margin-left: 17%;
+    margin: 0.5rem auto;
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+    width: 100px;
   }
   footer .footer-info {
     flex-direction: column;

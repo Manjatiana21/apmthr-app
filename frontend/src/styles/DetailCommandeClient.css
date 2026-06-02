@@ -54,9 +54,9 @@
 @media (max-width: 414px) {
   #annulee_la_commande {
     font-size: 0.6rem;
-    width: 170px; /* ✅ px en minuscule */
+    width: 170px; 
     height: 55px;
-    margin: 0 auto; /* ✅ centré */
+    margin: 0 auto; 
     display: block;
   }
 }
@@ -64,9 +64,18 @@
 @media (max-width: 360px) {
   #annulee_la_commande {
     font-size: 0.6rem;
-    width: 150px; /* ✅ un peu plus petit pour très petits écrans */
+    width: 150px; 
     height: 50px;
     margin: 0 auto;
     display: block;
   }
+}
+
+@media (max-width: 320px) {
+  table{
+    width: 170px;
+  }
+
+  
+  
 }

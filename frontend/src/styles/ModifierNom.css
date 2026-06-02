@@ -54,12 +54,16 @@
     display: block;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-nom{
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-    width: 100%;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* gap: 1rem; */
+    /* margin-top: 15%; */
+    max-width: 450px;
+    margin-left: 0;
+    /* height: 15px; */
+    /* border: 1px red solid; */
   }
 }
 
@@ -82,12 +86,16 @@
     display: block;
   }
 
-  #btn-modification-profil {
+   #btn-modification-profil-nom{
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-    width: 100%;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* gap: 1rem; */
+    /* margin-top: 15%; */
+    max-width: 400px;
+    margin-left: 0;
+    /* height: 15px; */
+    /* border: 1px red solid; */
   }
 }
 
@@ -110,12 +118,16 @@
     display: block;
   }
 
-  #btn-modification-profil {
+   #btn-modification-profil-nom{
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-    width: 100%;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* gap: 1rem; */
+    /* margin-top: 15%; */
+    max-width: 350px;
+    margin-left: 0;
+    height: 15px;
+    /* border: 1px red solid; */
   }
 
   .Valide-btn,
@@ -148,12 +160,16 @@
     padding-left: 0;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-nom{
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-    width: 100%;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* gap: 1rem; */
+    /* margin-top: 15%; */
+    max-width: 350px;
+    margin-left: 0;
+    height: 15px;
+    /* border: 1px red solid; */
   }
 }
 
@@ -190,16 +206,17 @@
   /* margin-top: 0; */
  }
 
-  .btn-nom-modification {
+  #btn-modification-profil-nom{
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    /* margin-top: 2rem; */
-    width: 100%;
-    margin-top: 0;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* gap: 1rem; */
+    /* margin-top: 15%; */
+    max-width: 300px;
+    margin-left: 0;
+    height: 15px;
     /* border: 1px red solid; */
   }
-
   .Valide-btn,
   .annuler-btn {
     font-size: 0.7rem;

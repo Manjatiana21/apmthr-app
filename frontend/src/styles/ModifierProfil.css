@@ -217,3 +217,36 @@
     display: block;
   }
 }
+
+
+@media (max-width: 320px) {
+  .profil-container {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .profil-titre {
+    display: none;
+  }
+
+  .Informations-profil {
+    font-size: 0.8rem;
+    width: 100%;
+    margin: 1rem auto;
+    display: block;
+    /* border: 1px red solid; */
+  }
+
+  .profil-options {
+    margin: 1rem auto;
+    text-align: right;
+    max-width: 268px;
+  }
+
+  .profil-options button {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    display: block;
+  }
+}

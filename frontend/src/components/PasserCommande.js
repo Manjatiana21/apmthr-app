@@ -111,14 +111,14 @@ function PasserCommande({ onCommandeSuccess }) {
           />
         </label>
 
-        <label>Mode de paiement :
+        <label>
           <select
             name="mode_paiement"
             value={formData.mode_paiement}
             onChange={handleChange}
             required
           >
-            <option value="">Choisir un mode de paiement</option>
+            <option value="">Mode de paiement</option>
             {Array.isArray(modes) && modes.length > 0 ? (
               modes.map((m) => (
                 <option key={m.id} value={m.id}>
@@ -134,7 +134,7 @@ function PasserCommande({ onCommandeSuccess }) {
         {numeroAdmin && (
           <div className="numero-admin">
             <label>Numéro pour envoyer le paiement :</label>
-            <input type="text" value={numeroAdmin} readOnly />
+            <input className="mode" type="text" value={numeroAdmin} readOnly />
           </div>
         )}
 

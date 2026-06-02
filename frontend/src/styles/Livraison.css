@@ -177,3 +177,15 @@ h2 {
   }
 }
 
+@media (max-width: 320px) {
+  #Statut_livraison_btn {
+    margin: 1rem auto;
+    height: auto;
+    font-size: 0.6rem;
+    width: 65px;
+    display: block;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+  
+}

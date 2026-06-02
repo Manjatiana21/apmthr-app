@@ -48,19 +48,19 @@
 
   .Form-input input {
     margin: 1rem auto;
-    width: 100%;      /* ✅ fluide */
+    width: 100%;     
     position: relative;
     display: block;
     margin-top: 0;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-telephone {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     width: 100%;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     max-width: 480px;
   }
 }
@@ -85,13 +85,13 @@
     margin-top: 0;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-telephone {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     width: 100%;
-    margin-top: 15%;
+    /* margin-top: 15%; */
     max-width: 400px;
   }
 }
@@ -116,13 +116,13 @@
     display: block;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-telephone {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     width: 100%;
-    margin-top: 15%;
+    /* margin-top: 15%; */
     max-width: 350px;
   }
 
@@ -158,12 +158,12 @@
     padding-left: 0;
   }
 
-  #btn-modification-profil {
+  #btn-modification-profil-telephone {
     display: flex;
     flex-direction: row;
     /* justify-content: center; */
     /* gap: 1rem; */
-    margin-top: 15%;
+    /* margin-top: 15%; */
     max-width: 350px;
     margin-left: 0;
     height: 15px;
@@ -181,6 +181,46 @@
 }
 
 @media (max-width: 360px) {
+  .modifier-telephone-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .modifier-telephone-container h2 {
+    font-size: large;
+    text-align: center;
+  }
+
+  .Form-input input {
+    margin: 1rem auto;
+    width: 100%;
+    position: relative;
+    display: block;
+  }
+
+
+  #btn-modification-profil-telephone{
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    /* border: 1px red solid; */
+    max-width: 300px;
+    /* margin-top: 30%; */
+  }
+  .Valide-btn,
+  .annuler-btn {
+    margin: 0 auto;
+    font-size: 0.7rem;
+    /* height: 5px; */
+    /* border: 1px red solid; */
+
+  }
+}
+
+
+
+@media (max-width: 320px) {
   .modifier-telephone-container {
     margin: 0 auto;
     width: 90%;

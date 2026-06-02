@@ -366,3 +366,54 @@ h2 {
     margin: 1rem auto;
   }
 }
+
+
+@media (max-width: 320px) {
+  .catalogue{
+    max-width: 320px;
+  }
+  .grid-produits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 250px;
+  }
+
+  .carte-produit {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    /* border: 1px red solid; */
+
+  }
+
+  .description,
+  .type,
+  .fournisseur {
+    margin: 0.5rem auto;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .Boutton_commande {
+    margin: 1rem auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #BTN-COMMANDEPASSER{
+    /* border: 1px red solid; */
+    margin: 0;
+  }
+
+  .carte-produit img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .P-Prix{
+    margin: 1rem auto;
+  }
+}

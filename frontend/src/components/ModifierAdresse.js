@@ -34,7 +34,7 @@ function ModifierAdresse() {
           onChange={(e) => setAdresse(e.target.value)}
           required
         />
-        <div id="btn-modification-profil">
+        <div id="btn-modification-profil-adresse">
         <button type="submit" className="Valide-btn">Valider</button>
         <button type="submit" className="annuler-btn">
         <Link to="/modifier-profil" className="btn btn-outline-danger" id="retour-btn">Annuler</Link></button>

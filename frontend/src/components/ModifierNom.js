@@ -35,7 +35,7 @@ function ModifierNom() {
           onChange={(e) => setUsername(e.target.value)}
           required
         />
-        <div className="btn-nom-modification" id="btn-modification-profil" >
+        <div className="btn-nom-modification" id="btn-modification-profil-nom" >
           <button type="submit" className="Valide-btn">Valider</button>
           <button type="submit" className="annuler-btn">
           <Link to="/modifier-profil" className="btn btn-outline-danger" id="retour-btn">Annuler</Link></button>

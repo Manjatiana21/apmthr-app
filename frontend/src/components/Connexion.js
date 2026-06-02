@@ -54,7 +54,7 @@ function Connexion() {
   return (
     <div className="connexion-container">
       <div className="connexion-box">
-        <h2>Connexion</h2>
+        <h2>Se connecter à un compte</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Nom d'utilisateur :</label>
