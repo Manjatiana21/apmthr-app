@@ -1914,7 +1914,7 @@ width: 250px;
     width: 50px;
     margin: 0.2rem auto;
     margin-top: 39.4%;
-    margin-left: 45%;
+    margin-left: 50%;
     /* display: none; */
   }
 
@@ -2022,8 +2022,9 @@ width: 250px;
   }
 
   .section_PROPOS h5{
-    max-width: 300px;
+    max-width: 280px;
     font-size: 12px;
+    margin-left: 0;
     margin: 0.5rem auto;
   }
 
