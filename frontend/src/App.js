@@ -50,9 +50,28 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Connexion />} />
-        <Route path="/login" element={<Connexion />} />
+        {/* <Route path="/" element={<Connexion />} /> */}
+        <Route
+          path="/"
+          element={
+            localStorage.getItem("access_token")
+              ? <Navigate to={localStorage.getItem("role") === "ADMIN" ? "/admin" : "/espace-client"} replace />
+              : <Connexion />
+          }
+        />
+
+        {/* <Route path="/login" element={<Connexion />} /> */}
         <Route path="/inscription" element={<Inscription />} />
+
+         <Route
+            path="/login"
+            element={
+              localStorage.getItem("access_token")
+                ? <Navigate to={localStorage.getItem("role") === "ADMIN" ? "/admin" : "/espace-client"} replace />
+                : <Connexion />
+            }
+        />
+
 
         <Route path="/logout" element={<Logout />} />
 
