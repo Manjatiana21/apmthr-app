@@ -1,7 +1,7 @@
 // frontend/src/App.js
 import React from "react";
 
-import { BrowserRouter, Routes, Route , Navigate} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Import de tes composants
 import Connexion from "./components/Connexion";
 import Inscription from "./components/Inscription";
@@ -50,28 +50,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Connexion />} /> */}
-        <Route
-          path="/"
-          element={
-            localStorage.getItem("access_token")
-              ? <Navigate to={localStorage.getItem("role") === "ADMIN" ? "/admin" : "/espace-client"} replace />
-              : <Connexion />
-          }
-        />
-
-        {/* <Route path="/login" element={<Connexion />} /> */}
+        <Route path="/" element={<Connexion />} />
+        <Route path="/login" element={<Connexion />} />
         <Route path="/inscription" element={<Inscription />} />
-
-         <Route
-            path="/login"
-            element={
-              localStorage.getItem("access_token")
-                ? <Navigate to={localStorage.getItem("role") === "ADMIN" ? "/admin" : "/espace-client"} replace />
-                : <Connexion />
-            }
-        />
-
 
         <Route path="/logout" element={<Logout />} />
 
