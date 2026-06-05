@@ -7,13 +7,16 @@ import { NotificationsProvider } from "./components/NotificationsContext";
 import "slick-carousel/slick/slick.css"; 
 import "./styles/slick-theme.css";
 import './styles/responsive.css';
+import { BrowserRouter } from "react-router-dom"; // ✅ ajout
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NotificationsProvider>
-      <App />
-    </NotificationsProvider>
+    <BrowserRouter>
+      <NotificationsProvider>
+        <App />
+      </NotificationsProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

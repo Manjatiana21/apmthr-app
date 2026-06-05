@@ -59,7 +59,6 @@ function App() {
   }, [navigate]);
   
   return (
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Connexion />} />
         <Route path="/login" element={<Connexion />} />
@@ -462,7 +461,7 @@ function App() {
         />
 
       </Routes>
-    </BrowserRouter>
+   
   );
 }
 
