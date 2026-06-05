@@ -1,8 +1,8 @@
 // frontend/src/App.js
-import React, { useEffect } from "react";
+import React from "react";
+import { useEffect } from "react";
 
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 // Import de tes composants
 import Connexion from "./components/Connexion";
 import Inscription from "./components/Inscription";
@@ -49,11 +49,12 @@ import Panier from "./components/Panier";
 
 
 function App() {
-  // ✅ Bloc pour forcer reload si état incohérent
+  const navigate = useNavigate(); 
+
   useEffect(() => {
     const token = localStorage.getItem("access_token");
     if (!token) {
-      navigate("/login", { replace: true }); // ✅ redirection propre
+      navigate("/login", { replace: true }); 
     }
   }, [navigate]);
   
