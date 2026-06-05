@@ -31,7 +31,7 @@ h2 {
   transition: transform 0.3s;
   border: white solid 5px;
   width: 320px;
-  height: 700px;
+  height: auto;
   border: 5px solid white;
 }
 
@@ -160,6 +160,69 @@ h2 {
   }
 }
 
+@media (max-width: 853px) {
+  .grid-produits {
+    width: 85%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr; /* ✅ une colonne */
+    gap: 1.5rem;
+  }
+
+  .carte-produit {
+    width: 100%;
+    height: auto;
+  }
+
+  
+  .Boutton_commande {
+    margin: 1rem auto;
+    max-width: 300px;
+    position: relative; /* ✅ évite débordement */
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
+@media (max-width: 820px) {
+  .grid-produits {
+    width: 85%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr; /* ✅ une colonne */
+    gap: 1.5rem;
+  }
+
+  .carte-produit {
+    width: 100%;
+    height: auto;
+  }
+
+  .Boutton_commande {
+    margin: 1rem auto;
+    max-width: 300px;
+    position: relative; /* ✅ évite débordement */
+    display: flex;
+    justify-content: center;
+  }
+
+  .description,
+  .type,
+  .fournisseur {
+    position: relative; /* ✅ plus stable */
+    margin: 0.5rem auto;
+    text-align: center;
+    width: auto;
+  }
+
+  .P-Prix {
+    margin: 0.5rem auto;
+    width: 120px;
+
+  }
+}
+
 @media (max-width: 768px) {
   .grid-produits {
     width: 85%;
@@ -179,6 +242,7 @@ h2 {
     position: relative; /* ✅ évite débordement */
     display: flex;
     justify-content: center;
+    max-width: 300px;
   }
 
   .description,

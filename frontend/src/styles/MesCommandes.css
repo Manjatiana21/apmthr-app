@@ -162,6 +162,23 @@ h2 {
   }
 }
 
+@media (max-width: 375px) {
+.actions {
+    width: 100%;
+    margin: 0 auto;
+    /* border: 1px red solid; */
+  }
+
+  #Voir-mes-commandes-btn {
+    /* border: 1px red solid; */
+    font-size: 0.6rem;
+    height: 20px;
+    padding: 0;
+  }
+
+  
+}
+
 @media (max-width: 360px) {
   .actions {
     width: 100%;

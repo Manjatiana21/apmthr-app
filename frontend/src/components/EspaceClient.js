@@ -1,6 +1,6 @@
 // frontend/src/components/EspaceClient.js
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/EspaceClient.css";
 import { getProduits, getMesNotifications } from "../api";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope,FaBell, FaFacebook, FaShoppingCart } from "react-icons/fa";
@@ -23,6 +23,7 @@ function EspaceClient() {
   const [menuProfilOpen, setMenuProfilOpen] = useState(false);
 
   const produitsSectionRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,6 +60,14 @@ function EspaceClient() {
     window.addEventListener("storage", handleStorageChange);
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
+
+  // ✅ Bloquer retour vers /login : refresh au lieu de revenir
+  useEffect(() => {
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = () => {
+      navigate(0); // refresh la page courante
+    };
+  }, [navigate]);
 
   const handleSearch = async () => {
     if (!search) return;

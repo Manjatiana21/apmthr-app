@@ -149,3 +149,28 @@ form input, form select {
     flex-direction: column
   }
 }
+
+
+@media (max-width: 375px) {
+  .commande-card form label input{
+    width: 200px;
+  }
+
+  .numero-admin{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: column
+  }
+
+  .numero-admin label{
+    /* border: 1px red solid; */
+    width: 180px;
+    /* font-size: 0.5rem; */
+    position: relative;
+    margin: 0;
+  }
+
+}
+
+

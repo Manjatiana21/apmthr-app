@@ -160,6 +160,49 @@
   }
 }
 
+@media (max-width: 375px) {
+  .modifier-adresse-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .modifier-adresse-container h2 {
+    font-size: large;
+    text-align: center;
+
+  }
+
+  .Form-input input {
+    margin-left: 0;
+    /* margin-top: 2rem; */
+    position: relative;
+    max-width: 270px;
+  }
+
+  .Form-input label{
+    /* border: 1px red solid; */
+    width: 300px;
+  }
+
+  #btn-modification-profil-adresse {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    /* position: absolute; */
+    gap: 1rem;
+    /* margin-top: 5rem; */
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .Valide-btn,
+  .annuler-btn {
+    font-size: 0.7rem;
+    height: 35px;
+  }
+}
+
 @media (max-width: 360px) {
   .modifier-adresse-container {
     margin-left: 2rem;

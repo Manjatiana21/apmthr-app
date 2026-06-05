@@ -1,6 +1,6 @@
 // frontend/src/components/TableauAdmin.js
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Bar, Pie } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -37,6 +37,8 @@ function TableauAdmin() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -55,6 +57,14 @@ function TableauAdmin() {
     };
     fetchData();
   }, []);
+
+   // ✅ Bloquer retour vers /login : refresh au lieu de revenir
+  useEffect(() => {
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = () => {
+      navigate(0); // refresh la page courante
+    };
+  }, [navigate]);
 
   // ✅ Données pour les graphiques
   const commandesData = {

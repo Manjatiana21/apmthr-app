@@ -48,6 +48,14 @@ h2 {
   transition: background-color 0.3s, transform 0.2s;
 }
 
+  #Statut_livraison_btn {
+    margin: 1rem auto;
+    height: auto;
+    display: block;
+    text-align: center;
+    width: auto;
+    /* border: 1px red solid; */
+  }
 .btn:hover {
   transform: scale(1.05);
 }

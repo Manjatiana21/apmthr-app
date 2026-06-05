@@ -48,7 +48,53 @@
   }
 }
 
+@media (max-width: 853px) {
+  .profil-titre {
+    margin: 0 auto;
+    margin-bottom: 0;
+    width: auto;
+    text-align: center;
+  }
+
+   .profil-titre h2 {
+    font-size: 1.2rem;
+    width: 100%; /* ✅ fluide */
+  }
+
+   .profil-container {
+    height: 500px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+}
+
+@media (max-width: 820px) {
+  .profil-titre {
+    margin: 0 auto;
+    margin-bottom: 0;
+    width: auto;
+    text-align: center;
+  }
+
+  .profil-titre h2 {
+    font-size: 1rem;
+    width: 100%; /* ✅ fluide */
+  }
+
+  .profil-container {
+    height: 400px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 768px) {
+  .profil-container {
+    height: 400px;
+    width: 90%;
+    margin: 0 auto;
+  }
   .profil-titre {
     margin: 0 auto;
     margin-bottom: 0;
@@ -187,6 +233,16 @@
   }
 }
 
+@media (max-width: 375px) {
+   .Informations-profil {
+    font-size: 0.8rem;
+    width: 100%;
+    margin: 1rem auto;
+    display: block;
+    /* border: 1px red solid; */
+  }
+}
+
 @media (max-width: 360px) {
   .profil-container {
     height: auto;
@@ -218,6 +274,21 @@
   }
 }
 
+@media (max-width: 344px) {
+   .profil-titre {
+    display: none;
+  }
+
+  .Informations-profil {
+    font-size: 0.8rem;
+    width: 100%;
+    margin: 1rem auto;
+    display: block;
+    /* border: 1px red solid; */
+  }
+
+  
+}
 
 @media (max-width: 320px) {
   .profil-container {

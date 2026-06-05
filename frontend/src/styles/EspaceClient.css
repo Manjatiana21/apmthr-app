@@ -661,6 +661,321 @@ width: 250px;
   }
 }
 
+@media (max-width: 912px){
+  .header-bottom-client{
+    margin-top: 14%;
+    /* border: 1px red solid; */
+    margin-left: 14%;
+  }
+
+  .header-client .logo {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    /* border: 1px green solid; */
+  }
+
+  .header-links {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* border: 1px green solid; */
+  }
+
+  .header-links  .Notifications-Espace {
+    /* border: 1px green solid; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    /* margin: 0 auto; */
+    /* max-width: auto; */
+  }
+
+ .header-client #BRecherche {
+    /* width: 50px; */
+    margin: 0.2rem auto;
+    margin-top: 26%;
+    margin-left: 38%;
+  }
+
+  .header-middle-client h1{
+    margin-left: 5%;
+    max-width: 500px;
+  }
+
+  .header-middle-client p {
+    /* border: 1px red solid; */
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+
+   .produits-gridEspace {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+    row-gap: 2rem;
+    margin: 0 auto;
+    max-width: 820px;
+    margin-left: 2%;
+  }
+
+  .produit-cardEspace {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 853px) {
+  
+  .header-middle-client h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    margin-left: 5%;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 58%;
+    margin-right: 0;
+    margin-top: 50px;
+    /* position: relative; */
+    width: auto;
+    max-width: 250px;
+  }
+
+  .header-middle-client p {
+    font-size: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+   .header-client .Recherche {
+    /* max-width: 25px; */
+    margin: 0.2rem auto;
+    margin-top: 18%;
+    margin-left: 10%;
+    /* display: none; */
+  }
+
+  .header-client #BRecherche {
+    /* width: 50px; */
+    margin: 0.2rem auto;
+    margin-top: 24.7%;
+    margin-left: 38%;
+  }
+
+  .header-bottom-client{
+    /* border: 1px red solid; */
+    margin-top: 18%;
+    margin-left: 5%;
+    width: 710px;
+  }
+
+   .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 750px;
+    margin-left: 2%;
+  }
+
+  .produits-gridEspace {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 55px;
+    margin: 0 auto;
+    max-width: 620px;
+  }
+
+
+  .produit-cardEspace {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-Commande {
+    margin: 1rem auto;
+    display: block;
+  }
+
+
+
+}
+@media (max-width: 820px) {
+  .espace-client{
+    max-width: 820px;
+  }
+  .header-client {
+    height: 380px;
+    position: relative;
+  }
+
+  .header-links{
+    width:  350px;
+  }
+
+  .header-bottom-client{
+    /* border: 1px red solid; */
+    margin-top: 8%;
+    margin-left: 0;
+    width: 710px;
+  }
+
+  .header-links .Notifications-Espace{
+    display: flex;
+  }
+
+  .header-middle-client h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    margin-left: 5%;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 68%;
+    margin-right: 0;
+    margin-top: 90px;
+    /* position: relative; */
+    width: auto;
+    max-width: 150px;
+  }
+
+  .header-middle-client p {
+    font-size: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+   .header-client .Recherche {
+    max-width: 25px;
+    margin: 0.2rem auto;
+    margin-top: 14%;
+    margin-left: 15%;
+    /* display: none; */
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 20.7%;
+    margin-left: 36%;
+  }
+
+    .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 680px;
+  }
+
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 680px;
+    margin-left: 2%;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 680px;
+  }
+
+  .produits-gridEspace {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 55px;
+    margin: 0 auto;
+    max-width: 620px;
+  }
+
+
+  .produit-cardEspace {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-Commande {
+    margin: 1rem auto;
+    display: block;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h4 {
+    margin: 0.5rem auto;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 700px;
+    font-size: 18px;
+    margin: 0.5rem auto;
+    margin-left: 1%;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 720px;
+    font-size: 15px;
+    margin: 0.5rem auto;
+    /* border: 1px red solid; */
+    margin-left: 3.5%;
+
+  }
+
+  .section-service p {
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 700px;
+    /* border: 1px red solid; */
+  }
+
+  .section-service h1{
+    font-size: 17px;
+    
+  }
+
+  .section-service li{
+    margin-left: 15%;
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .section-title{
+    /* border: 1px red solid; */
+    font-size: 1.5rem;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1.5rem;
+
+  }
+}
+
+
 @media (max-width: 768px) {
   .espace-client{
     max-width: 768px;
@@ -1238,6 +1553,209 @@ width: 250px;
   }
 }
 
+@media (max-width: 540px){
+.header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 1rem;
+    margin: 0.2rem auto;
+    max-width: 350px;
+    margin-left: 3%;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+
+  .header-middle-client p {
+    display: none;
+    margin: 0.5rem auto;
+    margin-left: 16%;
+    width: 200px;
+    /* border: 1px red solid; */
+  }
+
+  .header-top-client{
+    /* border: 1px red solid; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 40px;
+  }
+
+  .header-top-client .logo{
+    /* border: 1px red solid; */
+    margin-right: 45%;
+  }
+  .header-client .Recherche {
+    /* width: 7%; */
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 11%;
+    margin-left: 8%;
+    /* display: none; */
+  }
+
+   .bottom-responsive{
+    display: block;
+  }
+
+  .bottom-responsive #Espacenav{
+    /* gap: 13%; */
+    /* margin-left: 8%; */
+    text-align: center;
+    width: 460px;
+  }
+
+  #notification-mobile{
+    display: block;
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 21.3%;
+    margin-left: 37%;
+    /* display: none; */
+  }
+
+  .header-links{
+    display: none;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 62%;
+    margin-right: 0;
+    margin-top: 7px;
+    /* position: relative; */
+    width: auto;
+
+  }
+
+  .profil-dropdown-espace{
+    /* border: 1px red solid; */
+    margin: 0.5rem auto;
+  }
+
+  .header-bottom-client .nav-client{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 460px;
+    margin-left: 2%;
+  }
+
+  .section-title{
+    margin-left: 5%;
+    font-size: 1rem;
+    width: 1000px;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1rem;
+    margin-left: 0%;
+  }
+
+  .produits-gridEspace {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-left: 15%;
+  }
+
+  .produit-cardEspace {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 460px;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 460px;
+  }
+
+  .section_PROPOS h4 {
+    /* font-size: 0.9rem; */
+    margin: 0.5rem;
+    text-align: center;
+    max-width: 450px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 400px;
+    font-size: 18px;
+    margin: 0.5rem auto;
+    margin-left: 6%;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 520px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-service p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 460px;
+    /* border: 1px red solid; */
+  }
+
+  .section-service h1{
+    font-size: 15px;
+    
+  }
+
+  .section-service li{
+    margin-left: 0;
+    margin: 0.5rem auto;
+    /* border: 1px red solid; */
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer .footer-info #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 50%;
+    margin: 0.2rem auto;
+  }
+}
+
 @media (max-width: 480px) {
   .espace-client{
     max-width: 480px;
@@ -1444,6 +1962,78 @@ width: 250px;
   }
 }
 
+@media (max-width: 430px) {
+   .header-middle-client p {
+    display: none;
+  }
+
+  .header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 1rem;
+    margin: 0.2rem auto;
+    max-width: 250px;
+    margin-left: 0;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+
+    .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 62%;
+    margin-right: 0;
+    /* margin-top: 90px; */
+    /* position: relative; */
+    width: auto;
+    max-width: 120px;
+  }
+
+  
+  .header-client .Recherche {
+    /* width: 7%; */
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 12%;
+    /* display: none; */
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 25%;
+    margin-left: 42%;
+    /* display: none; */
+  }
+
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem ;
+    text-align: justify;
+    max-width: 354px;
+    margin-left: 5%;
+  }
+
+   .produits-gridEspace {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .produit-cardEspace {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+    width: 100px;
+    /* border: 1px red solid; */
+  }
+
+
+}
+
 @media (max-width: 414px) {
   .espace-client{
     max-width: 414px;
@@ -1637,6 +2227,8 @@ width: 250px;
 
   .btn-Commande{
     font-size: 11px;
+    width: 100px;
+    /* border: 1px red solid; */
   }
   footer .footer-info {
     flex-direction: column;
@@ -1648,6 +2240,255 @@ width: 250px;
     margin-left: 50%;
     margin: 0.2rem auto;
     /* margin: 10%; */
+  }
+}
+
+@media (max-width: 390px) {
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 36.2%;
+    margin-left: 40%;
+    /* display: none; */
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 53%;
+    margin-right: 0;
+    margin-top: 24px;
+    /* position: relative; */
+    width: auto;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+    width: 100px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem ;
+    text-align: justify;
+    max-width: 300px;
+    margin-left: 5%;
+
+  }
+
+  
+}
+
+@media (max-width: 375px) {
+  .espace-client{
+    /* border: 1px red solid; */
+    max-width: 375px;
+  }
+  .header-client{
+    height: auto;
+    position: relative;
+  }
+  .header-middle-client h1 {
+    font-size: 0.9rem;
+    margin: 0.2rem auto;
+    max-width: 200px;
+    margin-left: 0;
+    text-align: center;
+    /* border: 1px red solid; */
+  }
+  
+  .profil-menu-dropdown{
+    margin-top: 0;
+  }
+
+  .header-middle-client p {
+    display: none;
+  }
+
+  .header-top-client{
+    /* border: 1px red solid; */
+    padding-top: 0;
+    margin-top: 0;
+    height: 40px;
+  }
+
+  .header-top-client .logo{
+    /* border: 1px red solid; */
+    margin-right: 45%;
+  }
+  .header-client .Recherche {
+    /* width: 7%; */
+    max-width: 20px;
+    margin: 0.2rem auto;
+    margin-top: 22%;
+    /* display: none; */
+  }
+
+  .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 36.7%;
+    margin-left: 40%;
+    /* display: none; */
+  }
+
+  .header-links{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  .bottom-responsive{
+    display: block;
+  }
+
+  .bottom-responsive #Espacenav{
+    gap: 20px;
+    /* border: 1px red solid; */
+    /* margin-left: 0; */
+    margin-top: 35%;
+    max-width: 360px;
+    text-align: center;
+    /* margin-bottom: 0; */
+  }
+
+  #notification-mobile{
+    display: block;
+    margin-right: 30%;
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    width: auto;
+  }
+
+  .header-client .header-image{
+    /* border: 1px red solid; */
+    margin-left: 54%;
+    margin-right: 0;
+    margin-top: 25px;
+    /* position: relative; */
+    width: auto;
+
+  }
+
+  
+
+  .header-bottom-client .nav-client{
+    /* border: 1px red solid; */
+    display: none;
+  }
+
+  
+  .section_PROPOS p {
+    font-size: 0.9rem;
+    margin: 0.5rem ;
+    text-align: justify;
+    max-width: 280px;
+    margin-left: 5%;
+
+  }
+
+  .section-title{
+    margin-left: 5%;
+    font-size: 1rem;
+    width: 1000px;
+  }
+
+  #VOTRECOMMANDE{
+    padding-left: 2%;
+  }
+
+  .section_PROPOS h2{
+    font-size: 1rem;
+    margin-left: 0%;
+  }
+
+  .produits-gridEspace {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .produit-cardEspace {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .section-produits p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 280px;
+  }
+
+  .section-commandes p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto ;
+    text-align: justify;
+    max-width: 280px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h4 {
+    margin: 0.5rem;
+    text-align: center;
+    max-width: 310px;
+    /* border: 1px red solid; */
+  }
+
+  .section_PROPOS h5{
+    max-width: 330px;
+    font-size: 12px;
+    /* border: 1px red solid; */
+    margin: 0.5rem auto;
+  }
+
+  .section_PROPOS{
+    margin-left: 5%;
+  }
+  
+  .section_PROPOS h6{
+    max-width: 280px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-service p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    text-align: justify;
+    max-width: 300px;
+    /* margin-left: 10%; */
+  }
+
+  .section-service h1{
+    font-size: 15px;
+    
+  }
+
+  .section-service li{
+    margin-left: 17%;
+    margin: 0.5rem auto;
+  }
+
+  .cardindication{
+    display: none;
+  }
+
+  .btn-Commande{
+    font-size: 11px;
+    width: 100px;
+    /* border: 1px red solid; */
+  }
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer .footer-info #F-Telephone{
+    /* border: 1px red solid; */
+    margin-left: 50%;
+    margin: 0.2rem auto;
   }
 }
 
@@ -1860,6 +2701,28 @@ width: 250px;
   }
 }
 
+@media (max-width: 344px) {
+   .header-client #BRecherche {
+    width: 50px;
+    margin: 0.2rem auto;
+    margin-top: 38.2%;
+    margin-left: 40%;
+    /* display: none; */
+  }
+
+   .header-client .Recherche {
+    width: 7%;
+    /* max-width: 20px; */
+    /* margin: 0.2rem auto; */
+    margin-top: 22%;
+    /* display: none; */
+  }
+
+  .header-client .Recherche ::placeholder{
+    font-size: 10px;
+  }
+
+}
 
 @media (max-width: 320px) {
   .espace-client{
