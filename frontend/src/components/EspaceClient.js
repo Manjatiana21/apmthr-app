@@ -61,11 +61,17 @@ function EspaceClient() {
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
 
-  // ✅ Bloquer retour vers /login : refresh au lieu de revenir
+   // ✅ Bloquer retour vers /login : refresh au lieu de revenir (desktop + mobile)
   useEffect(() => {
-    window.history.pushState(null, "", window.location.href);
-    window.onpopstate = () => {
+    const handlePopState = () => {
       navigate(0); // refresh la page courante
+    };
+
+    window.history.pushState(null, "", window.location.href);
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
     };
   }, [navigate]);
 
