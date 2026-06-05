@@ -46,7 +46,16 @@ import ModifierNom from "./components/ModifierNom";
 import ModifierTelephone from "./components/ModifierTelephone";
 import Panier from "./components/Panier";
 
+
 function App() {
+  // ✅ Bloc pour forcer reload si état incohérent
+  useEffect(() => {
+    const token = localStorage.getItem("access_token");
+    if (!token) {
+      window.location.reload(); // force un vrai reload si l’état est vide
+    }
+  }, []);
+  
   return (
     <BrowserRouter>
       <Routes>
