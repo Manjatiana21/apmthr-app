@@ -52,11 +52,15 @@ function App() {
   const navigate = useNavigate(); 
 
   useEffect(() => {
-    const token = localStorage.getItem("access_token");
-    if (!token) {
-      navigate("/login", { replace: true }); 
-    }
-  }, [navigate]);
+  const token = localStorage.getItem("access_token");
+  const currentPath = window.location.pathname;
+
+  // ✅ Ne redirige vers /login que si on n'est pas déjà sur /login ou /inscription
+  if (!token && currentPath !== "/login" && currentPath !== "/inscription") {
+    navigate("/login", { replace: true });
+  }
+}, [navigate]);
+
   
   return (
       <Routes>
