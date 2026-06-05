@@ -52,9 +52,9 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem("access_token");
     if (!token) {
-      window.location.reload(); // force un vrai reload si l’état est vide
+      navigate("/login", { replace: true }); // ✅ redirection propre
     }
-  }, []);
+  }, [navigate]);
   
   return (
     <BrowserRouter>
