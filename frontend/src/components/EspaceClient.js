@@ -140,8 +140,14 @@ function EspaceClient() {
             </div>
           </div>
 
-      
-        <div className="Recherche">
+        <div className="header-middle-client">
+          <h1>Maîtrisez votre Art, </h1>
+          <h1> Professionalisez votre pratique</h1>
+          <p>Votre satisfaction, notre priorité</p>
+        </div>
+
+
+         <div className="Recherche">
           <input
             className="InputRech"
             type="text"
@@ -149,15 +155,9 @@ function EspaceClient() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
+          <button className="BtnRech" onClick={handleSearch}>🔍</button>
         </div>
-        <button id="BRecherche" onClick={handleSearch}>🔍</button>
-
-        <div className="header-middle-client">
-          <h1>Maîtrisez votre Art, </h1>
-          <h1> Professionalisez votre pratique</h1>
-          <p>Votre satisfaction, notre priorité</p>
-        </div>
-
+        
         <div className="header-bottom-client" id="header-bottom-client">
           <ul className="nav-client">
             <li id="Accueil-bottom"><Link to="/espace-client">Accueil</Link></li>

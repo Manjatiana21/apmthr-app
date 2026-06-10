@@ -92,7 +92,7 @@
   width: 60rem;
   position: absolute;
   margin-left: 28rem;
-  margin-top: 128px;
+  margin-top: 90px;
   border-radius: 15px;
   border-radius: 2px solid red;
   /* border: 1px red solid; */
@@ -130,39 +130,43 @@
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
-
-.Recherche{
-  margin-top: 1rem;
+.Recherche {
   display: flex;
+  /* justify-content: left; */
+  width: 100%;
+  max-width: 400px; 
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-left: 50px;
+  overflow: hidden; 
 }
 
-.Recherche input {
-  padding: 0.5rem;
-  border-radius: 6px 0 0 6px;
+.InputRech {
+  flex: 1;
+  padding: 0.6rem 1rem;
   border: none;
-  margin-top: 3.5rem;
-  width: 350px;
+  outline: none;
+  font-size: 1rem;
 }
 
-#BRecherche {
-  background: #e49e09;
+.BtnRech {
+  flex: 0 0 auto; /* bouton fixe */
+  width: 50px;    /* ✅ largeur plus courte */
+  background-color: #ff00dd;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0 6px 6px 0;
   cursor: pointer;
-  width: 90px;
-  margin-top: 15.2rem;
-  margin-left: 25rem;
-  position: absolute;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.Recherche{
-  width: 350px;
-  position: absolute;
-  margin-top: 188px;
-  margin-left: 7%;
+.BtnRech:hover {
+  background-color: #e49e09;
 }
+
+
+
 
 .header-image img {
   max-width: 250px;
@@ -482,6 +486,7 @@ width: 250px;
 @media (max-width: 1024px) {
   .espace-client{
     max-width: 1024px;
+    /* height: auto; */
   }
   .header-middle-client h1 {
     max-width: 550px;
@@ -502,7 +507,7 @@ width: 250px;
     margin: 2rem auto;
     text-align: center;
     max-width: 750px;
-    margin-top: 15%;
+    margin-top: 9%;
     margin-left: 23.5%;
     /* border: 1px red solid; */
   }
@@ -639,20 +644,7 @@ width: 250px;
     margin-top: 2%;
   }
 
-   .header-client .Recherche {
-    
-    margin: 0.2rem auto;
-    margin-top: 20%;
-    margin-left: 10%;
-    /* display: none; */
-  }
-
-  .header-client #BRecherche {
-    margin: 0.2rem auto;
-    margin-top: 25.5%;
-    margin-left: 38%;
-    /* display: none; */
-  }
+   
 
   .header-bottom-client{
     margin-top: 14%;
@@ -663,7 +655,7 @@ width: 250px;
 
 @media (max-width: 912px){
   .header-bottom-client{
-    margin-top: 14%;
+    margin-top: 8%;
     /* border: 1px red solid; */
     margin-left: 14%;
   }
@@ -685,6 +677,10 @@ width: 250px;
     /* border: 1px green solid; */
   }
 
+  .Recherche{
+    margin-left: 15%;
+  }
+
   .header-links  .Notifications-Espace {
     /* border: 1px green solid; */
     display: flex;
@@ -692,13 +688,6 @@ width: 250px;
     margin-top: 0;
     /* margin: 0 auto; */
     /* max-width: auto; */
-  }
-
- .header-client #BRecherche {
-    /* width: 50px; */
-    margin: 0.2rem auto;
-    margin-top: 26%;
-    margin-left: 38%;
   }
 
   .header-middle-client h1{
@@ -731,6 +720,9 @@ width: 250px;
 }
 
 @media (max-width: 853px) {
+  /* .espace-client{
+    height: auto;
+  } */
   
   .header-middle-client h1 {
     font-size: 1.5rem;
@@ -756,26 +748,13 @@ width: 250px;
     margin-left: 20px;
   }
 
-   .header-client .Recherche {
-    /* max-width: 25px; */
-    margin: 0.2rem auto;
-    margin-top: 18%;
-    margin-left: 10%;
-    /* display: none; */
-  }
-
-  .header-client #BRecherche {
-    /* width: 50px; */
-    margin: 0.2rem auto;
-    margin-top: 24.7%;
-    margin-left: 38%;
-  }
-
+  
   .header-bottom-client{
     /* border: 1px red solid; */
-    margin-top: 18%;
+    margin-top: 12%;
     margin-left: 5%;
     width: 710px;
+    margin-bottom: 0;
   }
 
    .section_PROPOS p {
@@ -805,6 +784,9 @@ width: 250px;
     display: block;
   }
 
+  .Recherche{
+    margin-top: 0;
+  }
 
 
 }
@@ -821,9 +803,18 @@ width: 250px;
     width:  350px;
   }
 
+  .Recherche ::placeholder{
+    font-size: 15px;
+  }
+
+  .Recherche{
+    margin-left: 15%;
+    margin-top: 0;
+  }
+
   .header-bottom-client{
     /* border: 1px red solid; */
-    margin-top: 8%;
+    margin-top: 0;
     margin-left: 0;
     width: 710px;
   }
@@ -856,22 +847,7 @@ width: 250px;
     margin-left: 20px;
   }
 
-   .header-client .Recherche {
-    max-width: 25px;
-    margin: 0.2rem auto;
-    margin-top: 14%;
-    margin-left: 15%;
-    /* display: none; */
-  }
-
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 20.7%;
-    margin-left: 36%;
-  }
-
-    .section-produits p {
+  .section-produits p {
     font-size: 0.9rem;
     margin: 0.5rem auto;
     text-align: justify;
@@ -989,9 +965,17 @@ width: 250px;
     width:  350px;
   }
 
+  .Recherche{
+    margin-left: 15%;
+    margin-top: 0;
+  }
+ 
+  .Recherche ::placeholder{
+  font-size: 15px;
+  }
   .header-bottom-client{
     /* border: 1px red solid; */
-    margin-top: 9%;
+    margin-top: 2%;
     margin-left: 0;
     width: 710px;
   }
@@ -1021,23 +1005,10 @@ width: 250px;
     font-size: 1rem;
     margin: 0.5rem auto;
     text-align: center;
-    margin-left: 0;
+    margin-left: 5%;
   }
 
-   .header-client .Recherche {
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 16%;
-    margin-left: 15%;
-    /* display: none; */
-  }
-
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 23.2%;
-    margin-left: 38%;
-  }
+ 
 
     .section-produits p {
     font-size: 0.9rem;
@@ -1180,14 +1151,6 @@ width: 250px;
     /* border: 1px red solid; */
     margin-right: 60%;
   }
-  .header-client .Recherche {
-    /* width: 7%; */
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 17%;
-    margin-left: 8%;
-    /* display: none; */
-  }
 
    .bottom-responsive{
     display: block;
@@ -1196,21 +1159,19 @@ width: 250px;
   .bottom-responsive #Espacenav{
     gap: 35px;
     /* margin-left: 8%; */
+    margin-top: 0;
     text-align: center;
     width: 460px;
+  }
+
+  .Recherche{
+    margin-left: 5%;
   }
 
   #notification-mobile{
     display: block;
   }
 
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 25.8%;
-    margin-left: 37%;
-    /* display: none; */
-  }
 
   .header-links{
     display: none;
@@ -1383,14 +1344,7 @@ width: 250px;
     /* border: 1px red solid; */
     margin-right: 45%;
   }
-  .header-client .Recherche {
-    /* width: 7%; */
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 17%;
-    margin-left: 8%;
-    /* display: none; */
-  }
+
 
    .bottom-responsive{
     display: block;
@@ -1399,6 +1353,7 @@ width: 250px;
   .bottom-responsive #Espacenav{
     /* gap: 13%; */
     /* margin-left: 8%; */
+    margin-top: 0;
     text-align: center;
     width: 460px;
   }
@@ -1407,13 +1362,10 @@ width: 250px;
     display: block;
   }
 
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 26.3%;
-    margin-left: 37%;
-    /* display: none; */
+  .Recherche{
+    margin-left: 5%;
   }
+
 
   .header-links{
     display: none;
@@ -1568,9 +1520,10 @@ width: 250px;
   }
 
   .header-middle-client p {
-    display: none;
-    margin: 0.5rem auto;
+    display: block;
+    /* margin: 0.5rem auto; */
     margin-left: 16%;
+    margin-bottom: 0;
     width: 200px;
     /* border: 1px red solid; */
   }
@@ -1586,14 +1539,7 @@ width: 250px;
     /* border: 1px red solid; */
     margin-right: 45%;
   }
-  .header-client .Recherche {
-    /* width: 7%; */
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 11%;
-    margin-left: 8%;
-    /* display: none; */
-  }
+ 
 
    .bottom-responsive{
     display: block;
@@ -1604,24 +1550,46 @@ width: 250px;
     /* margin-left: 8%; */
     text-align: center;
     width: 460px;
+    margin-top: 0;
   }
 
   #notification-mobile{
     display: block;
   }
 
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 21.3%;
-    margin-left: 37%;
-    /* display: none; */
-  }
-
-  .header-links{
+ .header-links{
     display: none;
   }
 
+    .Recherche .InputRech {
+  width: 60px;
+  /* border: 1px red solid; */
+}
+
+.BtnRech {
+  flex: 0 0 auto;
+  width: 50px;  
+  margin: 0 auto;
+  /* padding-bottom: 10px; */
+  /* height: 10px;  */
+  background-color: transparent;
+ 
+}
+
+ .header-client .Recherche{
+  /* border: 1px red solid; */
+  width:  65%;
+  height: 35px;
+  /* margin: 0 auto; */
+  margin-left: 5%;
+  /* margin-top: 15%; */
+  position: relative;
+  /* height: 35px; */
+ }
+
+ .Recherche ::placeholder{
+  font-size: 10px;
+ }
   .header-client .header-image{
     /* border: 1px red solid; */
     margin-left: 62%;
@@ -1792,14 +1760,7 @@ width: 250px;
     /* border: 1px red solid; */
     margin-right: 45%;
   }
-  .header-client .Recherche {
-    /* width: 7%; */
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 20%;
-    margin-left: 5%;
-    /* display: none; */
-  }
+ 
 
    .bottom-responsive{
     display: block;
@@ -1808,7 +1769,7 @@ width: 250px;
   .bottom-responsive #Espacenav{
     gap: 30px;
     /* margin-left: 0; */
-    margin-top: 27%;
+    /* margin-top: 27%; */
     text-align: center;
     width: 400px;
     /* border: 1px red solid; */
@@ -1818,13 +1779,7 @@ width: 250px;
     display: block;
   }
 
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 31.7%;
-    margin-left: 40%;
-    /* display: none; */
-  }
+  
 
   .header-links{
     display: none;
@@ -1848,6 +1803,17 @@ width: 250px;
     /* border: 1px red solid; */
     display: none;
   }
+
+  .header-client .Recherche{
+  /* border: 1px red solid; */
+  width:  60%;
+  height: 35px;
+  /* margin: 0 auto; */
+  margin-left: 0;
+  margin-top: 5%;
+  position: relative;
+  /* height: 35px; */
+ }
 
   
   .section_PROPOS p {
@@ -1976,6 +1942,7 @@ width: 250px;
     margin: 0.2rem auto;
     max-width: 250px;
     margin-left: 0;
+    margin-top: 5%;
     text-align: center;
     /* border: 1px red solid; */
   }
@@ -1991,22 +1958,39 @@ width: 250px;
   }
 
   
-  .header-client .Recherche {
-    /* width: 7%; */
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 12%;
-    /* display: none; */
-  }
+ .bottom-responsive #Espacenav{
+  margin-top: 0;
+ }
 
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 25%;
-    margin-left: 42%;
-    /* display: none; */
-  }
+    .Recherche .InputRech {
+  width: 60px;
+  /* border: 1px red solid; */
+}
 
+.BtnRech {
+  flex: 0 0 auto;
+  width: 50px;  
+  margin: 0 auto;
+  /* padding-bottom: 10px; */
+  /* height: 10px;  */
+  background-color: transparent;
+ 
+}
+
+ .header-client .Recherche{
+  /* border: 1px red solid; */
+  width:  65%;
+  height: 35px;
+  /* margin: 0 auto; */
+  margin-left: 0;
+  /* margin-top: 15%; */
+  position: relative;
+  /* height: 35px; */
+ }
+
+ .Recherche ::placeholder{
+  font-size: 10px;
+ }
   .section_PROPOS p {
     font-size: 0.9rem;
     margin: 0.5rem ;
@@ -2045,7 +2029,8 @@ width: 250px;
   .header-middle-client h1 {
     font-size: 0.9rem;
     margin: 0.2rem auto;
-    max-width: 200px;
+    max-width: 250px;
+    margin-top: 5%;
     margin-left: 0;
     text-align: center;
     /* border: 1px red solid; */
@@ -2066,21 +2051,7 @@ width: 250px;
     /* border: 1px red solid; */
     margin-right: 45%;
   }
-  .header-client .Recherche {
-    /* width: 7%; */
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 22%;
-    /* display: none; */
-  }
-
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 35.5%;
-    margin-left: 42%;
-    /* display: none; */
-  }
+  
 
   .header-links{
     /* border: 1px red solid; */
@@ -2094,10 +2065,40 @@ width: 250px;
   .bottom-responsive #Espacenav{
     gap: 25px;
     /* margin-left: 0; */
-    margin-top: 35%;
+    margin-top: 0;
     max-width: 414px;
     text-align: center;
   }
+
+    .Recherche .InputRech {
+  width: 60px;
+  /* border: 1px red solid; */
+}
+
+.BtnRech {
+  flex: 0 0 auto;
+  width: 50px;  
+  margin: 0 auto;
+  /* padding-bottom: 10px; */
+  /* height: 10px;  */
+  background-color: transparent;
+ 
+}
+
+ .header-client .Recherche{
+  /* border: 1px red solid; */
+  width:  62%;
+  height: 35px;
+  /* margin: 0 auto; */
+  margin-left: 0;
+  margin-top: 5%;
+  position: relative;
+  /* height: 35px; */
+ }
+
+ .Recherche ::placeholder{
+  font-size: 10px;
+ }
 
   #notification-mobile{
     display: block;
@@ -2244,13 +2245,7 @@ width: 250px;
 }
 
 @media (max-width: 390px) {
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 36.2%;
-    margin-left: 40%;
-    /* display: none; */
-  }
+ 
 
   .header-client .header-image{
     /* border: 1px red solid; */
@@ -2312,26 +2307,41 @@ width: 250px;
     height: 40px;
   }
 
+  
+  .Recherche .InputRech {
+  width: 60px;
+  /* border: 1px red solid; */
+}
+
+.BtnRech {
+  flex: 0 0 auto;
+  width: 50px;  
+  margin: 0 auto;
+  /* padding-bottom: 10px; */
+  /* height: 10px;  */
+  background-color: transparent;
+ 
+}
+
+ .header-client .Recherche{
+  /* border: 1px red solid; */
+  width:  70%;
+  height: 35px;
+  /* margin: 0 auto; */
+  margin-left: 0;
+  margin-top: 15%;
+  position: relative;
+  /* height: 35px; */
+ }
+
+ .Recherche ::placeholder{
+  font-size: 10px;
+ }
   .header-top-client .logo{
     /* border: 1px red solid; */
     margin-right: 45%;
   }
-  .header-client .Recherche {
-    /* width: 7%; */
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 22%;
-    /* display: none; */
-  }
-
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 36.7%;
-    margin-left: 40%;
-    /* display: none; */
-  }
-
+  
   .header-links{
     /* border: 1px red solid; */
     display: none;
@@ -2345,7 +2355,7 @@ width: 250px;
     gap: 20px;
     /* border: 1px red solid; */
     /* margin-left: 0; */
-    margin-top: 35%;
+    margin-top: 0;
     max-width: 360px;
     text-align: center;
     /* margin-bottom: 0; */
@@ -2529,21 +2539,7 @@ width: 250px;
     /* border: 1px red solid; */
     margin-right: 45%;
   }
-  .header-client .Recherche {
-    /* width: 7%; */
-    max-width: 20px;
-    margin: 0.2rem auto;
-    margin-top: 22%;
-    /* display: none; */
-  }
 
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 37.5%;
-    margin-left: 42%;
-    /* display: none; */
-  }
 
   .header-links{
     /* border: 1px red solid; */
@@ -2558,11 +2554,41 @@ width: 250px;
     gap: 20px;
     /* border: 1px red solid; */
     /* margin-left: 0; */
-    margin-top: 35%;
+    margin-top: 0;
     max-width: 360px;
     text-align: center;
     /* margin-bottom: 0; */
   }
+
+    .Recherche .InputRech {
+  width: 60px;
+  /* border: 1px red solid; */
+}
+
+.BtnRech {
+  flex: 0 0 auto;
+  width: 50px;  
+  margin: 0 auto;
+  /* padding-bottom: 10px; */
+  /* height: 10px;  */
+  background-color: transparent;
+ 
+}
+
+ .header-client .Recherche{
+  /* border: 1px red solid; */
+  width:  65%;
+  height: 35px;
+  /* margin: 0 auto; */
+  margin-left: 0;
+  margin-top: 15%;
+  position: relative;
+  /* height: 35px; */
+ }
+
+ .Recherche ::placeholder{
+  font-size: 10px;
+ }
 
   #notification-mobile{
     display: block;
@@ -2702,21 +2728,7 @@ width: 250px;
 }
 
 @media (max-width: 344px) {
-   .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 38.2%;
-    margin-left: 40%;
-    /* display: none; */
-  }
-
-   .header-client .Recherche {
-    width: 7%;
-    /* max-width: 20px; */
-    /* margin: 0.2rem auto; */
-    margin-top: 22%;
-    /* display: none; */
-  }
+   
 
   .header-client .Recherche ::placeholder{
     font-size: 10px;
@@ -2761,25 +2773,36 @@ width: 250px;
     /* border: 1px red solid; */
     margin-right: 45%;
   }
-  .header-client .Recherche {
-    width: 7%;
-    /* max-width: 20px; */
-    /* margin: 0.2rem auto; */
-    margin-top: 22%;
-    /* display: none; */
-  }
+  
 
-  .header-client .Recherche ::placeholder{
+  /* .header-client .Recherche ::placeholder{
     font-size: 10px;
-  }
+  } */
 
-  .header-client #BRecherche {
-    width: 50px;
-    margin: 0.2rem auto;
-    margin-top: 39.4%;
-    margin-left: 49%;
-    /* display: none; */
-  }
+  .Recherche .InputRech {
+  width: 60px;
+  /* border: 1px red solid; */
+}
+
+.BtnRech {
+  flex: 0 0 auto;
+  width: 50px;  
+  margin: 0 auto;
+  /* padding-bottom: 10px; */
+  /* height: 10px;  */
+  background-color: transparent;
+ 
+}
+
+ .header-client .Recherche{
+  /* border: 1px red solid; */
+  width:  75%;
+  height: 35px;
+  /* margin: 0 auto; */
+  margin-left: 0;
+  position: relative;
+  /* height: 35px; */
+ }
 
 
   .header-links{
@@ -2795,7 +2818,7 @@ width: 250px;
     gap: 10px;
     /* border: 1px red solid; */
     /* margin-left: 0; */
-    margin-top: 35%;
+    margin-top: 0;
     max-width: 320px;
     text-align: center;
     /* margin-bottom: 0; */

@@ -1,5 +1,7 @@
 .panier-container {
   max-width: 900px;
+  height: auto;
+  /* border: 1px red solid; */
   margin: 40px auto;
   padding: 20px;
   background: #ffffff;
@@ -43,6 +45,7 @@
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
+
 }
 
 .btn-valider,
@@ -89,10 +92,13 @@
 
 .panier-actions {
   display: flex;
-  justify-content: center;
+  /* justify-content: left; */
   gap: 15px;
-  margin-top: 20px;
+  /* margin-top: 150px; */
 }
+
+
+
 
 
 .feedback {
@@ -107,6 +113,10 @@
   flex-direction: column;
   gap: 15px;
   margin-top: 20px;
+  position: relative;
+  height: 200px;
+  /* border: 1px red solid; */
+  height: auto;
 }
 
 .panier-form label {
@@ -116,24 +126,29 @@
   color: #333;
 }
 
-.panier-form input[type="text"],
-.panier-form select {
+.adresselivraison input[type="text"],
+.adresselivraison select {
   margin-top: 5px;
   padding: 8px;
   border: 1px solid #bbb;
   border-radius: 4px;
   font-size: 14px;
-  margin-left: 2rem;
+  margin-left: 0;
+  width: 60%;
+  height: 20%;
+  /* border: 1px red solid; */
 }
 
+
 .numero-admin {
-  margin-top: 10px;
+  /* margin-top: 70px; */
   background: #f9f9f9;
   padding: 10px;
   border-left: 4px solid #007bff;
   border-radius: 4px;
   display: flex;
   flex-direction: row;
+  /* margin-left: 50px; */
 }
 
 .numero-admin label {
@@ -146,10 +161,50 @@
   animation-fill-mode:forwards;
 }
 
+
+
 @media (max-width: 360px) {
   .numero-admin input[type="text"] {
     margin-left: 0;  
     width: 100%;      
     display: block;   
+  }
+}
+
+@media (max-width: 375px) {
+  .NUMERO .numero-admin input[type="text"] {
+    margin-left: 0;  
+    width: 100%; 
+    display: flex;
+  }
+
+  .panier-form label{
+    width: 100%;
+  }
+
+  .adresselivraison input[type="text"],
+  .adresselivraison select {
+    width: 80%;
+    /* border: 1px red solid; */
+  }
+
+  .numero-admin {
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+  }
+
+  .numero-admin input{
+    width: 100%;
+  }
+}
+
+@media (max-width: 414px), (max-width: 430px) {
+  
+  .adresselivraison input[type="text"],
+  .adresselivraison select {
+    width: 85%;
+    /* border: 1px red solid; */
   }
 }

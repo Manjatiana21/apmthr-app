@@ -145,59 +145,69 @@ function Panier() {
 
           {/* Formulaire livraison + paiement */}
           <form onSubmit={handleSubmit} className="panier-form">
-            <label className="Adresse-input">
-              Adresse de livraison :
-              <input 
-                type="text"
-                name="adresse_livraison"
-                value={formData.adresse_livraison}
-                onChange={handleChange}
-                required
-              />
-            </label>
-
-            <label>
-              Mode de paiement :
-              <select
-                name="mode_paiement"
-                value={formData.mode_paiement}
-                className="MPaiement-input"
-                onChange={handleChange}
-                required
-              >
-                <option value="">Choisir un mode de paiement</option>
-                {Array.isArray(modes) && modes.length > 0 ? (
-                  modes.map((m) => (
-                    <option key={m.id} value={m.id}>
-                      {m.mode_paiement}
-                    </option>
-                  ))
-                ) : (
-                  <option disabled>Aucun mode disponible</option>
-                )}
-              </select>
-            </label>
-
-            {numeroAdmin && (
-              <div className="numero-admin">
-                <label>Numéro pour envoyer le paiement :</label>
-                <input type="text" value={numeroAdmin} readOnly className="Numero-input"/>
+            <div className="formulaire-panier">
+              <div className="adresselivraison">
+                <label className="Adresse-input">
+                  Adresse de livraison :
+                </label>
+                <input 
+                    type="text"
+                    name="adresse_livraison"
+                    value={formData.adresse_livraison}
+                    onChange={handleChange}
+                    required
+                  />
               </div>
-            )}
 
-            <div className="panier-actions">
-              <button type="submit" className="btn-valider">
-                Valider la commande
-              </button>
-              <button type="button" onClick={clearCart} className="btn-vider">
-                Vider le panier
-              </button>
+            <div className="adresselivraison">
+              <label>
+                Mode de paiement :
+              </label>
+              <select
+                  name="mode_paiement"
+                  value={formData.mode_paiement}
+                  className="MPaiement-input"
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Choisir un mode de paiement</option>
+                  {Array.isArray(modes) && modes.length > 0 ? (
+                    modes.map((m) => (
+                      <option key={m.id} value={m.id}>
+                        {m.mode_paiement}
+                      </option>
+                    ))
+                  ) : (
+                    <option disabled>Aucun mode disponible</option>
+                  )}
+                </select>
+              </div>
+              
+              <div>
+              {numeroAdmin && (
+                <div className="numero-admin">
+                  <label>Numéro pour envoyer le paiement :</label>
+                  <input type="text" value={numeroAdmin} readOnly className="Numero-input"/>
+                </div>
+              )}
+              </div>
+
+
+              <div className="panier-actions">
+                <button type="submit" className="btn-valider">
+                  Valider la commande
+                </button>
+                <button type="button" onClick={clearCart} className="btn-vider">
+                  Vider le panier
+                </button>
+              </div>
             </div>
-          </form>
-        </>
-      )}
-      {message && <p className="feedback">{message}</p>}
-    </div>
+
+            </form>
+          </>
+        )}
+        {message && <p className="feedback">{message}</p>}
+      </div>
     </Layout>
   );
 }
