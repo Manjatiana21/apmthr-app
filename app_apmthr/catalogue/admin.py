@@ -17,5 +17,5 @@ class ProduitAdmin(admin.ModelAdmin):
     list_display = ('designation', 'stock', 'type_produit', 'fournisseur', 'image')
     search_fields = ('designation',)
     list_filter = ('type_produit', 'fournisseur')
-     fields = ('designation', 'description', 'stock', 'type_produit', 'fournisseur', 'prix', 'image', 'is_active')
+    fields = ('designation', 'description', 'stock', 'type_produit', 'fournisseur', 'prix', 'image', 'is_active')
 
