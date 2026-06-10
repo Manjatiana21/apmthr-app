@@ -10,3 +10,6 @@ djangorestframework-simplejwt
 xhtml2pdf
 reportlab
 python-dotenv
+cloudinary==1.44.2
+django-cloudinary-storage==0.3.0
+
