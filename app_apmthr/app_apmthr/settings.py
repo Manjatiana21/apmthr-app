@@ -188,6 +188,7 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),   # token valable 1h
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),   # refresh valable 7 jours
 }
+
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.getenv('CLOUDINARY_NAME'),
     'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
