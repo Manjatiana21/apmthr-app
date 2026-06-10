@@ -43,6 +43,8 @@ ALLOWED_HOSTS = ['apmthr-app.onrender.com', 'localhost', "127.0.0.1", "localhost
 INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
+    'cloudinary',
+    'cloudinary_storage',
     'catalogue.apps.CatalogueConfig',
     'commandes.apps.CommandesConfig',
     'comptes.apps.ComptesConfig',
@@ -186,5 +188,12 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),   # token valable 1h
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),   # refresh valable 7 jours
 }
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
