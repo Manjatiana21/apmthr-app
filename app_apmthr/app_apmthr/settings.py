@@ -197,4 +197,6 @@ CLOUDINARY_STORAGE = {
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+print("Cloudinary Name:", os.getenv('CLOUDINARY_NAME'))
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
