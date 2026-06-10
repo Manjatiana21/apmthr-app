@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -194,9 +195,6 @@ CLOUDINARY_STORAGE = {
     'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
     'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
 }
-
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-print("Cloudinary Name:", os.getenv('CLOUDINARY_NAME'))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
