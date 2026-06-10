@@ -47,5 +47,6 @@ class ProduitSerializer(serializers.ModelSerializer):
             "date_ajout_formatee",  # ✅ champ calculé
         ]
         extra_kwargs = {
-            "is_active": {"default": True}
+            "is_active": {"default": True},
+            "image": {"required": False, "allow_null": True},
         }

@@ -45,9 +45,13 @@ function ModifierProduit() {
 
   // Gérer les changements dans le formulaire
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    setFormData({ ...formData, [name]: files ? files[0] : value });
+    const { name, files, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: files && files.length > 0 ? files[0] : value,
+    });
   };
+
 
   // Soumettre la modification
   const handleSubmit = async (e) => {
