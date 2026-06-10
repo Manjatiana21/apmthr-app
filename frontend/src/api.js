@@ -5,7 +5,7 @@ import axios from "axios";
 // ✅ Instance axios avec configuration de base
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
-  headers: { "Content-Type": "application/json" },
+  // headers: { "Content-Type": "application/json" },
 });
 
 
@@ -150,7 +150,9 @@ export const supprimerProduit = (id) => api.delete(`/produits/${id}/supprimer/`)
 
 export const updateProduit = (id, data) =>
   api.patch(`/produits/${id}/`, data, {
-    headers: { "Content-Type": "multipart/form-data" },
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
   });
 
 
