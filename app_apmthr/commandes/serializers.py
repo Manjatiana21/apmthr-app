@@ -105,6 +105,7 @@ class PanierSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         produits_data = validated_data.pop("produits", [])
+        validated_data.pop("date_commande", None)  
         client = self.context["request"].user
         commande = Commande.objects.create(client=client, **validated_data)
 
