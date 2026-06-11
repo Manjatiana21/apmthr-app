@@ -90,9 +90,9 @@ class CommandeSerializer(serializers.ModelSerializer):
         ]
 
     def get_date_commande(self, obj):
-    if obj.date_commande:
-        return timezone.localtime(obj.date_commande).strftime("%d/%m/%Y")
-    return None
+        if obj.date_commande:
+            return timezone.localtime(obj.date_commande).strftime("%d/%m/%Y")
+        return None
 
 class PanierSerializer(serializers.ModelSerializer):
     produits = DetailsSerializer(many=True, write_only=True, required=False)
