@@ -62,6 +62,7 @@ class CommandeSerializer(serializers.ModelSerializer):
     client = UtilisateurSerializer(read_only=True)
     details = DetailsSerializer(many=True, read_only=True)
     paiements = PaiementSerializer(many=True, read_only=True)  # ✅ correction
+    date_commande = serializers.SerializerMethodField()
 
     class Meta:
         model = Commande
@@ -85,6 +86,10 @@ class CommandeSerializer(serializers.ModelSerializer):
             "details",
             "paiements",
         ]
+
+    def get_date_commande(self, obj):
+        # ✅ convertit en fuseau Indian/Antananarivo
+        return timezone.localtime(obj.date_commande).strftime("%d/%m/%Y")
 
 class PanierSerializer(serializers.ModelSerializer):
     produits = DetailsSerializer(many=True, write_only=True, required=False)
