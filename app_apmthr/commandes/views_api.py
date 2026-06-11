@@ -90,6 +90,11 @@ def api_valider_commande(request, id):
     commande = get_object_or_404(Commande, id=id)
     commande.validerCommande()
 
+    # ✅ Créer les mouvements de sortie pour chaque produit
+    for detail in commande.details.all():
+        produit = detail.produit
+        produit.retirer_stock(detail.quantite, utilisateur=request.user)
+
     # notification client
     # Notification.objects.create(
     #     utilisateur=commande.client,
