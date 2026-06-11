@@ -88,21 +88,12 @@ def api_gestion_commandes(request):
 @permission_classes([IsAdminUser])
 def api_valider_commande(request, id):
     commande = get_object_or_404(Commande, id=id)
-    commande.validerCommande()
-
-    # notification client
-    # Notification.objects.create(
-    #     utilisateur=commande.client,
-    #     message=f"Votre commande #{commande.id} a été validée par l’admin."
-    # )
-
-    # # notification admin
-    # admins = Utilisateur.objects.filter(role="ADMIN")
-    # for admin in admins:
-    #     Notification.objects.create(
-    #         utilisateur=admin,
-    #         message=f"Commande #{commande.id} validée pour {commande.client.username}."
-    #     )
+    try:
+        # ✅ passe l’admin connecté
+        commande.validerCommande(utilisateur=request.user)
+    except ValueError as e:
+        # ✅ si stock insuffisant → erreur claire
+        return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     # création livraison si elle n’existe pas
     livraison, created = Livraison.objects.get_or_create(
@@ -112,6 +103,7 @@ def api_valider_commande(request, id):
 
     serializer = CommandeSerializer(commande)
     return Response(serializer.data)
+
 
 
 @api_view(["POST"])
