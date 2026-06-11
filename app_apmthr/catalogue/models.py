@@ -69,51 +69,61 @@ class Produit(models.Model):
     date_ajout = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
 
+
     def __str__(self):
         return f"{self.designation} - {self.prix} Ar"
 
+    def __str__(self): 
+        return self.designation
+    
+
     def save(self, *args, **kwargs):
-        is_new = self.pk is None
+        is_new = self.pk is None  # Vérifie si c'est un nouveau produit
         super().save(*args, **kwargs)
 
         if is_new and self.stock > 0:
+            # ✅ Mouvement ENTREE automatique à la création du produit
             MouvementStock.objects.create(
                 produit=self,
                 quantite=self.stock,
-                type_mouvement="ENTREE"
+                type_mouvement="ENTREE",
+                
             )
 
-    def retirer_stock(self, quantite, utilisateur=None):
-        if quantite > self.stock:
-            raise ValueError(
-                f"Stock insuffisant pour {self.designation} "
-                f"(dispo: {self.stock}, demandé: {quantite})"
-            )
+    def retirer_stock(self, quantite):
+        """Décrémenter le stock après une commande."""
         self.stock -= quantite
+        if self.stock <= 0:
+            self.stock = 0
+            # Optionnel : ajouter un champ is_epuise = True
         self.save()
 
+    def ajouter_stock(self, quantite):
+        """Incrémenter le stock après réception fournisseur."""
+        self.stock += quantite
+        self.save()
+        MouvementStock.objects.create( 
+            produit=self, 
+            quantite=quantite, 
+            type_mouvement="ENTREE", 
+            utilisateur=utilisateur )
+
+    @property
+    def est_epuise(self):
+        return self.stock <= 0
+
+
+    def retirer_stock(self, quantite, utilisateur=None):
+        self.stock -= quantite
+        if self.stock < 0:
+            self.stock = 0
+        self.save()
         MouvementStock.objects.create(
             produit=self,
             quantite=quantite,
             type_mouvement="SORTIE",
             utilisateur=utilisateur
         )
-
-    def ajouter_stock(self, quantite, utilisateur=None):
-        self.stock += quantite
-        self.save()
-
-        MouvementStock.objects.create(
-            produit=self,
-            quantite=quantite,
-            type_mouvement="ENTREE",
-            utilisateur=utilisateur
-        )
-
-    @property
-    def est_epuise(self):
-        return self.stock <= 0
-
 
 
         

@@ -66,15 +66,12 @@ class Commande(models.Model):
                 break
 
 
-    def validerCommande(self, utilisateur=None):
+    def validerCommande(self):
         self.statut = "VALIDEE"
         self.save()
 
         details = self.details.all()
         produits = ", ".join([f"{d.quantite} x {d.produit.designation}" for d in details]) if details.exists() else "aucun produit"
-
-        for d in details:
-            d.produit.retirer_stock(d.quantite, utilisateur=utilisateur)
 
         # ✅ notification client
         Notification.objects.create(
