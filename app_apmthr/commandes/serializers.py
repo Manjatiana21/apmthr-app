@@ -3,6 +3,8 @@ from .models import Commande, Details, CommandeItem
 from comptes.models import Utilisateur
 from catalogue.models import Produit
 from paiements.models import Paiement
+from django.utils import timezone
+
 
 # =========================
 # Utilisateur
@@ -88,8 +90,9 @@ class CommandeSerializer(serializers.ModelSerializer):
         ]
 
     def get_date_commande(self, obj):
-        # ✅ convertit en fuseau Indian/Antananarivo
+    if obj.date_commande:
         return timezone.localtime(obj.date_commande).strftime("%d/%m/%Y")
+    return None
 
 class PanierSerializer(serializers.ModelSerializer):
     produits = DetailsSerializer(many=True, write_only=True, required=False)

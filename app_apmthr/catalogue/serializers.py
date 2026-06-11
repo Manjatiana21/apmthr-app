@@ -27,8 +27,9 @@ class ProduitSerializer(serializers.ModelSerializer):
     date_ajout_formatee = serializers.SerializerMethodField()
 
     def get_date_ajout_formatee(self, obj):
-        # ✅ conversion en fuseau Indian/Antananarivo
+    if obj.date_ajout:
         return timezone.localtime(obj.date_ajout).strftime("%d/%m/%Y")
+    return None
 
     class Meta:
         model = Produit
