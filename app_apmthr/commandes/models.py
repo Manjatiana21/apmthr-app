@@ -66,7 +66,7 @@ class Commande(models.Model):
                 break
 
 
-    def validerCommande(self):
+    def validerCommande(self, utilisateur=None):
         self.statut = "VALIDEE"
         self.save()
 
