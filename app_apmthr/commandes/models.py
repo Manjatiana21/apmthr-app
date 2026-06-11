@@ -73,6 +73,9 @@ class Commande(models.Model):
         details = self.details.all()
         produits = ", ".join([f"{d.quantite} x {d.produit.designation}" for d in details]) if details.exists() else "aucun produit"
 
+        for d in details:
+            d.produit.retirer_stock(d.quantite, utilisateur=utilisateur)
+
         # ✅ notification client
         Notification.objects.create(
             utilisateur=self.client,
