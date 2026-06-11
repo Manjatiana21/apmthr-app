@@ -118,6 +118,10 @@ def valider_commande(request, pk):
     commande.statut = "VALIDEE"
     commande.save()
 
+    for detail in commande.details.all():
+        produit = detail.produit
+        produit.retirer_stock(detail.quantite, utilisateur=request.user)
+
     Livraison.objects.get_or_create(
         commande=commande,
         defaults={
