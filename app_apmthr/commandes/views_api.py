@@ -12,7 +12,6 @@ from livraisons.serializers import LivraisonSerializer
 from paiements.models import ModePaiement, Paiement
 
 
-
 # ViewSets
 class CommandeViewSet(viewsets.ModelViewSet):
     queryset = Commande.objects.all().order_by('-date_commande')
@@ -37,15 +36,7 @@ class CommandeViewSet(viewsets.ModelViewSet):
         if commande.statut not in ["EN_ATTENTE"]:
             return Response({"detail": "Impossible d'annuler cette commande"}, status=status.HTTP_400_BAD_REQUEST)
 
-        commande.statut = "ANNULEE"
-        commande.save()
-
-        # admins = Utilisateur.objects.filter(role="ADMIN")
-        # for admin in admins:
-        #     Notification.objects.create(
-        #         utilisateur=admin,
-        #         message=f"{request.user.username} a annulé sa commande #{commande.id}."
-        #     )
+        commande.annulerCommande(utilisateur=request.user, par_client=True)  # ✅ correction
 
         serializer = self.get_serializer(commande)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -59,12 +50,6 @@ class CommandeViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(client=self.request.user)
 
-    @action(detail=False, methods=['delete'], url_path='effacer-selection')
-    def effacer_selection(self, request):
-        ids = request.data.get("ids", [])
-        Commande.objects.filter(id__in=ids, statut="ANNULEE").delete()
-        return Response({"message": "Commandes sélectionnées supprimées"}, status=status.HTTP_204_NO_CONTENT)
-
 
 class DetailsViewSet(viewsets.ModelViewSet):
     queryset = Details.objects.all()
@@ -75,6 +60,7 @@ class CommandeItemViewSet(viewsets.ModelViewSet):
     queryset = CommandeItem.objects.all()
     serializer_class = CommandeItemSerializer
 
+
 # API côté Admin
 @api_view(["GET"])
 @permission_classes([IsAdminUser])
@@ -83,28 +69,13 @@ def api_gestion_commandes(request):
     serializer = CommandeSerializer(commandes, many=True)
     return Response(serializer.data)
 
- 
+
 @api_view(["POST"])
 @permission_classes([IsAdminUser])
 def api_valider_commande(request, id):
     commande = get_object_or_404(Commande, id=id)
-    commande.validerCommande()
+    commande.validerCommande(utilisateur=request.user)  # ✅ correction
 
-    # notification client
-    # Notification.objects.create(
-    #     utilisateur=commande.client,
-    #     message=f"Votre commande #{commande.id} a été validée par l’admin."
-    # )
-
-    # # notification admin
-    # admins = Utilisateur.objects.filter(role="ADMIN")
-    # for admin in admins:
-    #     Notification.objects.create(
-    #         utilisateur=admin,
-    #         message=f"Commande #{commande.id} validée pour {commande.client.username}."
-    #     )
-
-    # création livraison si elle n’existe pas
     livraison, created = Livraison.objects.get_or_create(
         commande=commande,
         defaults={"statut": "NON_DEMARREE"}
@@ -120,22 +91,10 @@ def api_annuler_commande(request, id):
     commande = get_object_or_404(Commande, id=id)
     commande.annulerCommande()
 
-    # # notification client
-    # Notification.objects.create(
-    #     utilisateur=commande.client,
-    #     message=f"Votre commande #{commande.id} a été annulée par l’admin."
-    # )
-
-    # # notification admin
-    # admins = Utilisateur.objects.filter(role="ADMIN")
-    # for admin in admins:
-    #     Notification.objects.create(
-    #         utilisateur=admin,
-    #         message=f"Commande #{commande.id} annulée pour {commande.client.username}."
-    #     )
 
     serializer = CommandeSerializer(commande)
     return Response(serializer.data)
+
 
 @api_view(["GET"])
 @permission_classes([IsAdminUser])
@@ -170,7 +129,7 @@ def api_passer_commande(request, produit_id):
     )
 
     commande.calculerTotal()
-    commande.creerCommande()
+    commande.creerCommande(utilisateur=request.user)  # ✅ correction
 
     Paiement.objects.create(
         commande=commande,
@@ -180,7 +139,6 @@ def api_passer_commande(request, produit_id):
         statut="EN_ATTENTE",
         date_paiement=None
     )
-
 
     commande.refresh_from_db()
     return Response(CommandeSerializer(commande).data)
@@ -193,12 +151,14 @@ def api_consulter_commande(request, id):
     serializer = CommandeSerializer(commande)
     return Response(serializer.data)
 
+
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def api_client_commandes(request):
     commandes = Commande.objects.filter(client=request.user).order_by("-date_commande")
     serializer = CommandeSerializer(commandes, many=True)
     return Response(serializer.data)
+
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
@@ -208,15 +168,7 @@ def api_annuler_commande_client(request, id):
     if commande.statut not in ["EN_ATTENTE"]:  
         return Response({"detail": "Impossible d'annuler cette commande"}, status=400)
 
-    commande.annulerCommande(par_client=True)
-
-    # ✅ notification admin
-    # admins = Utilisateur.objects.filter(role="ADMIN")
-    # for admin in admins:
-    #     Notification.objects.create(
-    #         utilisateur=admin,
-    #         message=f"{request.user.username} a annulé sa commande #{commande.id}."
-    #     )
+    commande.annulerCommande(utilisateur=request.user, par_client=True)  # ✅ correction
 
     serializer = CommandeSerializer(commande)
     return Response(serializer.data)
@@ -237,6 +189,7 @@ def api_commandes_annulees_admin(request):
     serializer = CommandeSerializer(commandes, many=True)
     return Response(serializer.data)
 
+
 @api_view(["GET"])
 @permission_classes([IsAdminUser])
 def api_commandes_validees_admin(request):
@@ -244,11 +197,11 @@ def api_commandes_validees_admin(request):
     serializer = CommandeSerializer(commandes, many=True)
     return Response(serializer.data)
 
+
 @api_view(["DELETE"])
 def api_supprimer_commande(request, id):
     commande = get_object_or_404(Commande, id=id)
 
-    # ✅ sécurité : empêcher suppression si paiements liés
     if Paiement.objects.filter(commande=commande).exists():
         return Response({"error": "Impossible de supprimer : des paiements sont liés."}, status=400)
 
@@ -259,14 +212,10 @@ def api_supprimer_commande(request, id):
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def ajouter_au_panier(request):
-    """
-    Ajoute une commande simple ou un panier multi-produits.
-    """
     serializer = PanierSerializer(data=request.data, context={"request": request})
     if serializer.is_valid():
         commande = serializer.save()
 
-        # ✅ Créer un paiement lié à la commande (comme dans api_passer_commande)
         if commande.mode_paiement:
             Paiement.objects.create(
                 commande=commande,
@@ -277,8 +226,7 @@ def ajouter_au_panier(request):
                 date_paiement=None
             )
 
-        # ✅ Notifications client + admin
-        commande.creerCommande()
+        commande.creerCommande(utilisateur=request.user)  # ✅ correction
 
         return Response(
             {
@@ -288,22 +236,12 @@ def ajouter_au_panier(request):
             status=status.HTTP_201_CREATED,
         )
     else:
-        # ✅ log côté serveur pour diagnostic
         print("Erreurs serializer:", serializer.errors)
         return Response(
             {"errors": serializer.errors, "detail": "Payload invalide."},
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-
-# @api_view(["GET"])
-# @permission_classes([IsAuthenticated])
-# def api_consulter_panier(request):
-#     commande = Commande.objects.filter(client=request.user, statut="EN_ATTENTE").last()
-#     if not commande:
-#         return Response({"detail": "Aucun panier en cours."}, status=404)
-#     serializer = CommandeSerializer(commande)
-#     return Response(serializer.data)
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
@@ -312,10 +250,7 @@ def vider_panier(request):
     if not commande:
         return Response({"detail": "Aucun panier en cours."}, status=404)
 
-    # ✅ Supprimer uniquement les détails (produits) du panier
     commande.details.all().delete()
-
-    # ✅ Réinitialiser le total
     commande.total = 0
     commande.save()
 

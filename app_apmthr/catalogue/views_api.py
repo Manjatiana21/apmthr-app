@@ -34,7 +34,7 @@ class ProduitViewSet(viewsets.ModelViewSet):
         return Response(ProduitSerializer(produit).data, status=status.HTTP_200_OK)
 
     def perform_create(self, serializer):
-        serializer.save(is_active=True)
+        serializer.save(is_active=True, utilisateur=self.request.user)  # ✅ admin connecté
 
 
 class TypeProduitViewSet(viewsets.ModelViewSet):
@@ -66,7 +66,7 @@ def api_detail_produit(request, id):
 def api_ajouter_produit(request):
     serializer = ProduitSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save(is_active=True)
+        serializer.save(is_active=True, utilisateur=request.user)  # ✅ admin connecté
         return Response(serializer.data, status=201)
     return Response(serializer.errors, status=400)
 

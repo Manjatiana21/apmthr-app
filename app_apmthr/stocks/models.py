@@ -13,6 +13,7 @@ class MouvementStock(models.Model):
     quantite = models.PositiveIntegerField()
     commande = models.ForeignKey("commandes.Commande", on_delete=models.SET_NULL, null=True, blank=True)
     type_mouvement = models.CharField(max_length=10, choices=TYPE_CHOICES)
+    utilisateur = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
     date_mouvement = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

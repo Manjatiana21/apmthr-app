@@ -1,22 +1,19 @@
-from rest_framework import viewsets, filters
+from rest_framework import viewsets, filters, status
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import MouvementStock
 from .serializers import MouvementStockSerializer
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 from django.db.models import Sum
 from django.utils.timezone import localtime
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAdminUser
 from django.shortcuts import get_object_or_404
-
 
 class MouvementStockViewSet(viewsets.ModelViewSet):
     queryset = MouvementStock.objects.all().order_by('-date_mouvement')
     serializer_class = MouvementStockSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
 
-    # ✅ filtres disponibles
     filterset_fields = ["type_mouvement", "produit__designation"]
     search_fields = ["produit__designation"]
     ordering_fields = ["date_mouvement", "quantite"]
@@ -25,7 +22,6 @@ class MouvementStockViewSet(viewsets.ModelViewSet):
 def rapport_mouvement(request):
     mouvements = MouvementStock.objects.all()
 
-    # filtres
     type_mouvement = request.GET.get("type_mouvement")
     produit = request.GET.get("produit")
 
@@ -34,20 +30,18 @@ def rapport_mouvement(request):
     if produit:
         mouvements = mouvements.filter(produit__designation__icontains=produit)
 
-    # regroupement par mois
     data = {}
     for mvt in mouvements:
         mois = localtime(mvt.date_mouvement).strftime("%Y-%m")
         if mois not in data:
             data[mois] = {"ENTREE": 0, "SORTIE": 0}
-        data[mois][mvt.type_mouvement] += mvt.quantite
+        if mvt.type_mouvement in data[mois]:  # ✅ sécurisation
+            data[mois][mvt.type_mouvement] += mvt.quantite
 
     return Response({
         "data": data,
         "mouvements": MouvementStockSerializer(mouvements, many=True).data
     })
-
-
 
 @api_view(["GET"])
 @permission_classes([IsAdminUser])
@@ -61,7 +55,7 @@ def api_gestion_stock(request):
 def api_ajouter_mouvement(request):
     serializer = MouvementStockSerializer(data=request.data)
     if serializer.is_valid():
-        mvt = serializer.save()
+        mvt = serializer.save(utilisateur=request.user)  # ✅ admin connecté
         return Response(MouvementStockSerializer(mvt).data, status=201)
     return Response(serializer.errors, status=400)
 
@@ -87,7 +81,8 @@ def api_rapport_mouvements(request):
         type_mvt = s["type_mouvement"]
         if mois not in data:
             data[mois] = {"ENTREE": 0, "SORTIE": 0}
-        data[mois][type_mvt] = s["total"]
+        if type_mvt in data[mois]:  # ✅ sécurisation
+            data[mois][type_mvt] = s["total"]
 
     return Response({
         "stats": data,

@@ -72,9 +72,6 @@ class Produit(models.Model):
 
     def __str__(self):
         return f"{self.designation} - {self.prix} Ar"
-
-    def __str__(self): 
-        return self.designation
     
 
     def save(self, *args, **kwargs):
@@ -83,47 +80,44 @@ class Produit(models.Model):
 
         if is_new and self.stock > 0:
             # ✅ Mouvement ENTREE automatique à la création du produit
+            # On récupère l'admin passé en paramètre
+            utilisateur = kwargs.get("utilisateur")
             MouvementStock.objects.create(
                 produit=self,
                 quantite=self.stock,
                 type_mouvement="ENTREE",
-                
+                utilisateur=utilisateur  # toujours admin
             )
 
-    def retirer_stock(self, quantite):
-        """Décrémenter le stock après une commande."""
-        self.stock -= quantite
-        if self.stock <= 0:
-            self.stock = 0
-            # Optionnel : ajouter un champ is_epuise = True
-        self.save()
 
-    def ajouter_stock(self, quantite):
-        """Incrémenter le stock après réception fournisseur."""
+    def ajouter_stock(self, quantite, utilisateur):
+        """Incrémenter le stock après réception fournisseur (toujours admin)."""
         self.stock += quantite
         self.save()
         MouvementStock.objects.create( 
             produit=self, 
             quantite=quantite, 
             type_mouvement="ENTREE", 
-            utilisateur=utilisateur )
+            utilisateur=utilisateur  # toujours admin
+        )
 
-    @property
-    def est_epuise(self):
-        return self.stock <= 0
-
-
-    def retirer_stock(self, quantite, utilisateur=None):
+    def retirer_stock(self, quantite, utilisateur):
+        """Décrémenter le stock après une commande validée (toujours admin)."""
+        if quantite > self.stock:
+            raise ValueError("Stock insuffisant")
         self.stock -= quantite
-        if self.stock < 0:
-            self.stock = 0
         self.save()
         MouvementStock.objects.create(
             produit=self,
             quantite=quantite,
             type_mouvement="SORTIE",
-            utilisateur=utilisateur
+            utilisateur=utilisateur  # toujours admin
         )
+
+
+    @property
+    def est_epuise(self):
+        return self.stock <= 0
 
 
         

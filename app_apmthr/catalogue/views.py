@@ -26,9 +26,11 @@ def ajouter_produit(request):
     if request.method == "POST":
         form = ProduitForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            produit = form.save(commit=False)
+            produit.save(utilisateur=request.user)  # ✅ admin connecté
             messages.success(request, "Produit ajouté avec succès.")
             return redirect("liste_produits")
+
     else:
         form = ProduitForm()
     return render(request, "catalogue/ajouter_produit.html", {"form": form})
