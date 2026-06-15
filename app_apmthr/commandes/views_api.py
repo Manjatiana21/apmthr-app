@@ -36,7 +36,7 @@ class CommandeViewSet(viewsets.ModelViewSet):
         if commande.statut not in ["EN_ATTENTE"]:
             return Response({"detail": "Impossible d'annuler cette commande"}, status=status.HTTP_400_BAD_REQUEST)
 
-        commande.annulerCommande(utilisateur=request.user, par_client=True)  # ✅ correction
+        commande.annulerCommande(par_client=True)  # ✅ correction
 
         serializer = self.get_serializer(commande)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -129,7 +129,7 @@ def api_passer_commande(request, produit_id):
     )
 
     commande.calculerTotal()
-    commande.creerCommande(utilisateur=request.user)  # ✅ correction
+    commande.creerCommande()  # ✅ correction
 
     Paiement.objects.create(
         commande=commande,
@@ -168,7 +168,7 @@ def api_annuler_commande_client(request, id):
     if commande.statut not in ["EN_ATTENTE"]:  
         return Response({"detail": "Impossible d'annuler cette commande"}, status=400)
 
-    commande.annulerCommande(utilisateur=request.user, par_client=True)  # ✅ correction
+    commande.annulerCommande(par_client=True)  # ✅ correction
 
     serializer = CommandeSerializer(commande)
     return Response(serializer.data)
@@ -226,7 +226,7 @@ def ajouter_au_panier(request):
                 date_paiement=None
             )
 
-        commande.creerCommande(utilisateur=request.user)  # ✅ correction
+        commande.creerCommande()  # ✅ correction
 
         return Response(
             {
