@@ -10,7 +10,7 @@ from django.template.loader import get_template
 from xhtml2pdf import pisa
 from factures.models import Facture
 from factures.serializers import FactureSerializer
-import unicodedata
+# import unicodedata
 
 
 
