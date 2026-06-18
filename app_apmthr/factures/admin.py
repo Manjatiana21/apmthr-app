@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Facture
 
-# Register your models here.
+@admin.register(Facture)
+class FactureAdmin(admin.ModelAdmin):
+    list_display = ("numero", "commande", "paiement", "montant_total", "envoyee", "date_emission")
+
