@@ -10,6 +10,8 @@ from django.template.loader import get_template
 from xhtml2pdf import pisa
 from factures.models import Facture
 from factures.serializers import FactureSerializer
+import unicodedata
+
 
 
 # ViewSets (DRF standard)
@@ -142,15 +144,20 @@ def api_paiement_detail(request, paiement_id):
 #     serializer = FactureSerializer(facture)
 #     return Response(serializer.data, status=201)
 
+
+def normalize(value):
+    if not value:
+        return ""
+    return unicodedata.normalize("NFKD", value).encode("ASCII", "ignore").decode("ASCII").upper()
+
 @api_view(["POST"])
 @permission_classes([IsAdminUser])
 def api_generer_facture(request, paiement_id):
     paiement = get_object_or_404(Paiement, id=paiement_id)
     commande = paiement.commande
 
-    if paiement.statut.upper() != "REÇU" or commande.statut.upper() != "VALIDEE":
+    if normalize(paiement.statut) != "RECU" or normalize(commande.statut) != "VALIDEE":
         return Response({"error": "La facture ne peut être générée que si la commande est validée et le paiement reçu."}, status=400)
-
 
     if hasattr(paiement, "facture"):
         return Response({"error": "Une facture existe déjà pour ce paiement."}, status=400)
