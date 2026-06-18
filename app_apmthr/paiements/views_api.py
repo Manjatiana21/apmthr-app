@@ -145,36 +145,34 @@ def api_paiement_detail(request, paiement_id):
 #     return Response(serializer.data, status=201)
 
 
-def normalize(value):
-    if not value:
-        return ""
-    return unicodedata.normalize("NFKD", value).encode("ASCII", "ignore").decode("ASCII").upper()
-
 @api_view(["POST"])
 @permission_classes([IsAdminUser])
 def api_generer_facture(request, paiement_id):
     paiement = get_object_or_404(Paiement, id=paiement_id)
     commande = paiement.commande
 
-    if normalize(paiement.statut) != "RECU" or normalize(commande.statut) != "VALIDEE":
-        return Response({"error": "La facture ne peut être générée que si la commande est validée et le paiement reçu."}, status=400)
+    # Normalisation des statuts
+    statut_paiement = unidecode(paiement.statut).strip().upper()
+    statut_commande = unidecode(commande.statut).strip().upper()
+
+    # Vérification des conditions métier
+    if statut_paiement != "RECU" or statut_commande != "VALIDEE":
+        return Response(
+            {"error": "La facture ne peut être générée que si le paiement est reçu et la commande validée."},
+            status=400
+        )
 
     if hasattr(paiement, "facture"):
         return Response({"error": "Une facture existe déjà pour ce paiement."}, status=400)
 
+    # Génération de la facture
     import uuid
     numero_facture = f"FAC-{uuid.uuid4().hex[:8].upper()}"
-    client = paiement.client
-
     facture = Facture.objects.create(
         commande=commande,
         paiement=paiement,
         numero=numero_facture,
-        montant_total=paiement.montant,
-        client_nom=client.username,
-        client_email=client.email or "Non renseigné",
-        client_adresse=getattr(client, "adresse", "Non renseignée"),
-        client_telephone=getattr(client, "telephone", "Non renseigné"),
+        montant_total=paiement.montant
     )
 
     serializer = FactureSerializer(facture)

@@ -18,7 +18,7 @@ class Paiement(models.Model):
     montant = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     statut = models.CharField(max_length=50, default="EN_ATTENTE", choices=[
         ("EN_ATTENTE", "En_attente"),
-        ("REÇU", "Reçu"),
+        ("RECU", "Reçu"),
         ("ANNULE", "Annulé"),
     ])
     date_paiement = models.DateTimeField(blank=True, null=True)
