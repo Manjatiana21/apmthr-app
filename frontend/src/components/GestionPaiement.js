@@ -99,7 +99,7 @@ function GestionPaiement() {
             {(showRecus ? paiementsPageRecus : paiementsPageAttente).length > 0 ? (
               (showRecus ? paiementsPageRecus : paiementsPageAttente).map((paiement) => (
                 <tr key={paiement.id}>
-                  <td>{paiement.client}</td>
+                  <td>{paiement.client.username}</td>
                   <td>
                     {paiement.commande?.details.map((d) => (
                       <div key={d.id}>
