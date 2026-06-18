@@ -118,6 +118,30 @@ def api_paiement_detail(request, paiement_id):
     serializer = PaiementSerializer(paiement)
     return Response(serializer.data)
 
+# @api_view(["POST"])
+# @permission_classes([IsAdminUser])
+# def api_generer_facture(request, paiement_id):
+#     paiement = get_object_or_404(Paiement, id=paiement_id)
+#     commande = paiement.commande
+
+#     if paiement.statut != "REÇU" or commande.statut != "VALIDEE":
+#         return Response({"error": "La facture ne peut être générée que si la commande est validée et le paiement reçu."}, status=400)
+
+#     if hasattr(paiement, "facture"):
+#         return Response({"error": "Une facture existe déjà pour ce paiement."}, status=400)
+
+#     import uuid
+#     numero_facture = f"FAC-{uuid.uuid4().hex[:8].upper()}"
+#     facture = Facture.objects.create(
+#         commande=commande,
+#         paiement=paiement,
+#         numero=numero_facture,
+#         montant_total=paiement.montant
+#     )
+
+#     serializer = FactureSerializer(facture)
+#     return Response(serializer.data, status=201)
+
 @api_view(["POST"])
 @permission_classes([IsAdminUser])
 def api_generer_facture(request, paiement_id):
@@ -132,11 +156,17 @@ def api_generer_facture(request, paiement_id):
 
     import uuid
     numero_facture = f"FAC-{uuid.uuid4().hex[:8].upper()}"
+    client = paiement.client
+
     facture = Facture.objects.create(
         commande=commande,
         paiement=paiement,
         numero=numero_facture,
-        montant_total=paiement.montant
+        montant_total=paiement.montant,
+        client_nom=client.username,
+        client_email=client.email or "Non renseigné",
+        client_adresse=getattr(client, "adresse", "Non renseignée"),
+        client_telephone=getattr(client, "telephone", "Non renseigné"),
     )
 
     serializer = FactureSerializer(facture)

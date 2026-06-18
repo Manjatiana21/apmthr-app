@@ -30,19 +30,20 @@ class CommandeSerializer(serializers.ModelSerializer):
         fields = ["id", "details", "statut", "total"]
 
 class PaiementSerializer(serializers.ModelSerializer):
-    client = serializers.CharField(source="client.username", read_only=True)
+    client = UtilisateurSerializer(read_only=True)
     commande = CommandeSerializer(read_only=True)
     mode_paiement = serializers.CharField(source="mode_paiement.mode_paiement", read_only=True)
     facture = FactureSerializer(source="commande.facture", read_only=True) 
+
     class Meta:
         model = Paiement
         fields = [
             "id",
-            "client",
+            "client",          # maintenant objet complet
             "commande",
             "montant",
             "mode_paiement",
             "statut",
             "date_paiement",
             "facture"
-        ]
+    ]

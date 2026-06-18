@@ -5,27 +5,25 @@ from paiements.models import Paiement
 from comptes.models import Utilisateur
 
 class DetailCommandeSerializer(serializers.ModelSerializer):
-    produit = serializers.CharField(source="produit.designation", read_only=True)  # ✅ correction
+    produit = serializers.CharField(source="produit.designation", read_only=True)
 
     class Meta:
         model = Details
         fields = ["id", "produit", "quantite", "prix_unitaire"]
 
 class PaiementSerializer(serializers.ModelSerializer):
-    paiement= Paiement.mode_paiement
-    mode_paiement = serializers.CharField(source="mode_paiement.mode_paiement", read_only=True)  # ✅ correction
+    mode_paiement = serializers.CharField(source="mode_paiement.mode_paiement", read_only=True)
 
     class Meta:
         model = Paiement
         fields = ["id", "montant", "statut", "date_paiement", "mode_paiement"]
 
-
 class CommandeSerializer(serializers.ModelSerializer):
-    details = DetailCommandeSerializer(many=True)
+    details = DetailCommandeSerializer(many=True, read_only=True)
 
     class Meta:
         model = Commande
-        fields = ["id", "client", "details"]
+        fields = ["id", "details", "statut", "total"]
 
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
@@ -33,9 +31,9 @@ class ClientSerializer(serializers.ModelSerializer):
         fields = ["username", "email", "adresse", "telephone"]
 
 class FactureSerializer(serializers.ModelSerializer):
-    commande = CommandeSerializer()
-    paiement = PaiementSerializer()
-    client = ClientSerializer(source="commande.client", read_only=True)
+    commande = CommandeSerializer(read_only=True)
+    paiement = PaiementSerializer(read_only=True)
+    client = ClientSerializer(source="paiement.client", read_only=True)  # ✅ correction
 
     class Meta:
         model = Facture
@@ -45,9 +43,9 @@ class FactureSerializer(serializers.ModelSerializer):
             "date_emission",
             "montant_total",
             "envoyee",
-            "client",    
-            "commande", 
-            "paiement",  
+            "client",
+            "commande",
+            "paiement",
         ]
 
 class FactureListSerializer(serializers.ModelSerializer):
