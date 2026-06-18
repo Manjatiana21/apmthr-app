@@ -148,8 +148,9 @@ def api_generer_facture(request, paiement_id):
     paiement = get_object_or_404(Paiement, id=paiement_id)
     commande = paiement.commande
 
-    if paiement.statut != "REÇU" or commande.statut != "VALIDEE":
+    if paiement.statut.upper() != "REÇU" or commande.statut.upper() != "VALIDEE":
         return Response({"error": "La facture ne peut être générée que si la commande est validée et le paiement reçu."}, status=400)
+
 
     if hasattr(paiement, "facture"):
         return Response({"error": "Une facture existe déjà pour ce paiement."}, status=400)
