@@ -16,6 +16,7 @@ from django.http import HttpResponse
 from django.templatetags.static import static
 import os
 from django.conf import settings
+from django.utils import timezone
 
 
 # Génération d’un numéro unique basé sur le paiement

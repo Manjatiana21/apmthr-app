@@ -49,7 +49,15 @@ function ListeFactures() {
                   <td data-label="Facture N°">{f.numero}</td>
                   <td data-label="Client">{f.client?.username || "—"}</td>
                   <td data-label="Montant Total">{f.montant_total} Ar</td>
-                  <td data-label="Date d'émission">{new Date(f.date_emission).toLocaleDateString()}</td>
+                  <td data-label="Date d'émission">
+                    {f.date_emission
+                      ? new Date(f.date_emission).toLocaleDateString("fr-FR", {
+                          day: "2-digit",
+                          month: "2-digit",
+                          year: "numeric"
+                        })
+                      : "Non définie"}
+                  </td>
                   <td>
                     <span className={`badge ${f.envoyee ? "badge-success" : "badge-danger"}`}>
                       {f.envoyee ? "Oui" : "Non"}
