@@ -48,7 +48,6 @@ class FactureSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "numero",
-            "date_emission",
             "montant_total",
             "envoyee",
             "client",
