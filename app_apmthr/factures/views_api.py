@@ -49,7 +49,8 @@ def api_generer_facture(request, paiement_id):
         commande=commande,
         paiement=paiement,
         numero=numero_facture,
-        montant_total=paiement.montant
+        montant_total=paiement.montant,
+        date_emission=timezone.now() 
     )
 
     serializer = FactureSerializer(facture)
