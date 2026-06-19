@@ -3,6 +3,8 @@ from .models import ModePaiement, Paiement
 from commandes.models import Commande, Details 
 from comptes.models import Utilisateur
 from factures.serializers import FactureSerializer
+from factures.models import Facture
+
 
 
 class ModePaiementSerializer(serializers.ModelSerializer):
