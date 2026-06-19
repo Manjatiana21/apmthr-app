@@ -132,7 +132,7 @@ function GestionPaiement() {
                         </button>
                       </>
                     )}
-                    {paiement.statut === "REÇU" && (
+                    {paiement.statut === "RECU" && (
                       paiement.facture ? (
                         <button className="btn btn-secondary btn-sm" disabled>
                           Facture générée
