@@ -3,5 +3,5 @@ from .models import Facture
 
 @admin.register(Facture)
 class FactureAdmin(admin.ModelAdmin):
-    list_display = ("numero", "commande", "paiement", "montant_total", "envoyee", "date_emission")
+    list_display = ("numero", "commande", "paiement", "montant_total", "envoyee")
 
