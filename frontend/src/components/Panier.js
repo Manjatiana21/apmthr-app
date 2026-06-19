@@ -170,7 +170,7 @@ function Panier() {
                   onChange={handleChange}
                   required
                 >
-                  <option value="">Choisir un mode de paiement</option>
+                  <option value="">Mode de paiement</option>
                   {Array.isArray(modes) && modes.length > 0 ? (
                     modes.map((m) => (
                       <option key={m.id} value={m.id}>
