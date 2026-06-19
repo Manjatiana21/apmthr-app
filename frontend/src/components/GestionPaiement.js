@@ -55,7 +55,7 @@ function GestionPaiement() {
   if (loading) return <p>Chargement des paiements...</p>;
 
   const paiementsAttente = paiements.filter(p => p.statut === "EN_ATTENTE");
-  const paiementsRecus = paiements.filter(p => p.statut === "REÇU");
+  const paiementsRecus = paiements.filter(p => p.statut === "RECU");
 
   const totalPagesAttente = Math.ceil(paiementsAttente.length / paiementsPerPage);
   const paiementsPageAttente = paiementsAttente.slice((pageAttente - 1) * paiementsPerPage, pageAttente * paiementsPerPage);
