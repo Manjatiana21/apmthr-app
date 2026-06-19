@@ -58,8 +58,11 @@ class FactureSerializer(serializers.ModelSerializer):
 
 
 class FactureListSerializer(serializers.ModelSerializer):
-    date_emission = serializers.DateTimeField(format="%Y-%m-%d", read_only=True)
+    date_emission = serializers.SerializerMethodField()
 
     class Meta:
         model = Facture
         fields = ["id", "numero", "date_emission", "montant_total"]
+
+    def get_date_emission(self, obj):
+        return obj.date_emission.isoformat() if obj.date_emission else None
