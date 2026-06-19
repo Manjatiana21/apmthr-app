@@ -37,7 +37,7 @@ function ListeFactures() {
               <th>Numéro</th>
               <th>Client</th>
               <th>Montant</th>
-              <th>Date émission</th>
+              {/* <th>Date émission</th> */}
               <th>Envoyée</th>
               <th>Actions</th>
             </tr>
@@ -49,7 +49,7 @@ function ListeFactures() {
                   <td data-label="Facture N°">{f.numero}</td>
                   <td data-label="Client">{f.client?.username || "—"}</td>
                   <td data-label="Montant Total">{f.montant_total} Ar</td>
-                  <td data-label="Date d'émission">
+                  {/* <td data-label="Date d'émission">
                     {f.date_emission
                       ? new Date(Date.parse(f.date_emission)).toLocaleDateString("fr-FR", {
                           day: "2-digit",
@@ -57,7 +57,7 @@ function ListeFactures() {
                           year: "numeric"
                         })
                       : "Non définie"}
-                  </td>
+                  </td> */}
 
                   <td>
                     <span className={`badge ${f.envoyee ? "badge-success" : "badge-danger"}`}>
