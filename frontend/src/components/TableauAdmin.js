@@ -64,7 +64,7 @@ function TableauAdmin() {
     window.onpopstate = () => {
       navigate(0); // refresh la page courante
     };
-  }, [navigate]);g
+  }, [navigate]);
 
   // ✅ Données pour les graphiques
   const commandesData = {
