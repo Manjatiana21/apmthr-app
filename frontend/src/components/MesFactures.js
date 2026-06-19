@@ -23,7 +23,7 @@ function MesFactures() {
         <thead>
           <tr>
             <th>Numéro</th>
-            <th>Date</th>
+            <th>Date de paiement</th>
             <th>Montant</th>
             <th>Action</th>
           </tr>
@@ -33,8 +33,14 @@ function MesFactures() {
             factures.map((f) => (
               <tr key={f.id}>
                 <td data-label="Facture N° :">{f.numero}</td>
-              <td data-label="Date d'émission">
-                {new Date(f.date_emission).toLocaleDateString("fr-FR")}
+              <td data-label="Date de paiement">
+                {f.paiement?.date_paiement
+                  ? new Date(Date.parse(f.paiement.date_paiement)).toLocaleDateString("fr-FR", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric"
+                    })
+                  : "Non définie"}
               </td>
                 <td data-label="Montant Total">{f.montant_total} Ar</td>
                 <td data-label="Action">
