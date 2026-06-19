@@ -54,7 +54,7 @@ def api_admin_stats(request):
     produits_vendus_qs = (
         Details.objects.filter(
             commande__statut="VALIDEE",
-            commande__paiements__statut="REÇU"  # ⚠️ uniformiser aussi les statuts Paiement
+            commande__paiements__statut="RECU"  # ⚠️ uniformiser aussi les statuts Paiement
         )
         .values("produit__designation")
         .annotate(total_vendu=Sum("quantite"))
@@ -62,7 +62,7 @@ def api_admin_stats(request):
     )
 
     # ✅ Paiements
-    paiements_recus = Paiement.objects.filter(statut="REÇU").count()
+    paiements_recus = Paiement.objects.filter(statut="RECU").count()
     paiements_attente = Paiement.objects.filter(statut="EN_ATTENTE").count()
 
     # ✅ Livraisons

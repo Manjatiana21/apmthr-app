@@ -15,10 +15,12 @@ class DetailCommandeSerializer(serializers.ModelSerializer):
 
 class PaiementSerializer(serializers.ModelSerializer):
     mode_paiement = serializers.CharField(source="mode_paiement.mode_paiement", read_only=True)
+    date_paiement = serializers.DateTimeField(format="%Y-%m-%dT%H:%M:%S%z", read_only=True)  # ✅ correction
 
     class Meta:
         model = Paiement
         fields = ["id", "montant", "statut", "date_paiement", "mode_paiement"]
+
 
 
 class CommandeSerializer(serializers.ModelSerializer):

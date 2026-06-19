@@ -85,9 +85,22 @@ function FactureDetailPage() {
           </div>
         </div>
 
-        {facture.paiement && (
+        {facture.paiement?.date_paiement ? (
           <div className="paiement-info">
-            <p><strong>Date de paiement :</strong> {new Date(facture.paiement.date_paiement).toLocaleDateString()}</p>
+            <p>
+              <strong>Date de paiement :</strong>{" "}
+              {new Date(Date.parse(facture.paiement.date_paiement)).toLocaleString("fr-FR", {
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric",
+                hour: "2-digit",
+                minute: "2-digit"
+              })}
+            </p>
+          </div>
+        ) : (
+          <div className="paiement-info">
+            <p><strong>Date de paiement :</strong> Non définie</p>
           </div>
         )}
 
