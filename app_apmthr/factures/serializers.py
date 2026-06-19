@@ -57,7 +57,8 @@ class FactureSerializer(serializers.ModelSerializer):
 
 
 class FactureListSerializer(serializers.ModelSerializer):
+    paiement = PaiementSerializer(read_only=True)
 
     class Meta:
         model = Facture
-        fields = ["id", "numero", "montant_total"]
+        fields = ["id", "numero", "montant_total", "paiement"]
