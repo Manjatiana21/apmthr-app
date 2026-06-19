@@ -33,17 +33,23 @@ class PaiementSerializer(serializers.ModelSerializer):
     client = UtilisateurSerializer(read_only=True)
     commande = CommandeSerializer(read_only=True)
     mode_paiement = serializers.CharField(source="mode_paiement.mode_paiement", read_only=True)
-    facture = FactureSerializer(source="commande.facture", read_only=True) 
+    facture = serializers.SerializerMethodField()
 
     class Meta:
         model = Paiement
         fields = [
             "id",
-            "client",          # maintenant objet complet
+            "client",
             "commande",
             "montant",
             "mode_paiement",
             "statut",
             "date_paiement",
             "facture"
-    ]
+        ]
+
+    def get_facture(self, obj):
+        facture = Facture.objects.filter(paiement=obj).first()
+        if facture:
+            return FactureSerializer(facture).data
+        return None

@@ -120,52 +120,18 @@ def api_paiement_detail(request, paiement_id):
     serializer = PaiementSerializer(paiement)
     return Response(serializer.data)
 
-@api_view(["POST"])
-@permission_classes([IsAdminUser])
-def api_generer_facture(request, paiement_id):
-    paiement = get_object_or_404(Paiement, id=paiement_id)
-    commande = paiement.commande
-
-    if paiement.statut != "RECU" or commande.statut != "VALIDEE":
-        return Response({"error": "La facture ne peut être générée que si la commande est validée et le paiement reçu."}, status=400)
-
-    if hasattr(paiement, "facture"):
-        return Response({"error": "Une facture existe déjà pour ce paiement."}, status=400)
-
-    import uuid
-    numero_facture = f"FAC-{uuid.uuid4().hex[:8].upper()}"
-    facture = Facture.objects.create(
-        commande=commande,
-        paiement=paiement,
-        numero=numero_facture,
-        montant_total=paiement.montant
-    )
-
-    serializer = FactureSerializer(facture)
-    return Response(serializer.data, status=201)
-
-
 # @api_view(["POST"])
 # @permission_classes([IsAdminUser])
 # def api_generer_facture(request, paiement_id):
 #     paiement = get_object_or_404(Paiement, id=paiement_id)
 #     commande = paiement.commande
 
-#     # Normalisation des statuts
-#     statut_paiement = unidecode(paiement.statut).strip().upper()
-#     statut_commande = unidecode(commande.statut).strip().upper()
-
-#     # Vérification des conditions métier
-#     if statut_paiement != "RECU" or statut_commande != "VALIDEE":
-#         return Response(
-#             {"error": "La facture ne peut être générée que si le paiement est reçu et la commande validée."},
-#             status=400
-#         )
+#     if paiement.statut != "RECU" or commande.statut != "VALIDEE":
+#         return Response({"error": "La facture ne peut être générée que si la commande est validée et le paiement reçu."}, status=400)
 
 #     if hasattr(paiement, "facture"):
 #         return Response({"error": "Une facture existe déjà pour ce paiement."}, status=400)
 
-#     # Génération de la facture
 #     import uuid
 #     numero_facture = f"FAC-{uuid.uuid4().hex[:8].upper()}"
 #     facture = Facture.objects.create(
@@ -177,3 +143,32 @@ def api_generer_facture(request, paiement_id):
 
 #     serializer = FactureSerializer(facture)
 #     return Response(serializer.data, status=201)
+
+@api_view(["POST"])
+@permission_classes([IsAdminUser])
+def api_generer_facture(request, paiement_id):
+    paiement = get_object_or_404(Paiement, id=paiement_id)
+    commande = paiement.commande
+
+    # Vérification des conditions
+    if paiement.statut.strip().upper() != "RECU":
+        return Response({"error": "Paiement non reçu."}, status=400)
+
+    if commande.statut.strip().upper() != "VALIDEE":
+        return Response({"error": "Commande non validée."}, status=400)
+
+    if Facture.objects.filter(paiement=paiement).exists():
+        return Response({"error": "Une facture existe déjà pour ce paiement."}, status=400)
+
+    # Génération de la facture
+    import uuid
+    numero_facture = f"FAC-{uuid.uuid4().hex[:8].upper()}"
+    facture = Facture.objects.create(
+        commande=commande,
+        paiement=paiement,
+        numero=numero_facture,
+        montant_total=paiement.montant
+    )
+
+    serializer = FactureSerializer(facture)
+    return Response(serializer.data, status=201)

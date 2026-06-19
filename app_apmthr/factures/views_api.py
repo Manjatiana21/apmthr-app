@@ -32,14 +32,14 @@ def api_generer_facture(request, paiement_id):
     commande = paiement.commande
 
     # Vérifier conditions
-    if paiement.statut != "REÇU":
+    if paiement.statut.upper() != "RECU":
         return Response({"error": "Paiement non reçu."}, status=400)
 
-    if commande.statut not in ["VALIDEE", "VALIDÉE"]:
+    if commande.statut.upper() != "VALIDEE":
         return Response({"error": "Commande non validée."}, status=400)
 
-    if hasattr(commande, "facture"):
-        return Response({"error": "Une facture existe déjà pour cette commande."}, status=400)
+    if Facture.objects.filter(paiement=paiement).exists():
+        return Response({"error": "Une facture existe déjà pour ce paiement."}, status=400)
 
     # Générer un numéro unique
     import uuid
@@ -54,6 +54,7 @@ def api_generer_facture(request, paiement_id):
 
     serializer = FactureSerializer(facture)
     return Response(serializer.data, status=201)
+
 
 
 # Télécharger une facture en PDF (Client ou Admin)
