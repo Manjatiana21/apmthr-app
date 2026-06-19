@@ -32,8 +32,8 @@ class Paiement(models.Model):
         super().save(*args, **kwargs)
 
     def validerPaiement(self):
-        """Valider le paiement (statut = REÇU)."""
-        self.statut = "REÇU"
+        """Valider le paiement (statut = RECU)."""
+        self.statut = "RECU"
         self.date_paiement = timezone.now()
         self.save()
 
