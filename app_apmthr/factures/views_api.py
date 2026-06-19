@@ -137,7 +137,7 @@ def api_mes_factures(request):
 @api_view(["GET"])
 @permission_classes([IsAdminUser])
 def api_factures_list(request):
-    factures = Facture.objects.all().order_by("-date_emission")
+    factures = Facture.objects.all().order_by("-numero")
     serializer = FactureSerializer(factures, many=True)
     return Response(serializer.data)
 

@@ -6,5 +6,5 @@ from .models import Facture
 from .serializers import FactureSerializer
 
 class FactureListAPIView(ListAPIView):
-    queryset = Facture.objects.all().order_by("-id")
+    queryset = Facture.objects.all().order_by("-numero")
     serializer_class = FactureSerializer
