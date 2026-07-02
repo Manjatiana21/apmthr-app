@@ -95,11 +95,23 @@ function PasserCommande({ onCommandeSuccess }) {
           <input
             type="number"
             name="quantite"
+            min="1"
+            max={produit.stock}   // ✅ limite côté frontend
             value={formData.quantite}
-            onChange={handleChange}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value > produit.stock) {
+                setMessage(`❌ Stock insuffisant. Disponible: ${produit.stock} pièces.`);
+                setMessageType("error");
+              } else {
+                setMessage(""); // ✅ efface le message si c’est correct
+                setFormData({ ...formData, quantite: value });
+              }
+            }}
             required
           />
         </label>
+
 
         <label>Adresse de livraison :
           <input

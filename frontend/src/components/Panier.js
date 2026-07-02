@@ -125,8 +125,17 @@ function Panier() {
                     <input
                       type="number"
                       min="1"
+                      max={item.stock}   // ✅ limite côté frontend
                       value={item.quantite}
-                      onChange={(e) => updateQuantity(item.id, e.target.value)}
+                      onChange={(e) => {
+                        const value = Number(e.target.value);
+                        if (value > item.stock) {
+                          setMessage(`❌ Stock insuffisant pour ${item.designation}. Disponible: ${item.stock} pièces.`);
+                        } else {
+                          setMessage(""); // ✅ efface le message si c’est correct
+                          updateQuantity(item.id, value);
+                        }
+                      }}
                     />
                   </td>
                   <td data-label="Montant Total">{item.prix * item.quantite} Ar</td>

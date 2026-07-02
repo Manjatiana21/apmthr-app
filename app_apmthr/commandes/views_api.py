@@ -111,6 +111,13 @@ def api_passer_commande(request, produit_id):
     produit = get_object_or_404(Produit, id=produit_id)
     quantite = int(request.data.get("quantite", 1))
 
+     # ✅ Vérification du stock
+    if quantite > produit.stock:
+        return Response(
+            {"error": f"Stock insuffisant. Disponible: {produit.stock}"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
     mode_paiement_id = request.data.get("mode_paiement")
     mode = get_object_or_404(ModePaiement, id=mode_paiement_id) if mode_paiement_id else None
 
@@ -215,6 +222,14 @@ def ajouter_au_panier(request):
     serializer = PanierSerializer(data=request.data, context={"request": request})
     if serializer.is_valid():
         commande = serializer.save()
+
+        # ✅ Vérification stock pour chaque détail
+        for detail in commande.details.all():
+            if detail.quantite > detail.produit.stock:
+                return Response(
+                    {"error": f"Stock insuffisant pour {detail.produit.designation}. Disponible: {detail.produit.stock}"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
 
         if commande.mode_paiement:
             Paiement.objects.create(
