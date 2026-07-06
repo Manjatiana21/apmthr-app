@@ -91,7 +91,7 @@ function PasserCommande({ onCommandeSuccess }) {
       {produit.description && <p className="description1">{produit.description}</p>}
 
       <form onSubmit={handleSubmit}>
-        <label>Quantité : 
+        <label>Quantité 
           <input
             type="number"
             name="quantite"
@@ -113,7 +113,7 @@ function PasserCommande({ onCommandeSuccess }) {
         </label>
 
 
-        <label>Adresse de livraison :
+        <label>Adresse de livraison 
           <input
             type="text"
             name="adresse_livraison"
